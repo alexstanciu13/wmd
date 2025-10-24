@@ -28,7 +28,7 @@ export function PricingCard({
     >
       {highlighted && (
         <div className="absolute -top-4 left-1/2 -translate-x-1/2">
-          <div className="bg-gradient-to-r from-[#00AEEF] to-[#1E40AF] text-white px-4 py-1 rounded-full text-sm flex items-center space-x-1">
+          <div className="bg-gradient-to-r from-[#00AEEF] to-[#2563EB] text-white px-4 py-1 rounded-full text-sm flex items-center space-x-1">
             <Zap className="w-4 h-4" />
             <span>Most Popular</span>
           </div>
@@ -57,7 +57,7 @@ export function PricingCard({
         onClick={onSelect}
         className={`w-full ${
           highlighted
-            ? 'bg-gradient-to-r from-[#00AEEF] to-[#1E40AF] text-white hover:opacity-90'
+            ? 'bg-gradient-to-r from-[#00AEEF] to-[#2563EB] text-white hover:opacity-90'
             : 'bg-white/10 text-white hover:bg-white/20'
         } transition-all`}
       >
