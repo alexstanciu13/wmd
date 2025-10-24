@@ -15,24 +15,24 @@ export function HomePage({ onNavigate }: HomePageProps) {
   const caseStudies = [
     {
       client: 'TechFlow Solutions',
-      industry: 'SaaS Technology',
+      industry: 'Tehnologie SaaS',
       image: 'https://images.unsplash.com/photo-1677214467820-ab069619bbb6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtb2Rlcm4lMjB3ZWIlMjBkZXNpZ258ZW58MXx8fHwxNzYxMjI3OTQ4fDA&ixlib=rb-4.1.0&q=80&w=1080',
-      problem: 'Outdated website with poor conversion rates and minimal user engagement across key product pages.',
-      solution: 'Complete redesign with conversion-focused UX, AI-powered personalization, and optimized funnel architecture.',
+      problem: 'Site web învechit cu rate de conversie slabe și implicare minimă a utilizatorilor pe paginile cheie ale produsului.',
+      solution: 'Redesign complet cu UX orientat spre conversie, personalizare alimentată de AI și arhitectură de funnel optimizată.',
       results: [
-        { metric: 'Conversion Rate', value: '+247%' },
-        { metric: 'User Engagement', value: '+189%' },
+        { metric: 'Rată de Conversie', value: '+247%' },
+        { metric: 'Implicare Utilizatori', value: '+189%' },
       ],
     },
     {
       client: 'LuxeCommerce',
       industry: 'E-Commerce',
       image: 'https://images.unsplash.com/photo-1658297063569-162817482fb6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxlY29tbWVyY2UlMjBzaG9wcGluZyUyMG9ubGluZXxlbnwxfHx8fDE3NjEyMzkzMjl8MA&ixlib=rb-4.1.0&q=80&w=1080',
-      problem: 'Low cart conversion and high abandonment rates impacting revenue growth and customer lifetime value.',
-      solution: 'Rebuilt e-commerce platform with AI recommendations, streamlined checkout, and retention automation.',
+      problem: 'Rate scăzute de conversie a coșului și rate ridicate de abandon care afectează creșterea veniturilor și valoarea pe viață a clienților.',
+      solution: 'Platformă e-commerce reconstruită cu recomandări AI, checkout simplificat și automatizare de retenție.',
       results: [
-        { metric: 'Revenue Growth', value: '+312%' },
-        { metric: 'Cart Abandonment', value: '-68%' },
+        { metric: 'Creștere Venituri', value: '+312%' },
+        { metric: 'Abandon Coș', value: '-68%' },
       ],
     },
   ];
@@ -43,15 +43,15 @@ export function HomePage({ onNavigate }: HomePageProps) {
       role: 'CEO',
       company: 'TechFlow Solutions',
       image: 'https://images.unsplash.com/photo-1531545514256-b1400bc00f31?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx0ZWFtJTIwY29sbGFib3JhdGlvbiUyMG1lZXRpbmd8ZW58MXx8fHwxNzYxMjkwOTA4fDA&ixlib=rb-4.1.0&q=80&w=1080',
-      testimonial: 'WMD transformed our digital presence completely. The ROI has been exceptional, and their strategic approach to our growth has been invaluable. This is the premium partnership we were looking for.',
+      testimonial: 'WMD ne-a transformat complet prezența digitală. ROI-ul a fost excepțional, iar abordarea lor strategică pentru creșterea noastră a fost inestimabilă. Acesta este parteneriatul premium pe care îl căutam.',
       rating: 5,
     },
     {
       name: 'Michael Rodriguez',
-      role: 'Founder',
+      role: 'Fondator',
       company: 'LuxeCommerce',
       image: 'https://images.unsplash.com/photo-1640109341881-1cd3eaf50909?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxsdXh1cnklMjBvZmZpY2UlMjB3b3Jrc3BhY2V8ZW58MXx8fHwxNzYxMjMzMzI1fDA&ixlib=rb-4.1.0&q=80&w=1080',
-      testimonial: 'Working with WMD felt like having a world-class in-house team. Their AI automation solutions have saved us countless hours and significantly improved our customer experience.',
+      testimonial: 'Colaborarea cu WMD a fost ca și cum am avea o echipă internă de clasă mondială. Soluțiile lor de automatizare AI ne-au economisit nenumărate ore și au îmbunătățit semnificativ experiența clienților noștri.',
       rating: 5,
     },
   ];
@@ -59,23 +59,23 @@ export function HomePage({ onNavigate }: HomePageProps) {
   const valuePillars = [
     {
       icon: Sparkles,
-      title: 'Premium Design',
-      description: 'Luxury-grade digital experiences that captivate and convert',
+      title: 'Design Premium',
+      description: 'Experiențe digitale de nivel luxury care captivează și convertesc',
     },
     {
       icon: TrendingUp,
-      title: 'ROI-Focused',
-      description: 'Every decision backed by data and optimized for measurable growth',
+      title: 'Focusat pe ROI',
+      description: 'Fiecare decizie susținută de date și optimizată pentru creștere măsurabilă',
     },
     {
       icon: Zap,
-      title: 'AI Automation',
-      description: 'Cutting-edge automation that scales your operations seamlessly',
+      title: 'Automatizare AI',
+      description: 'Automatizare de ultimă generație care scalează operațiunile tale fără probleme',
     },
     {
       icon: Shield,
-      title: 'Strategic Partnership',
-      description: 'Long-term collaboration built on trust and mutual success',
+      title: 'Parteneriat Strategic',
+      description: 'Colaborare pe termen lung bazată pe încredere și succes reciproc',
     },
   ];
 
@@ -96,16 +96,16 @@ export function HomePage({ onNavigate }: HomePageProps) {
             transition={{ duration: 0.8 }}
           >
             <div className="inline-block glass-strong rounded-full px-6 py-2 mb-8">
-              <span className="text-[#00AEEF]">✦ Elite Digital Agency ✦</span>
+              <span className="text-[#00AEEF]">✦ Agenție Digitală de Elită ✦</span>
             </div>
 
             <h1 className="text-5xl md:text-7xl mb-6 max-w-4xl mx-auto">
-              Elevate Your Brand with{' '}
-              <span className="text-gradient">Premium Digital Excellence</span>
+              Ridică-ți Brandul cu{' '}
+              <span className="text-gradient">Excelență Digitală Premium</span>
             </h1>
 
             <p className="text-xl text-white/70 mb-8 max-w-2xl mx-auto">
-              Exclusive partnerships for high-growth brands seeking exceptional design, data-driven marketing, and AI-powered automation.
+              Parteneriate exclusive pentru branduri în creștere rapidă care caută design excepțional, marketing bazat pe date și automatizare alimentată de AI.
             </p>
 
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-12">
@@ -113,7 +113,7 @@ export function HomePage({ onNavigate }: HomePageProps) {
                 onClick={() => onNavigate('apply')}
                 className="bg-gradient-to-r from-[#00AEEF] to-[#9333EA] text-white hover:opacity-90 transition-opacity h-14 px-8 glow-cyan text-lg"
               >
-                Apply for Collaboration
+                Aplică pentru Colaborare
                 <ArrowRight className="ml-2 w-5 h-5" />
               </Button>
               <Button
@@ -121,14 +121,14 @@ export function HomePage({ onNavigate }: HomePageProps) {
                 variant="outline"
                 className="border-white/20 text-white hover:bg-white/10 h-14 px-8 text-lg"
               >
-                View Our Work
+                Vezi Munca Noastră
               </Button>
             </div>
 
             <div className="glass rounded-lg p-4 max-w-md mx-auto">
               <p className="text-sm text-white/60">
                 <Award className="w-4 h-4 inline mr-2 text-[#00AEEF]" />
-                Limited to <span className="text-[#00AEEF]">12 clients per quarter</span> • Application required
+                Limitat la <span className="text-[#00AEEF]">12 clienți pe trimestru</span> • Aplicație necesară
               </p>
             </div>
           </motion.div>
@@ -138,7 +138,7 @@ export function HomePage({ onNavigate }: HomePageProps) {
       {/* Trusted By */}
       <section className="relative py-12 border-y border-white/10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <p className="text-center text-white/60 mb-8">Trusted by Industry Leaders</p>
+          <p className="text-center text-white/60 mb-8">De Încredere pentru Liderii din Industrie</p>
           <div className="grid grid-cols-2 md:grid-cols-6 gap-8">
             {clientLogos.map((logo, index) => (
               <motion.div
@@ -161,18 +161,18 @@ export function HomePage({ onNavigate }: HomePageProps) {
       <section className="relative py-20 bg-gradient-to-b from-transparent via-[#1A237E]/5 to-transparent">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-4xl mb-4">Impact That Speaks Volumes</h2>
+            <h2 className="text-4xl mb-4">Impact Care Vorbește de la Sine</h2>
             <p className="text-white/60 max-w-2xl mx-auto">
-              Data-driven results that transform businesses and exceed expectations
+              Rezultate bazate pe date care transformă afaceri și depășesc așteptările
             </p>
           </div>
 
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
             {[
-              { icon: Users, value: '200+', label: 'Projects Delivered', color: 'from-[#00AEEF] to-cyan-600' },
-              { icon: DollarSign, value: '$50M+', label: 'Revenue Generated', color: 'from-[#9333EA] to-purple-600' },
-              { icon: BarChart3, value: '247%', label: 'Avg ROI Increase', color: 'from-[#00AEEF] to-[#1A237E]' },
-              { icon: Clock, value: '98%', label: 'Client Retention', color: 'from-[#1A237E] to-[#9333EA]' },
+              { icon: Users, value: '200+', label: 'Proiecte Finalizate', color: 'from-[#00AEEF] to-cyan-600' },
+              { icon: DollarSign, value: '$50M+', label: 'Venituri Generate', color: 'from-[#9333EA] to-purple-600' },
+              { icon: BarChart3, value: '247%', label: 'Creștere ROI Medie', color: 'from-[#00AEEF] to-[#1A237E]' },
+              { icon: Clock, value: '98%', label: 'Retenție Clienți', color: 'from-[#1A237E] to-[#9333EA]' },
             ].map((stat, index) => (
               <motion.div
                 key={stat.label}
@@ -196,9 +196,9 @@ export function HomePage({ onNavigate }: HomePageProps) {
       <section className="relative py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-4xl mb-4">Elite Services for Elite Brands</h2>
+            <h2 className="text-4xl mb-4">Servicii de Elită pentru Branduri de Elită</h2>
             <p className="text-white/60 max-w-2xl mx-auto">
-              Comprehensive solutions designed to elevate every aspect of your digital presence
+              Soluții cuprinzătoare concepute pentru a ridica fiecare aspect al prezenței tale digitale
             </p>
           </div>
 
@@ -206,27 +206,27 @@ export function HomePage({ onNavigate }: HomePageProps) {
             {[
               {
                 icon: Code2,
-                title: 'Web Design & Development',
-                description: 'Premium websites and platforms built for conversion, performance, and scale',
-                features: ['Custom Development', 'E-Commerce Solutions', 'Progressive Web Apps'],
+                title: 'Design & Dezvoltare Web',
+                description: 'Site-uri și platforme premium construite pentru conversie, performanță și scalare',
+                features: ['Dezvoltare Personalizată', 'Soluții E-Commerce', 'Aplicații Web Progressive'],
               },
               {
                 icon: Megaphone,
-                title: 'Digital Marketing',
-                description: 'Data-driven campaigns that maximize ROI and accelerate growth',
-                features: ['PPC Management', 'SEO Strategy', 'Social Media Ads'],
+                title: 'Marketing Digital',
+                description: 'Campanii bazate pe date care maximizează ROI-ul și accelerează creșterea',
+                features: ['Management PPC', 'Strategie SEO', 'Reclame Social Media'],
               },
               {
                 icon: Palette,
-                title: 'Brand Strategy',
-                description: 'Distinctive brand identities that resonate and convert',
-                features: ['Brand Development', 'Visual Identity', 'Brand Guidelines'],
+                title: 'Strategie de Brand',
+                description: 'Identități de brand distinctive care rezonează și convertesc',
+                features: ['Dezvoltare Brand', 'Identitate Vizuală', 'Ghiduri Brand'],
               },
               {
                 icon: Brain,
-                title: 'AI Automation',
-                description: 'Intelligent systems that streamline operations and enhance customer experience',
-                features: ['Workflow Automation', 'AI Chatbots', 'Predictive Analytics'],
+                title: 'Automatizare AI',
+                description: 'Sisteme inteligente care simplifică operațiunile și îmbunătățesc experiența clienților',
+                features: ['Automatizare Fluxuri', 'Chatbot-uri AI', 'Analiză Predictivă'],
               },
             ].map((service, index) => (
               <motion.div
@@ -260,7 +260,7 @@ export function HomePage({ onNavigate }: HomePageProps) {
               variant="outline"
               className="border-white/20 text-white hover:bg-white/10 h-12 px-8"
             >
-              Explore All Services
+              Explorează Toate Serviciile
               <ArrowRight className="ml-2 w-4 h-4" />
             </Button>
           </div>
@@ -271,9 +271,9 @@ export function HomePage({ onNavigate }: HomePageProps) {
       <section className="relative py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-4xl mb-4">Why Premium Brands Choose WMD</h2>
+            <h2 className="text-4xl mb-4">De Ce Brandurile Premium Aleg WMD</h2>
             <p className="text-white/60 max-w-2xl mx-auto">
-              We combine strategic thinking, exceptional design, and cutting-edge technology to deliver transformative results.
+              Combinăm gândire strategică, design excepțional și tehnologie de ultimă generație pentru a livra rezultate transformatoare.
             </p>
           </div>
 
@@ -301,9 +301,9 @@ export function HomePage({ onNavigate }: HomePageProps) {
       <section className="relative py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-4xl mb-4">Proven Results</h2>
+            <h2 className="text-4xl mb-4">Rezultate Dovedite</h2>
             <p className="text-white/60 max-w-2xl mx-auto">
-              Real transformations, measurable impact, and exceptional growth for our partners.
+              Transformări reale, impact măsurabil și creștere excepțională pentru partenerii noștri.
             </p>
           </div>
 
@@ -326,7 +326,7 @@ export function HomePage({ onNavigate }: HomePageProps) {
               variant="outline"
               className="border-white/20 text-white hover:bg-white/10"
             >
-              View All Case Studies
+              Vezi Toate Studiile de Caz
               <ArrowRight className="ml-2 w-4 h-4" />
             </Button>
           </div>
@@ -337,9 +337,9 @@ export function HomePage({ onNavigate }: HomePageProps) {
       <section className="relative py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-4xl mb-4">What Our Partners Say</h2>
+            <h2 className="text-4xl mb-4">Ce Spun Partenerii Noștri</h2>
             <p className="text-white/60 max-w-2xl mx-auto">
-              Don't just take our word for it. Here's what our clients have to say about working with WMD.
+              Nu lua doar cuvântul nostru. Iată ce au de spus clienții noștri despre colaborarea cu WMD.
             </p>
           </div>
 
@@ -362,9 +362,9 @@ export function HomePage({ onNavigate }: HomePageProps) {
       <section className="relative py-20 bg-gradient-to-b from-transparent via-[#00AEEF]/5 to-transparent">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-4xl mb-4">Powered by Cutting-Edge Technology</h2>
+            <h2 className="text-4xl mb-4">Alimentat de Tehnologie de Ultimă Generație</h2>
             <p className="text-white/60 max-w-2xl mx-auto">
-              We leverage the latest tools and frameworks to deliver exceptional performance and scalability
+              Folosim cele mai recente instrumente și framework-uri pentru a livra performanță și scalabilitate excepționale
             </p>
           </div>
 
@@ -391,31 +391,31 @@ export function HomePage({ onNavigate }: HomePageProps) {
       <section className="relative py-20">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-4xl mb-4">Our Process</h2>
-            <p className="text-white/60">A proven methodology for exceptional results</p>
+            <h2 className="text-4xl mb-4">Procesul Nostru</h2>
+            <p className="text-white/60">O metodologie dovedită pentru rezultate excepționale</p>
           </div>
 
           <div className="space-y-8">
             {[
               {
                 step: '01',
-                title: 'Application & Discovery',
-                description: 'Submit your application and join a strategic discovery session to align goals and vision.',
+                title: 'Aplicație & Descoperire',
+                description: 'Trimite aplicația și alătură-te unei sesiuni strategice de descoperire pentru a alinia obiectivele și viziunea.',
               },
               {
                 step: '02',
-                title: 'Strategy & Planning',
-                description: 'We develop a comprehensive roadmap tailored to your business objectives and growth targets.',
+                title: 'Strategie & Planificare',
+                description: 'Dezvoltăm o foaie de parcurs cuprinzătoare adaptată obiectivelor tale de business și țintelor de creștere.',
               },
               {
                 step: '03',
-                title: 'Design & Development',
-                description: 'Our team crafts premium experiences with meticulous attention to detail and performance.',
+                title: 'Design & Dezvoltare',
+                description: 'Echipa noastră creează experiențe premium cu atenție meticuloasă la detalii și performanță.',
               },
               {
                 step: '04',
-                title: 'Launch & Optimization',
-                description: 'Strategic launch followed by continuous optimization and data-driven improvements.',
+                title: 'Lansare & Optimizare',
+                description: 'Lansare strategică urmată de optimizare continuă și îmbunătățiri bazate pe date.',
               },
             ].map((item, index) => (
               <motion.div
@@ -444,18 +444,18 @@ export function HomePage({ onNavigate }: HomePageProps) {
             <div className="relative grid md:grid-cols-2 gap-12 items-center">
               <div>
                 <div className="inline-block glass rounded-full px-4 py-1 mb-4">
-                  <span className="text-[#00AEEF] text-sm">Free Education • Lifetime Access</span>
+                  <span className="text-[#00AEEF] text-sm">Educație Gratuită • Acces pe Viață</span>
                 </div>
-                <h2 className="text-4xl mb-4">Master Digital Growth with WMD Academy</h2>
+                <h2 className="text-4xl mb-4">Stăpânește Creșterea Digitală cu Academia WMD</h2>
                 <p className="text-white/70 mb-6">
-                  Access premium courses on web design, e-commerce, digital marketing, and AI automation. Learn from industry experts and grow your business knowledge.
+                  Accesează cursuri premium despre design web, e-commerce, marketing digital și automatizare AI. Învață de la experți din industrie și dezvoltă-ți cunoștințele de business.
                 </p>
                 <ul className="space-y-3 mb-8">
                   {[
-                    'Expert-led video courses',
-                    'Real-world case studies',
-                    'Downloadable resources',
-                    'Community access'
+                    'Cursuri video conduse de experți',
+                    'Studii de caz din lumea reală',
+                    'Resurse descărcabile',
+                    'Acces la comunitate'
                   ].map((feature) => (
                     <li key={feature} className="flex items-center text-white/80">
                       <GraduationCap className="w-5 h-5 mr-3 text-[#00AEEF]" />
@@ -467,16 +467,16 @@ export function HomePage({ onNavigate }: HomePageProps) {
                   onClick={() => onNavigate('academy')}
                   className="bg-gradient-to-r from-[#00AEEF] to-[#9333EA] text-white hover:opacity-90 transition-opacity h-12 px-8"
                 >
-                  Start Learning Free
+                  Începe să Înveți Gratuit
                   <ArrowRight className="ml-2 w-4 h-4" />
                 </Button>
               </div>
               <div className="grid grid-cols-2 gap-4">
                 {[
-                  { title: 'Web Design', modules: '12 Modules' },
-                  { title: 'E-Commerce', modules: '8 Modules' },
-                  { title: 'Marketing', modules: '10 Modules' },
-                  { title: 'AI Automation', modules: '6 Modules' },
+                  { title: 'Design Web', modules: '12 Module' },
+                  { title: 'E-Commerce', modules: '8 Module' },
+                  { title: 'Marketing', modules: '10 Module' },
+                  { title: 'Automatizare AI', modules: '6 Module' },
                 ].map((course, index) => (
                   <motion.div
                     key={course.title}
@@ -502,37 +502,37 @@ export function HomePage({ onNavigate }: HomePageProps) {
           <div className="text-center mb-16">
             <div className="inline-block glass-strong rounded-full px-6 py-2 mb-6">
               <Lock className="w-4 h-4 inline mr-2 text-[#00AEEF]" />
-              <span className="text-[#00AEEF]">Exclusive Partnership</span>
+              <span className="text-[#00AEEF]">Parteneriat Exclusiv</span>
             </div>
-            <h2 className="text-4xl mb-4">Who We Work With</h2>
+            <h2 className="text-4xl mb-4">Cu Cine Lucrăm</h2>
             <p className="text-white/60 max-w-2xl mx-auto">
-              We partner exclusively with ambitious brands ready to invest in transformative growth
+              Ne asociem exclusiv cu branduri ambițioase pregătite să investească în creștere transformatoare
             </p>
           </div>
 
           <div className="grid md:grid-cols-2 gap-6">
             {[
               {
-                title: 'Ideal Partners',
+                title: 'Parteneri Ideali',
                 icon: CheckCircle2,
                 items: [
-                  'Annual revenue $500K+',
-                  'Committed to growth and innovation',
-                  'Value strategic partnership',
-                  'Ready to invest in premium solutions',
-                  'Open to data-driven approaches'
+                  'Venit anual $500K+',
+                  'Angajați pentru creștere și inovație',
+                  'Apreciază parteneriatul strategic',
+                  'Pregătiți să investească în soluții premium',
+                  'Deschiși la abordări bazate pe date'
                 ],
                 className: 'border-[#00AEEF]/30'
               },
               {
-                title: 'Not a Fit',
+                title: 'Nu Sunt Potriviți',
                 icon: Target,
                 items: [
-                  'Looking for the cheapest option',
-                  'Need work done "yesterday"',
-                  'Not open to professional guidance',
-                  'Unwilling to invest in quality',
-                  'Seeking template-based solutions'
+                  'Caută opțiunea cea mai ieftină',
+                  'Au nevoie de lucru făcut "ieri"',
+                  'Nu sunt deschiși la îndrumare profesională',
+                  'Nu vor să investească în calitate',
+                  'Caută soluții bazate pe template-uri'
                 ],
                 className: 'border-white/10'
               }
@@ -562,13 +562,13 @@ export function HomePage({ onNavigate }: HomePageProps) {
 
           <div className="text-center mt-12">
             <p className="text-white/60 mb-6">
-              Limited to <span className="text-[#00AEEF]">12 new partnerships per quarter</span>
+              Limitat la <span className="text-[#00AEEF]">12 parteneriate noi pe trimestru</span>
             </p>
             <Button
               onClick={() => onNavigate('apply')}
               className="bg-gradient-to-r from-[#00AEEF] to-[#9333EA] text-white hover:opacity-90 transition-opacity h-12 px-8"
             >
-              Apply Now
+              Aplică Acum
               <ArrowRight className="ml-2 w-4 h-4" />
             </Button>
           </div>
@@ -580,15 +580,15 @@ export function HomePage({ onNavigate }: HomePageProps) {
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="glass-strong rounded-2xl p-8 md:p-12 text-center glow-indigo">
             <Rocket className="w-16 h-16 mx-auto mb-6 text-[#00AEEF]" />
-            <h2 className="text-3xl mb-4">Premium Hosting & Domains</h2>
+            <h2 className="text-3xl mb-4">Găzduire & Domenii Premium</h2>
             <p className="text-white/70 mb-8 max-w-2xl mx-auto">
-              Enterprise-grade infrastructure powered by ROMARG. Secure, fast, and reliable hosting solutions for businesses that demand excellence.
+              Infrastructură de nivel enterprise alimentată de ROMARG. Soluții de găzduire sigure, rapide și fiabile pentru afaceri care cer excelență.
             </p>
             <Button
               onClick={() => onNavigate('hosting')}
               className="bg-gradient-to-r from-[#00AEEF] to-[#9333EA] text-white hover:opacity-90 transition-opacity"
             >
-              Explore Hosting Plans
+              Explorează Planurile de Găzduire
             </Button>
           </div>
         </div>
@@ -598,21 +598,21 @@ export function HomePage({ onNavigate }: HomePageProps) {
       <section className="relative py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-4xl mb-4">Industry Expertise</h2>
+            <h2 className="text-4xl mb-4">Expertiză în Industrie</h2>
             <p className="text-white/60 max-w-2xl mx-auto">
-              Deep knowledge across diverse sectors, delivering tailored solutions that drive results
+              Cunoștințe profunde în sectoare diverse, oferind soluții personalizate care generează rezultate
             </p>
           </div>
 
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
             {[
-              { name: 'SaaS & Technology', icon: Code2 },
+              { name: 'SaaS & Tehnologie', icon: Code2 },
               { name: 'E-Commerce', icon: Globe },
-              { name: 'Professional Services', icon: Briefcase },
-              { name: 'Healthcare', icon: Shield },
-              { name: 'Finance & Fintech', icon: DollarSign },
-              { name: 'Real Estate', icon: Target },
-              { name: 'Education', icon: GraduationCap },
+              { name: 'Servicii Profesionale', icon: Briefcase },
+              { name: 'Sănătate', icon: Shield },
+              { name: 'Finanțe & Fintech', icon: DollarSign },
+              { name: 'Imobiliare', icon: Target },
+              { name: 'Educație', icon: GraduationCap },
               { name: 'Manufacturing', icon: BarChart3 },
             ].map((industry, index) => (
               <motion.div
@@ -634,37 +634,37 @@ export function HomePage({ onNavigate }: HomePageProps) {
       <section className="relative py-20 bg-gradient-to-b from-transparent via-[#00AEEF]/5 to-transparent">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-4xl mb-4">Frequently Asked Questions</h2>
+            <h2 className="text-4xl mb-4">Întrebări Frecvente</h2>
             <p className="text-white/60">
-              Everything you need to know about partnering with WMD
+              Tot ce trebuie să știi despre parteneriatul cu WMD
             </p>
           </div>
 
           <Accordion type="single" collapsible className="space-y-4">
             {[
               {
-                question: 'What is your typical project timeline?',
-                answer: 'Project timelines vary based on scope and complexity. A typical website project ranges from 6-12 weeks, while comprehensive digital transformations can take 3-6 months. We provide detailed timelines during the discovery phase.'
+                question: 'Care este cronologia tipică a unui proiect?',
+                answer: 'Cronologia proiectelor variază în funcție de domeniu și complexitate. Un proiect tipic de site web durează 6-12 săptămâni, în timp ce transformările digitale cuprinzătoare pot dura 3-6 luni. Oferim cronologii detaliate în faza de descoperire.'
               },
               {
-                question: 'What are your minimum project requirements?',
-                answer: 'We work with established businesses with annual revenue of $500K+ and project budgets starting at $25,000. This ensures we can deliver the quality and depth of service that drives transformative results.'
+                question: 'Care sunt cerințele minime pentru proiecte?',
+                answer: 'Lucrăm cu afaceri consacrate cu venituri anuale de $500K+ și bugete de proiect începând de la $25,000. Acest lucru asigură că putem livra calitatea și profunzimea serviciilor care generează rezultate transformatoare.'
               },
               {
-                question: 'Do you offer payment plans?',
-                answer: 'Yes, we offer flexible payment structures for qualified clients. Typically, we work with a 50% deposit and milestone-based payments throughout the project lifecycle.'
+                question: 'Oferiți planuri de plată?',
+                answer: 'Da, oferim structuri de plată flexibile pentru clienții calificați. De obicei, lucrăm cu un avans de 50% și plăți bazate pe milestone-uri pe parcursul ciclului de viață al proiectului.'
               },
               {
-                question: 'How do you measure success?',
-                answer: 'We establish clear KPIs aligned with your business objectives during the discovery phase. This includes metrics like conversion rates, revenue growth, user engagement, and ROI. We provide detailed analytics and regular reporting.'
+                question: 'Cum măsurați succesul?',
+                answer: 'Stabilim KPI-uri clare aliniate cu obiectivele tale de business în faza de descoperire. Acestea includ metrici precum ratele de conversie, creșterea veniturilor, implicarea utilizatorilor și ROI. Oferim analize detaliate și raportare regulată.'
               },
               {
-                question: 'What ongoing support do you provide?',
-                answer: 'All clients receive 30 days of post-launch support included. We also offer monthly retainer packages for ongoing optimization, maintenance, and strategic guidance to ensure continued growth.'
+                question: 'Ce suport continuu oferiți?',
+                answer: 'Toți clienții primesc 30 de zile de suport post-lansare incluse. De asemenea, oferim pachete de reținere lunare pentru optimizare continuă, întreținere și îndrumare strategică pentru a asigura creșterea continuă.'
               },
               {
-                question: 'Why is there an application process?',
-                answer: 'Our application process ensures mutual fit and allows us to maintain the quality of service our clients expect. We can only take on 12 new partnerships per quarter, so we carefully select projects where we can deliver exceptional results.'
+                question: 'De ce există un proces de aplicație?',
+                answer: 'Procesul nostru de aplicație asigură potrivirea reciprocă și ne permite să menținem calitatea serviciilor pe care clienții noștri o așteaptă. Putem accepta doar 12 parteneriate noi pe trimestru, deci selectăm cu atenție proiectele unde putem livra rezultate excepționale.'
               }
             ].map((faq, index) => (
               <AccordionItem
@@ -688,16 +688,16 @@ export function HomePage({ onNavigate }: HomePageProps) {
       <section className="relative py-20">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-4xl md:text-5xl mb-6">
-            Ready to <span className="text-gradient">Transform</span> Your Digital Presence?
+            Ești Gata să îți <span className="text-gradient">Transformi</span> Prezența Digitală?
           </h2>
           <p className="text-xl text-white/70 mb-8">
-            Join the exclusive group of high-growth brands we partner with.
+            Alătură-te grupului exclusiv de branduri în creștere rapidă cu care ne asociem.
           </p>
           <Button
             onClick={() => onNavigate('apply')}
             className="bg-gradient-to-r from-[#00AEEF] to-[#9333EA] text-white hover:opacity-90 transition-opacity h-14 px-8 text-lg glow-cyan"
           >
-            Apply for Collaboration
+            Aplică pentru Colaborare
             <ArrowRight className="ml-2 w-5 h-5" />
           </Button>
         </div>

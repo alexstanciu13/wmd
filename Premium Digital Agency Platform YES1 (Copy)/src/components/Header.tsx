@@ -21,13 +21,13 @@ export function Header({ currentPage, onNavigate }: HeaderProps) {
   }, []);
 
   const navigation = [
-    { name: 'Home', page: 'home' },
-    { name: 'Services', page: 'services' },
-    { name: 'Portfolio', page: 'portfolio' },
-    { name: 'WMD Academy', page: 'academy' },
+    { name: 'Acasă', page: 'home' },
+    { name: 'Servicii', page: 'services' },
+    { name: 'Portofoliu', page: 'portfolio' },
+    { name: 'Academia WMD', page: 'academy' },
     { name: 'Web Media AI', page: 'ai' },
-    { name: 'Hosting', page: 'hosting' },
-    { name: 'About', page: 'about' },
+    { name: 'Găzduire', page: 'hosting' },
+    { name: 'Despre', page: 'about' },
   ];
 
   return (
@@ -72,7 +72,7 @@ export function Header({ currentPage, onNavigate }: HeaderProps) {
               onClick={() => onNavigate('apply')}
               className="bg-gradient-to-r from-[#00AEEF] to-[#9333EA] text-white hover:opacity-90 transition-opacity glow-cyan"
             >
-              Apply Now
+              Aplică Acum
             </Button>
           </div>
 
@@ -111,7 +111,7 @@ export function Header({ currentPage, onNavigate }: HeaderProps) {
               }}
               className="w-full bg-gradient-to-r from-[#00AEEF] to-[#9333EA] text-white"
             >
-              Apply Now
+              Aplică Acum
             </Button>
           </div>
         </div>
