@@ -16,7 +16,6 @@ export function Footer({ onNavigate }: FooterProps) {
     { name: 'Despre Noi', page: 'about' },
     { name: 'Portofoliu', page: 'portfolio' },
     { name: 'Academia WMD', page: 'academy' },
-    { name: 'Găzduire & Domenii', page: 'hosting' },
   ];
 
   return (

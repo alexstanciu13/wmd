@@ -40,7 +40,7 @@ export function ServiceDetailPage({ service, onNavigate }: ServiceDetailPageProp
               onClick={() => onNavigate('apply')}
               className="bg-gradient-to-r from-[#00AEEF] to-[#9333EA] text-white hover:opacity-90 transition-opacity h-12 px-8"
             >
-              Get Started
+              Începe Acum
               <ArrowRight className="ml-2 w-5 h-5" />
             </Button>
           </motion.div>
@@ -64,8 +64,8 @@ export function ServiceDetailPage({ service, onNavigate }: ServiceDetailPageProp
       {/* Features */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-20">
         <div className="text-center mb-12">
-          <h2 className="text-4xl mb-4">What's Included</h2>
-          <p className="text-white/60">Comprehensive solutions tailored to your needs</p>
+          <h2 className="text-4xl mb-4">Ce Este Inclus</h2>
+          <p className="text-white/60">Soluții complete adaptate nevoilor tale</p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -87,7 +87,7 @@ export function ServiceDetailPage({ service, onNavigate }: ServiceDetailPageProp
       {/* Benefits */}
       <section className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 mb-20">
         <div className="glass-strong rounded-2xl p-8 md:p-12">
-          <h2 className="text-3xl mb-8 text-center">Why Choose WMD</h2>
+          <h2 className="text-3xl mb-8 text-center">De Ce Să Alegi WMD</h2>
           <div className="space-y-4">
             {service.benefits.map((benefit, index) => (
               <motion.div
@@ -110,8 +110,8 @@ export function ServiceDetailPage({ service, onNavigate }: ServiceDetailPageProp
       {/* Process */}
       <section className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 mb-20">
         <div className="text-center mb-12">
-          <h2 className="text-4xl mb-4">Our Process</h2>
-          <p className="text-white/60">How we deliver exceptional results</p>
+          <h2 className="text-4xl mb-4">Procesul Nostru</h2>
+          <p className="text-white/60">Cum livrăm rezultate excepționale</p>
         </div>
 
         <div className="space-y-6">
@@ -138,16 +138,16 @@ export function ServiceDetailPage({ service, onNavigate }: ServiceDetailPageProp
       {/* Pricing */}
       <section className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 mb-20">
         <div className="glass-strong rounded-2xl p-8 md:p-12 text-center">
-          <h2 className="text-3xl mb-4">Investment</h2>
+          <h2 className="text-3xl mb-4">Investiție</h2>
           <div className="text-5xl text-gradient mb-4">{service.pricing}</div>
           <p className="text-white/60 mb-8">
-            Custom solutions tailored to your specific needs and goals
+            Soluții personalizate adaptate nevoilor și obiectivelor tale specifice
           </p>
           <Button
             onClick={() => onNavigate('apply')}
             className="bg-gradient-to-r from-[#00AEEF] to-[#9333EA] text-white hover:opacity-90 transition-opacity h-12 px-8"
           >
-            Request Proposal
+            Solicită Propunere
           </Button>
         </div>
       </section>
@@ -155,23 +155,23 @@ export function ServiceDetailPage({ service, onNavigate }: ServiceDetailPageProp
       {/* CTA */}
       <section className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center">
-          <h2 className="text-4xl mb-6">Ready to Get Started?</h2>
+          <h2 className="text-4xl mb-6">Ești Gata să Începi?</h2>
           <p className="text-xl text-white/70 mb-8">
-            Let's discuss how we can help you achieve your goals.
+            Să discutăm cum te putem ajuta să îți atingi obiectivele.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button
               onClick={() => onNavigate('apply')}
               className="bg-gradient-to-r from-[#00AEEF] to-[#9333EA] text-white hover:opacity-90 transition-opacity h-12 px-8"
             >
-              Apply Now
+              Aplică Acum
             </Button>
             <Button
               onClick={() => onNavigate('portfolio')}
               variant="outline"
               className="border-white/20 text-white hover:bg-white/10 h-12 px-8"
             >
-              View Case Studies
+              Vezi Studii de Caz
             </Button>
           </div>
         </div>

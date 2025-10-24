@@ -11,45 +11,45 @@ export function AboutPage({ onNavigate }: AboutPageProps) {
   const values = [
     {
       icon: Target,
-      title: 'Excellence',
-      description: 'We pursue perfection in every project, never settling for good enough.',
+      title: 'Excelență',
+      description: 'Urmărim perfecțiunea în fiecare proiect, fără a ne mulțumi cu suficient de bine.',
     },
     {
       icon: Shield,
-      title: 'Integrity',
-      description: 'Transparency and honesty guide every client interaction and decision.',
+      title: 'Integritate',
+      description: 'Transparența și onestitatea ghidează fiecare interacțiune cu clienții și decizie.',
     },
     {
       icon: Zap,
-      title: 'Innovation',
-      description: 'We stay ahead of trends, leveraging cutting-edge technology for results.',
+      title: 'Inovație',
+      description: 'Rămânem înaintea tendințelor, folosind tehnologie de ultimă generație pentru rezultate.',
     },
     {
       icon: Heart,
-      title: 'Partnership',
-      description: 'Your success is our success. We\'re in this together, long-term.',
+      title: 'Parteneriat',
+      description: 'Succesul tău este succesul nostru. Suntem împreună în asta, pe termen lung.',
     },
   ];
 
   const team = [
     {
       name: 'Sarah Che',
-      role: 'Founder & CEO',
+      role: 'Fondator & CEO',
       image: 'https://images.unsplash.com/photo-1531545514256-b1400bc00f31?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx0ZWFtJTIwY29sbGFib3JhdGlvbiUyMG1lZXRpbmd8ZW58MXx8fHwxNzYxMjkwOTA4fDA&ixlib=rb-4.1.0&q=80&w=1080',
     },
     {
       name: 'Michael Rodriguez',
-      role: 'Creative Director',
+      role: 'Director Creativ',
       image: 'https://images.unsplash.com/photo-1640109341881-1cd3eaf50909?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxsdXh1cnklMjBvZmZpY2UlMjB3b3Jrc3BhY2V8ZW58MXx8fHwxNzYxMjMzMzI1fDA&ixlib=rb-4.1.0&q=80&w=1080',
     },
     {
       name: 'Emily Watson',
-      role: 'Head of Strategy',
+      role: 'Șef Strategie',
       image: 'https://images.unsplash.com/photo-1599658880436-c61792e70672?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxkaWdpdGFsJTIwbWFya2V0aW5nJTIwYW5hbHl0aWNzfGVufDF8fHx8MTc2MTIzMDUwNHww&ixlib=rb-4.1.0&q=80&w=1080',
     },
     {
       name: 'David Kim',
-      role: 'Lead Developer',
+      role: 'Dezvoltator Principal',
       image: 'https://images.unsplash.com/photo-1697577418970-95d99b5a55cf?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxhcnRpZmljaWFsJTIwaW50ZWxsaWdlbmNlJTIwdGVjaG5vbG9neXxlbnwxfHx8fDE3NjEyMTA4MTV8MA&ixlib=rb-4.1.0&q=80&w=1080',
     },
   ];
@@ -64,11 +64,11 @@ export function AboutPage({ onNavigate }: AboutPageProps) {
           className="text-center"
         >
           <h1 className="text-5xl md:text-6xl mb-6">
-            About <span className="text-gradient">Web Media Design</span>
+            Despre <span className="text-gradient">Web Media Design</span>
           </h1>
 
           <p className="text-xl text-white/70 max-w-3xl mx-auto">
-            We're not just another agency. We're your strategic partner in digital transformation.
+            Nu suntem doar o altă agenție. Suntem partenerul tău strategic în transformarea digitală.
           </p>
         </motion.div>
       </section>
@@ -76,25 +76,26 @@ export function AboutPage({ onNavigate }: AboutPageProps) {
       {/* Story Section */}
       <section className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 mb-20">
         <div className="glass-strong rounded-2xl p-8 md:p-12">
-          <h2 className="text-3xl mb-6 text-center">Our Story</h2>
+          <h2 className="text-3xl mb-6 text-center">Povestea Noastră</h2>
           <div className="space-y-4 text-white/70">
             <p>
-              Founded in 2018, Web Media Design emerged from a simple observation: most digital agencies
-              prioritize quantity over quality, treating clients as transactions rather than partners.
-              We knew there was a better way.
+              Fondată în 2018, Web Media Design a apărut dintr-o observație simplă: majoritatea agențiilor digitale
+              prioritizează cantitatea în detrimentul calității, tratând clienții ca tranzacții și nu ca parteneri.
+              Știam că există o cale mai bună.
             </p>
             <p>
-              We built WMD on the principle of exclusivity and excellence. By limiting our client roster
-              to just 12 partnerships per quarter, we ensure every project receives the strategic attention,
-              creative excellence, and technical precision it deserves.
+              Am construit WMD pe principiul exclusivității și excelenței. Limitând lista noastră de clienți
+              la doar 12 parteneriate pe trimestru, ne asigurăm că fiecare proiect primește atenția strategică,
+              excelența creativă și precizia tehnică pe care le merită.
             </p>
             <p>
-              Today, we're proud to partner with some of the most ambitious brands in tech, e-commerce,
-              and professional services. Our clients don't just see results—they experience transformation.
+              Astăzi, suntem mândri să fim partenerii unor dintre cele mai ambițioase branduri din tech, e-commerce
+              și servicii profesionale. Clienții noștri nu doar văd rezultate—ei experimentează transformare.
             </p>
             <p>
-              This isn't about building websites or running ads. It's about architecting digital ecosystems
-              that drive sustainable growth, powered by data, fueled by creativity, and executed with precision.
+              Nu este vorba despre construirea de site-uri web sau difuzarea de reclame. Este vorba despre arhitecturarea
+              ecosistemelor digitale care generează creștere sustenabilă, alimentate de date, înflăcărate de creativitate
+              și executate cu precizie.
             </p>
           </div>
         </div>
@@ -103,8 +104,8 @@ export function AboutPage({ onNavigate }: AboutPageProps) {
       {/* Values */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-20">
         <div className="text-center mb-12">
-          <h2 className="text-4xl mb-4">Our Values</h2>
-          <p className="text-white/60">The principles that guide everything we do</p>
+          <h2 className="text-4xl mb-4">Valorile Noastre</h2>
+          <p className="text-white/60">Principiile care ghidează tot ce facem</p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -129,8 +130,8 @@ export function AboutPage({ onNavigate }: AboutPageProps) {
       {/* Team */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-20">
         <div className="text-center mb-12">
-          <h2 className="text-4xl mb-4">Meet Our Team</h2>
-          <p className="text-white/60">The experts behind your success</p>
+          <h2 className="text-4xl mb-4">Întâlnește Echipa Noastră</h2>
+          <p className="text-white/60">Experții din spatele succesului tău</p>
         </div>
 
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
@@ -161,20 +162,20 @@ export function AboutPage({ onNavigate }: AboutPageProps) {
         <div className="glass-strong rounded-2xl p-8">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
             <div>
-              <div className="text-4xl text-gradient mb-2">7+ Years</div>
-              <div className="text-white/60">In Business</div>
+              <div className="text-4xl text-gradient mb-2">7+ Ani</div>
+              <div className="text-white/60">În Afaceri</div>
             </div>
             <div>
               <div className="text-4xl text-gradient mb-2">150+</div>
-              <div className="text-white/60">Projects Delivered</div>
+              <div className="text-white/60">Proiecte Finalizate</div>
             </div>
             <div>
               <div className="text-4xl text-gradient mb-2">$50M+</div>
-              <div className="text-white/60">Client Revenue</div>
+              <div className="text-white/60">Venituri Clienți</div>
             </div>
             <div>
               <div className="text-4xl text-gradient mb-2">98%</div>
-              <div className="text-white/60">Retention Rate</div>
+              <div className="text-white/60">Rată Retenție</div>
             </div>
           </div>
         </div>
@@ -188,19 +189,19 @@ export function AboutPage({ onNavigate }: AboutPageProps) {
               <Award className="w-8 h-8 text-white" />
             </div>
             <div>
-              <h2 className="text-3xl mb-4">Why We're Exclusive</h2>
+              <h2 className="text-3xl mb-4">De Ce Suntem Exclusivi</h2>
               <p className="text-white/70 mb-4">
-                Quality takes time. Deep strategy takes focus. Transformational results require partnership.
+                Calitatea necesită timp. Strategia profundă necesită concentrare. Rezultatele transformatoare necesită parteneriat.
               </p>
               <p className="text-white/70 mb-4">
-                By limiting our client roster to 12 partnerships per quarter, we ensure that every project
-                gets the senior-level attention it deserves. No junior teams, no cookie-cutter solutions,
-                no divided attention.
+                Limitând lista noastră de clienți la 12 parteneriate pe trimestru, ne asigurăm că fiecare proiect
+                primește atenția la nivel senior pe care o merită. Fără echipe junior, fără soluții de tip cookie-cutter,
+                fără atenție divizată.
               </p>
               <p className="text-white/70">
-                This exclusivity isn't about being difficult—it's about being exceptional. It's about
-                ensuring we can deliver the level of service, creativity, and results that justify your
-                investment and our reputation.
+                Această exclusivitate nu înseamnă a fi dificili—înseamnă a fi excepționali. Este despre
+                asigurarea că putem livra nivelul de serviciu, creativitate și rezultate care justifică
+                investiția ta și reputația noastră.
               </p>
             </div>
           </div>
@@ -210,15 +211,15 @@ export function AboutPage({ onNavigate }: AboutPageProps) {
       {/* CTA */}
       <section className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center">
-          <h2 className="text-4xl mb-6">Ready to Join Our Partner Network?</h2>
+          <h2 className="text-4xl mb-6">Ești Gata să te Alături Rețelei Noastre de Parteneri?</h2>
           <p className="text-xl text-white/70 mb-8">
-            We're selective about who we work with, and we're looking for brands ready to make a real impact.
+            Suntem selectivi cu cine lucrăm și căutăm branduri gata să facă un impact real.
           </p>
           <Button
             onClick={() => onNavigate('apply')}
             className="bg-gradient-to-r from-[#00AEEF] to-[#9333EA] text-white hover:opacity-90 transition-opacity h-14 px-8 text-lg glow-cyan"
           >
-            Apply for Collaboration
+            Aplică pentru Colaborare
           </Button>
         </div>
       </section>
