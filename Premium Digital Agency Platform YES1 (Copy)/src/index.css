@@ -76,7 +76,7 @@
     --font-sans: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
     --color-cyan-600: oklch(.609 .126 221.723);
-    --color-purple-600: oklch(.558 .288 302.321);
+    --color-blue-700: oklch(.558 .288 302.321);
     --color-gray-100: oklch(.967 .003 264.542);
     --color-white: #fff;
     --spacing: .25rem;
@@ -1369,7 +1369,7 @@
   }
 
   .from-\[\#9333EA\] {
-    --tw-gradient-from: #9333ea;
+    --tw-gradient-from: #1E40AF;
     --tw-gradient-stops: var(--tw-gradient-via-stops, var(--tw-gradient-position), var(--tw-gradient-from) var(--tw-gradient-from-position), var(--tw-gradient-to) var(--tw-gradient-to-position));
   }
 
@@ -1407,7 +1407,7 @@
   }
 
   .to-\[\#9333EA\] {
-    --tw-gradient-to: #9333ea;
+    --tw-gradient-to: #1E40AF;
     --tw-gradient-stops: var(--tw-gradient-via-stops, var(--tw-gradient-position), var(--tw-gradient-from) var(--tw-gradient-from-position), var(--tw-gradient-to) var(--tw-gradient-to-position));
   }
 
@@ -1421,8 +1421,8 @@
     --tw-gradient-stops: var(--tw-gradient-via-stops, var(--tw-gradient-position), var(--tw-gradient-from) var(--tw-gradient-from-position), var(--tw-gradient-to) var(--tw-gradient-to-position));
   }
 
-  .to-purple-600 {
-    --tw-gradient-to: var(--color-purple-600);
+  .to-blue-700 {
+    --tw-gradient-to: var(--color-blue-700);
     --tw-gradient-stops: var(--tw-gradient-via-stops, var(--tw-gradient-position), var(--tw-gradient-from) var(--tw-gradient-from-position), var(--tw-gradient-to) var(--tw-gradient-to-position));
   }
 
@@ -1661,7 +1661,7 @@
   }
 
   .text-\[\#9333EA\] {
-    color: #9333ea;
+    color: #1E40AF;
   }
 
   .text-\[\#FFD700\] {

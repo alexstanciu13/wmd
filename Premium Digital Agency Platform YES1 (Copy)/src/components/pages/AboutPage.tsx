@@ -117,7 +117,7 @@ export function AboutPage({ onNavigate }: AboutPageProps) {
               transition={{ delay: index * 0.1 }}
               className="glass rounded-xl p-6 text-center"
             >
-              <div className="w-16 h-16 rounded-xl bg-gradient-to-br from-[#00AEEF] to-[#9333EA] flex items-center justify-center mx-auto mb-4">
+              <div className="w-16 h-16 rounded-xl bg-gradient-to-br from-[#00AEEF] to-[#1E40AF] flex items-center justify-center mx-auto mb-4">
                 <value.icon className="w-8 h-8 text-white" />
               </div>
               <h3 className="text-xl mb-3">{value.title}</h3>
@@ -185,7 +185,7 @@ export function AboutPage({ onNavigate }: AboutPageProps) {
       <section className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 mb-20">
         <div className="glass rounded-2xl p-8 md:p-12">
           <div className="flex items-start space-x-6">
-            <div className="w-16 h-16 rounded-xl bg-gradient-to-br from-[#00AEEF] to-[#9333EA] flex items-center justify-center flex-shrink-0">
+            <div className="w-16 h-16 rounded-xl bg-gradient-to-br from-[#00AEEF] to-[#1E40AF] flex items-center justify-center flex-shrink-0">
               <Award className="w-8 h-8 text-white" />
             </div>
             <div>
@@ -217,7 +217,7 @@ export function AboutPage({ onNavigate }: AboutPageProps) {
           </p>
           <Button
             onClick={() => onNavigate('apply')}
-            className="bg-gradient-to-r from-[#00AEEF] to-[#9333EA] text-white hover:opacity-90 transition-opacity h-14 px-8 text-lg glow-cyan"
+            className="bg-gradient-to-r from-[#00AEEF] to-[#1E40AF] text-white hover:opacity-90 transition-opacity h-14 px-8 text-lg glow-cyan"
           >
             Aplică pentru Colaborare
           </Button>

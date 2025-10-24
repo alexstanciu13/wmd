@@ -34,7 +34,7 @@ export function ServicesPage({ onNavigate }: ServicesPageProps) {
         'Analytics & Raportare',
       ],
       page: 'marketing',
-      color: 'from-[#9333EA] to-[#00AEEF]',
+      color: 'from-[#1E40AF] to-[#00AEEF]',
     },
     {
       icon: Sparkles,
@@ -48,7 +48,7 @@ export function ServicesPage({ onNavigate }: ServicesPageProps) {
         'Poziționare Brand',
       ],
       page: 'branding',
-      color: 'from-[#1A237E] to-[#9333EA]',
+      color: 'from-[#1A237E] to-[#1E40AF]',
     },
     {
       icon: Bot,
@@ -62,7 +62,7 @@ export function ServicesPage({ onNavigate }: ServicesPageProps) {
         'Soluții AI Personalizate',
       ],
       page: 'ai-automation',
-      color: 'from-[#00AEEF] to-[#9333EA]',
+      color: 'from-[#00AEEF] to-[#1E40AF]',
     },
   ];
 
@@ -117,7 +117,7 @@ export function ServicesPage({ onNavigate }: ServicesPageProps) {
             >
               <div className={`h-2 bg-gradient-to-r ${service.color}`} />
               <div className="p-8">
-                <div className="w-16 h-16 rounded-xl bg-gradient-to-br from-[#00AEEF] to-[#9333EA] flex items-center justify-center mb-6">
+                <div className="w-16 h-16 rounded-xl bg-gradient-to-br from-[#00AEEF] to-[#1E40AF] flex items-center justify-center mb-6">
                   <service.icon className="w-8 h-8 text-white" />
                 </div>
 
@@ -135,7 +135,7 @@ export function ServicesPage({ onNavigate }: ServicesPageProps) {
 
                 <Button
                   onClick={() => onNavigate(service.page)}
-                  className="bg-gradient-to-r from-[#00AEEF] to-[#9333EA] text-white hover:opacity-90 transition-opacity w-full group"
+                  className="bg-gradient-to-r from-[#00AEEF] to-[#1E40AF] text-white hover:opacity-90 transition-opacity w-full group"
                 >
                   Află Mai Multe
                   <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
@@ -187,7 +187,7 @@ export function ServicesPage({ onNavigate }: ServicesPageProps) {
           </p>
           <Button
             onClick={() => onNavigate('apply')}
-            className="bg-gradient-to-r from-[#00AEEF] to-[#9333EA] text-white hover:opacity-90 transition-opacity h-12 px-8"
+            className="bg-gradient-to-r from-[#00AEEF] to-[#1E40AF] text-white hover:opacity-90 transition-opacity h-12 px-8"
           >
             Aplică pentru Colaborare
             <ArrowRight className="ml-2 w-5 h-5" />
