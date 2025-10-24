@@ -6,17 +6,17 @@ interface FooterProps {
 
 export function Footer({ onNavigate }: FooterProps) {
   const services = [
-    { name: 'Web Design', page: 'web-design' },
-    { name: 'Digital Marketing', page: 'marketing' },
+    { name: 'Design Web', page: 'web-design' },
+    { name: 'Marketing Digital', page: 'marketing' },
     { name: 'Branding', page: 'branding' },
-    { name: 'AI Automation', page: 'ai-automation' },
+    { name: 'Automatizare AI', page: 'ai-automation' },
   ];
 
   const company = [
-    { name: 'About Us', page: 'about' },
-    { name: 'Portfolio', page: 'portfolio' },
-    { name: 'WMD Academy', page: 'academy' },
-    { name: 'Hosting & Domains', page: 'hosting' },
+    { name: 'Despre Noi', page: 'about' },
+    { name: 'Portofoliu', page: 'portfolio' },
+    { name: 'Academia WMD', page: 'academy' },
+    { name: 'Găzduire & Domenii', page: 'hosting' },
   ];
 
   return (
@@ -32,7 +32,7 @@ export function Footer({ onNavigate }: FooterProps) {
               <span className="text-gradient">WMD</span>
             </div>
             <p className="text-white/60 mb-4">
-              Premium digital agency crafting exceptional experiences for high-growth brands.
+              Agenție digitală premium care creează experiențe excepționale pentru branduri în creștere rapidă.
             </p>
             <div className="flex space-x-4">
               <a href="#" className="text-white/60 hover:text-[#00AEEF] transition-colors">
@@ -52,7 +52,7 @@ export function Footer({ onNavigate }: FooterProps) {
 
           {/* Services */}
           <div>
-            <h3 className="mb-4">Services</h3>
+            <h3 className="mb-4">Servicii</h3>
             <ul className="space-y-3">
               {services.map((item) => (
                 <li key={item.page}>
@@ -69,7 +69,7 @@ export function Footer({ onNavigate }: FooterProps) {
 
           {/* Company */}
           <div>
-            <h3 className="mb-4">Company</h3>
+            <h3 className="mb-4">Companie</h3>
             <ul className="space-y-3">
               {company.map((item) => (
                 <li key={item.page}>
@@ -107,14 +107,14 @@ export function Footer({ onNavigate }: FooterProps) {
         {/* Bottom Bar */}
         <div className="pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
           <p className="text-white/60">
-            © 2025 Web Media Design. All rights reserved.
+            © 2025 Web Media Design. Toate drepturile rezervate.
           </p>
           <div className="flex space-x-6">
             <a href="#" className="text-white/60 hover:text-[#00AEEF] transition-colors">
-              Privacy Policy
+              Politica de Confidențialitate
             </a>
             <a href="#" className="text-white/60 hover:text-[#00AEEF] transition-colors">
-              Terms of Service
+              Termeni și Condiții
             </a>
           </div>
         </div>

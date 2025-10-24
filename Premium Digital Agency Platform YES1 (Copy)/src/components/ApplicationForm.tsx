@@ -12,7 +12,7 @@ interface ApplicationFormProps {
   description?: string;
 }
 
-export function ApplicationForm({ title = "Apply for Collaboration", description = "Let's build something extraordinary together" }: ApplicationFormProps) {
+export function ApplicationForm({ title = "Aplică pentru Colaborare", description = "Hai să construim ceva extraordinar împreună" }: ApplicationFormProps) {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -33,8 +33,8 @@ export function ApplicationForm({ title = "Apply for Collaboration", description
     // Simulate API call
     await new Promise(resolve => setTimeout(resolve, 1500));
 
-    toast.success('Application Submitted!', {
-      description: 'We\'ll review your application and get back to you within 24-48 hours.',
+    toast.success('Aplicație Trimisă!', {
+      description: 'Vom revizui aplicația ta și te vom contacta în 24-48 de ore.',
       duration: 5000,
     });
 
@@ -67,18 +67,18 @@ export function ApplicationForm({ title = "Apply for Collaboration", description
         {/* Name & Email */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           <div className="space-y-2">
-            <Label htmlFor="name">Full Name *</Label>
+            <Label htmlFor="name">Nume Complet *</Label>
             <Input
               id="name"
               value={formData.name}
               onChange={(e) => handleChange('name', e.target.value)}
               required
               className="bg-white/5 border-white/10 text-white"
-              placeholder="John Doe"
+              placeholder="Ion Popescu"
             />
           </div>
           <div className="space-y-2">
-            <Label htmlFor="email">Email Address *</Label>
+            <Label htmlFor="email">Adresă Email *</Label>
             <Input
               id="email"
               type="email"
@@ -86,7 +86,7 @@ export function ApplicationForm({ title = "Apply for Collaboration", description
               onChange={(e) => handleChange('email', e.target.value)}
               required
               className="bg-white/5 border-white/10 text-white"
-              placeholder="john@company.com"
+              placeholder="ion@companie.ro"
             />
           </div>
         </div>
@@ -94,25 +94,25 @@ export function ApplicationForm({ title = "Apply for Collaboration", description
         {/* Company & Website */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           <div className="space-y-2">
-            <Label htmlFor="company">Company Name *</Label>
+            <Label htmlFor="company">Nume Companie *</Label>
             <Input
               id="company"
               value={formData.company}
               onChange={(e) => handleChange('company', e.target.value)}
               required
               className="bg-white/5 border-white/10 text-white"
-              placeholder="Acme Inc."
+              placeholder="Compania SRL"
             />
           </div>
           <div className="space-y-2">
-            <Label htmlFor="website">Website (Optional)</Label>
+            <Label htmlFor="website">Website (Opțional)</Label>
             <Input
               id="website"
               type="url"
               value={formData.website}
               onChange={(e) => handleChange('website', e.target.value)}
               className="bg-white/5 border-white/10 text-white"
-              placeholder="https://example.com"
+              placeholder="https://exemplu.ro"
             />
           </div>
         </div>
@@ -120,10 +120,10 @@ export function ApplicationForm({ title = "Apply for Collaboration", description
         {/* Budget & Project Type */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           <div className="space-y-2">
-            <Label htmlFor="budget">Project Budget *</Label>
+            <Label htmlFor="budget">Buget Proiect *</Label>
             <Select value={formData.budget} onValueChange={(value) => handleChange('budget', value)} required>
               <SelectTrigger className="bg-white/5 border-white/10 text-white">
-                <SelectValue placeholder="Select budget range" />
+                <SelectValue placeholder="Selectează intervalul bugetar" />
               </SelectTrigger>
               <SelectContent className="bg-[#1A1A1A] border-white/10">
                 <SelectItem value="50k-100k">$50k - $100k</SelectItem>
@@ -134,18 +134,18 @@ export function ApplicationForm({ title = "Apply for Collaboration", description
             </Select>
           </div>
           <div className="space-y-2">
-            <Label htmlFor="projectType">Project Type *</Label>
+            <Label htmlFor="projectType">Tip Proiect *</Label>
             <Select value={formData.projectType} onValueChange={(value) => handleChange('projectType', value)} required>
               <SelectTrigger className="bg-white/5 border-white/10 text-white">
-                <SelectValue placeholder="Select project type" />
+                <SelectValue placeholder="Selectează tipul proiectului" />
               </SelectTrigger>
               <SelectContent className="bg-[#1A1A1A] border-white/10">
-                <SelectItem value="web-design">Web Design</SelectItem>
+                <SelectItem value="web-design">Design Web</SelectItem>
                 <SelectItem value="ecommerce">E-Commerce</SelectItem>
-                <SelectItem value="marketing">Digital Marketing</SelectItem>
+                <SelectItem value="marketing">Marketing Digital</SelectItem>
                 <SelectItem value="branding">Branding</SelectItem>
-                <SelectItem value="ai-automation">AI Automation</SelectItem>
-                <SelectItem value="comprehensive">Comprehensive Package</SelectItem>
+                <SelectItem value="ai-automation">Automatizare AI</SelectItem>
+                <SelectItem value="comprehensive">Pachet Complet</SelectItem>
               </SelectContent>
             </Select>
           </div>
@@ -153,30 +153,30 @@ export function ApplicationForm({ title = "Apply for Collaboration", description
 
         {/* Timeline */}
         <div className="space-y-2">
-          <Label htmlFor="timeline">Desired Timeline *</Label>
+          <Label htmlFor="timeline">Cronologie Dorită *</Label>
           <Select value={formData.timeline} onValueChange={(value) => handleChange('timeline', value)} required>
             <SelectTrigger className="bg-white/5 border-white/10 text-white">
-              <SelectValue placeholder="Select timeline" />
+              <SelectValue placeholder="Selectează cronologia" />
             </SelectTrigger>
             <SelectContent className="bg-[#1A1A1A] border-white/10">
-              <SelectItem value="asap">ASAP (Within 1 month)</SelectItem>
-              <SelectItem value="1-3">1-3 months</SelectItem>
-              <SelectItem value="3-6">3-6 months</SelectItem>
-              <SelectItem value="6+">6+ months</SelectItem>
+              <SelectItem value="asap">Cât mai curând (În 1 lună)</SelectItem>
+              <SelectItem value="1-3">1-3 luni</SelectItem>
+              <SelectItem value="3-6">3-6 luni</SelectItem>
+              <SelectItem value="6+">6+ luni</SelectItem>
             </SelectContent>
           </Select>
         </div>
 
         {/* Project Description */}
         <div className="space-y-2">
-          <Label htmlFor="description">Project Description *</Label>
+          <Label htmlFor="description">Descriere Proiect *</Label>
           <Textarea
             id="description"
             value={formData.description}
             onChange={(e) => handleChange('description', e.target.value)}
             required
             className="bg-white/5 border-white/10 text-white min-h-32"
-            placeholder="Tell us about your project goals, challenges, and what success looks like..."
+            placeholder="Spune-ne despre obiectivele proiectului tău, provocări și cum arată succesul..."
           />
         </div>
 
@@ -186,10 +186,10 @@ export function ApplicationForm({ title = "Apply for Collaboration", description
             <CheckCircle className="w-5 h-5 text-[#00AEEF] flex-shrink-0 mt-0.5" />
             <div className="text-sm text-white/70">
               <p className="mb-2">
-                Due to high demand and our commitment to quality, we only accept a limited number of clients each quarter.
+                Datorită cererii ridicate și angajamentului nostru față de calitate, acceptăm doar un număr limitat de clienți în fiecare trimestru.
               </p>
               <p>
-                All applications are carefully reviewed to ensure mutual fit and project alignment.
+                Toate aplicațiile sunt revizuite cu atenție pentru a asigura potrivirea reciprocă și alinierea proiectului.
               </p>
             </div>
           </div>
@@ -200,7 +200,7 @@ export function ApplicationForm({ title = "Apply for Collaboration", description
           disabled={isSubmitting}
           className="w-full bg-gradient-to-r from-[#00AEEF] to-[#9333EA] text-white hover:opacity-90 transition-opacity h-12"
         >
-          {isSubmitting ? 'Submitting Application...' : 'Submit Application'}
+          {isSubmitting ? 'Se Trimite Aplicația...' : 'Trimite Aplicația'}
         </Button>
       </form>
     </div>

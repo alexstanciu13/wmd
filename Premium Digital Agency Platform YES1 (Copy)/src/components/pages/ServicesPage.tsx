@@ -10,56 +10,56 @@ export function ServicesPage({ onNavigate }: ServicesPageProps) {
   const services = [
     {
       icon: Palette,
-      title: 'Web Design & Development',
-      description: 'Premium, conversion-optimized websites that captivate audiences and drive measurable results.',
+      title: 'Design & Dezvoltare Web',
+      description: 'Site-uri web premium, optimizate pentru conversie, care captivează audiențele și generează rezultate măsurabile.',
       features: [
-        'Custom UI/UX Design',
-        'Responsive Development',
-        'Performance Optimization',
-        'CMS Integration',
-        'E-Commerce Solutions',
+        'Design UI/UX Personalizat',
+        'Dezvoltare Responsivă',
+        'Optimizare Performanță',
+        'Integrare CMS',
+        'Soluții E-Commerce',
       ],
       page: 'web-design',
       color: 'from-[#00AEEF] to-[#1A237E]',
     },
     {
       icon: TrendingUp,
-      title: 'Digital Marketing',
-      description: 'Data-driven marketing strategies that maximize ROI and accelerate sustainable growth.',
+      title: 'Marketing Digital',
+      description: 'Strategii de marketing bazate pe date care maximizează ROI-ul și accelerează creșterea sustenabilă.',
       features: [
-        'SEO & Content Strategy',
-        'PPC & Paid Advertising',
-        'Social Media Marketing',
+        'Strategie SEO & Conținut',
+        'PPC & Publicitate Plătită',
+        'Marketing Social Media',
         'Email Marketing',
-        'Analytics & Reporting',
+        'Analytics & Raportare',
       ],
       page: 'marketing',
       color: 'from-[#9333EA] to-[#00AEEF]',
     },
     {
       icon: Sparkles,
-      title: 'Brand Identity',
-      description: 'Distinctive brand identities that resonate with your audience and stand out in the market.',
+      title: 'Identitate de Brand',
+      description: 'Identități de brand distinctive care rezonează cu audiența ta și se evidențiază pe piață.',
       features: [
-        'Brand Strategy',
-        'Logo & Visual Identity',
-        'Brand Guidelines',
-        'Marketing Collateral',
-        'Brand Positioning',
+        'Strategie Brand',
+        'Logo & Identitate Vizuală',
+        'Ghiduri Brand',
+        'Materiale Marketing',
+        'Poziționare Brand',
       ],
       page: 'branding',
       color: 'from-[#1A237E] to-[#9333EA]',
     },
     {
       icon: Bot,
-      title: 'AI Automation',
-      description: 'Cutting-edge AI solutions that streamline operations and unlock new growth opportunities.',
+      title: 'Automatizare AI',
+      description: 'Soluții AI de ultimă generație care simplifică operațiunile și deblochează noi oportunități de creștere.',
       features: [
-        'Process Automation',
-        'AI Chatbots',
-        'Predictive Analytics',
-        'Workflow Optimization',
-        'Custom AI Solutions',
+        'Automatizare Procese',
+        'Chatbot-uri AI',
+        'Analiză Predictivă',
+        'Optimizare Fluxuri',
+        'Soluții AI Personalizate',
       ],
       page: 'ai-automation',
       color: 'from-[#00AEEF] to-[#9333EA]',
@@ -68,20 +68,20 @@ export function ServicesPage({ onNavigate }: ServicesPageProps) {
 
   const process = [
     {
-      title: 'Discovery & Strategy',
-      description: 'Deep dive into your business, goals, and target audience to develop a winning strategy.',
+      title: 'Descoperire & Strategie',
+      description: 'Analiză profundă a afacerii tale, obiectivelor și audienței țintă pentru a dezvolta o strategie câștigătoare.',
     },
     {
-      title: 'Design & Planning',
-      description: 'Create detailed designs and roadmaps with stakeholder collaboration and feedback.',
+      title: 'Design & Planificare',
+      description: 'Creăm designuri și foi de parcurs detaliate cu colaborare și feedback de la stakeholderi.',
     },
     {
-      title: 'Development & Execution',
-      description: 'Build and implement solutions with precision, quality, and attention to detail.',
+      title: 'Dezvoltare & Execuție',
+      description: 'Construim și implementăm soluții cu precizie, calitate și atenție la detalii.',
     },
     {
-      title: 'Launch & Optimization',
-      description: 'Strategic launch followed by continuous monitoring, testing, and optimization.',
+      title: 'Lansare & Optimizare',
+      description: 'Lansare strategică urmată de monitorizare continuă, testare și optimizare.',
     },
   ];
 
@@ -95,11 +95,11 @@ export function ServicesPage({ onNavigate }: ServicesPageProps) {
           className="text-center"
         >
           <h1 className="text-5xl md:text-6xl mb-6">
-            Premium <span className="text-gradient">Digital Services</span>
+            Servicii <span className="text-gradient">Digitale Premium</span>
           </h1>
 
           <p className="text-xl text-white/70 max-w-3xl mx-auto mb-8">
-            Comprehensive solutions designed to elevate your brand and drive exceptional growth.
+            Soluții cuprinzătoare concepute pentru a-ți ridica brandul și a genera creștere excepțională.
           </p>
         </motion.div>
       </section>
@@ -137,7 +137,7 @@ export function ServicesPage({ onNavigate }: ServicesPageProps) {
                   onClick={() => onNavigate(service.page)}
                   className="bg-gradient-to-r from-[#00AEEF] to-[#9333EA] text-white hover:opacity-90 transition-opacity w-full group"
                 >
-                  Learn More
+                  Află Mai Multe
                   <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
                 </Button>
               </div>
@@ -149,9 +149,9 @@ export function ServicesPage({ onNavigate }: ServicesPageProps) {
       {/* Process */}
       <section className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 mb-20">
         <div className="text-center mb-12">
-          <h2 className="text-4xl mb-4">Our Process</h2>
+          <h2 className="text-4xl mb-4">Procesul Nostru</h2>
           <p className="text-white/60">
-            A proven methodology that delivers exceptional results
+            O metodologie dovedită care livrează rezultate excepționale
           </p>
         </div>
 
@@ -180,16 +180,16 @@ export function ServicesPage({ onNavigate }: ServicesPageProps) {
       <section className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="glass-strong rounded-2xl p-8 md:p-12 text-center glow-cyan">
           <h2 className="text-3xl md:text-4xl mb-4">
-            Ready to Get Started?
+            Ești Gata să Începi?
           </h2>
           <p className="text-white/70 mb-8 max-w-2xl mx-auto">
-            Join the exclusive group of high-growth brands we partner with. Limited slots available.
+            Alătură-te grupului exclusiv de branduri în creștere rapidă cu care ne asociem. Locuri limitate disponibile.
           </p>
           <Button
             onClick={() => onNavigate('apply')}
             className="bg-gradient-to-r from-[#00AEEF] to-[#9333EA] text-white hover:opacity-90 transition-opacity h-12 px-8"
           >
-            Apply for Collaboration
+            Aplică pentru Colaborare
             <ArrowRight className="ml-2 w-5 h-5" />
           </Button>
         </div>
