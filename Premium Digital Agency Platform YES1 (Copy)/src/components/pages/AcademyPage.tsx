@@ -18,73 +18,73 @@ export function AcademyPage({ onNavigate }: AcademyPageProps) {
 
   const courses = [
     {
-      title: 'Modern Web Design Masterclass',
-      description: 'Learn to design stunning, conversion-optimized websites using industry best practices and modern tools.',
+      title: 'Curs Avansat de Design Web Modern',
+      description: 'Învață să proiectezi site-uri web uimitoare, optimizate pentru conversie, folosind cele mai bune practici din industrie și instrumente moderne.',
       image: 'https://images.unsplash.com/photo-1677214467820-ab069619bbb6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtb2Rlcm4lMjB3ZWIlMjBkZXNpZ258ZW58MXx8fHwxNzYxMjI3OTQ4fDA&ixlib=rb-4.1.0&q=80&w=1080',
-      duration: '8 hours',
+      duration: '8 ore',
       students: 3240,
       rating: 4.9,
-      level: 'Intermediate',
+      level: 'Intermediar',
       category: 'design',
     },
     {
-      title: 'E-Commerce Growth Strategy',
-      description: 'Master e-commerce fundamentals from store setup to scaling a multi-million dollar online business.',
+      title: 'Strategie de Creștere E-Commerce',
+      description: 'Stăpânește fundamentele e-commerce de la configurarea magazinului până la scalarea unei afaceri online de milioane de dolari.',
       image: 'https://images.unsplash.com/photo-1658297063569-162817482fb6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxlY29tbWVyY2UlMjBzaG9wcGluZyUyMG9ubGluZXxlbnwxfHx8fDE3NjEyMzkzMjl8MA&ixlib=rb-4.1.0&q=80&w=1080',
-      duration: '12 hours',
+      duration: '12 ore',
       students: 2890,
       rating: 4.8,
-      level: 'Advanced',
+      level: 'Avansat',
       category: 'ecommerce',
     },
     {
-      title: 'Digital Marketing Essentials',
-      description: 'Complete guide to digital marketing including SEO, PPC, social media, and analytics.',
+      title: 'Esențiale Marketing Digital',
+      description: 'Ghid complet de marketing digital incluzând SEO, PPC, social media și analytics.',
       image: 'https://images.unsplash.com/photo-1599658880436-c61792e70672?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxkaWdpdGFsJTIwbWFya2V0aW5nJTIwYW5hbHl0aWNzfGVufDF8fHx8MTc2MTIzMDUwNHww&ixlib=rb-4.1.0&q=80&w=1080',
-      duration: '10 hours',
+      duration: '10 ore',
       students: 4120,
       rating: 4.9,
-      level: 'Beginner',
+      level: 'Începător',
       category: 'marketing',
     },
     {
-      title: 'AI Automation for Business',
-      description: 'Leverage AI and automation to streamline operations, improve efficiency, and scale your business.',
+      title: 'Automatizare AI pentru Afaceri',
+      description: 'Profită de AI și automatizare pentru a simplifica operațiunile, îmbunătăți eficiența și scala afacerea ta.',
       image: 'https://images.unsplash.com/photo-1697577418970-95d99b5a55cf?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxhcnRpZmljaWFsJTIwaW50ZWxsaWdlbmNlJTIwdGVjaG5vbG9neXxlbnwxfHx8fDE3NjEyMTA4MTV8MA&ixlib=rb-4.1.0&q=80&w=1080',
-      duration: '15 hours',
+      duration: '15 ore',
       students: 2650,
       rating: 5.0,
-      level: 'Advanced',
+      level: 'Avansat',
       category: 'automation',
     },
     {
-      title: 'Conversion Rate Optimization',
-      description: 'Data-driven strategies to improve website conversions and maximize ROI from your traffic.',
+      title: 'Optimizare Rată de Conversie',
+      description: 'Strategii bazate pe date pentru a îmbunătăți conversiile site-ului și a maximiza ROI-ul din traficul tău.',
       image: 'https://images.unsplash.com/photo-1599658880436-c61792e70672?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxkaWdpdGFsJTIwbWFya2V0aW5nJTIwYW5hbHl0aWNzfGVufDF8fHx8MTc2MTIzMDUwNHww&ixlib=rb-4.1.0&q=80&w=1080',
-      duration: '6 hours',
+      duration: '6 ore',
       students: 1980,
       rating: 4.8,
-      level: 'Intermediate',
+      level: 'Intermediar',
       category: 'marketing',
     },
     {
-      title: 'Brand Identity Design',
-      description: 'Create powerful brand identities that resonate with your audience and stand out in the market.',
+      title: 'Design Identitate de Brand',
+      description: 'Creează identități de brand puternice care rezonează cu audiența ta și se evidențiază pe piață.',
       image: 'https://images.unsplash.com/photo-1677214467820-ab069619bbb6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtb2Rlcm4lMjB3ZWIlMjBkZXNpZ258ZW58MXx8fHwxNzYxMjI3OTQ4fDA&ixlib=rb-4.1.0&q=80&w=1080',
-      duration: '9 hours',
+      duration: '9 ore',
       students: 2340,
       rating: 4.9,
-      level: 'Intermediate',
+      level: 'Intermediar',
       category: 'design',
     },
   ];
 
   const categories = [
-    { id: 'all', name: 'All Courses' },
+    { id: 'all', name: 'Toate Cursurile' },
     { id: 'design', name: 'Design' },
     { id: 'ecommerce', name: 'E-Commerce' },
     { id: 'marketing', name: 'Marketing' },
-    { id: 'automation', name: 'Automation' },
+    { id: 'automation', name: 'Automatizare' },
   ];
 
   const filteredCourses = courses.filter(course => {
@@ -95,15 +95,15 @@ export function AcademyPage({ onNavigate }: AcademyPageProps) {
   });
 
   const handleEnroll = (courseTitle: string) => {
-    toast.success('Course Access Granted!', {
-      description: `You now have access to "${courseTitle}". Check your email for login details.`,
+    toast.success('Acces la Curs Acordat!', {
+      description: `Acum ai acces la "${courseTitle}". Verifică-ți emailul pentru detalii de autentificare.`,
     });
   };
 
   const handleEmailSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    toast.success('Welcome to WMD Academy!', {
-      description: 'Check your email for access to all courses and exclusive resources.',
+    toast.success('Bun venit la Academia WMD!', {
+      description: 'Verifică-ți emailul pentru acces la toate cursurile și resursele exclusive.',
     });
     setEmail('');
   };
@@ -119,29 +119,29 @@ export function AcademyPage({ onNavigate }: AcademyPageProps) {
         >
           <div className="inline-block glass-strong rounded-full px-6 py-2 mb-6">
             <GraduationCap className="w-5 h-5 inline mr-2 text-[#00AEEF]" />
-            <span className="text-[#00AEEF]">Free Education Resources</span>
+            <span className="text-[#00AEEF]">Resurse Educaționale Gratuite</span>
           </div>
 
           <h1 className="text-5xl md:text-6xl mb-6">
-            <span className="text-gradient">WMD Academy</span>
+            <span className="text-gradient">Academia WMD</span>
           </h1>
 
           <p className="text-xl text-white/70 max-w-3xl mx-auto mb-8">
-            Master the skills that drive digital success. Free courses on web design, e-commerce, marketing, and AI automation from industry experts.
+            Stăpânește abilitățile care generează succes digital. Cursuri gratuite despre design web, e-commerce, marketing și automatizare AI de la experți din industrie.
           </p>
 
           {/* Email Capture */}
           <div className="glass-strong rounded-xl p-8 max-w-2xl mx-auto">
-            <h3 className="text-2xl mb-4">Get Full Access</h3>
+            <h3 className="text-2xl mb-4">Obține Acces Complet</h3>
             <p className="text-white/60 mb-6">
-              Join 10,000+ professionals learning and growing with WMD Academy
+              Alătură-te celor 10.000+ de profesioniști care învață și cresc cu Academia WMD
             </p>
             <form onSubmit={handleEmailSubmit} className="flex flex-col sm:flex-row gap-4">
               <Input
                 type="email"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
-                placeholder="Enter your email"
+                placeholder="Introdu adresa ta de email"
                 required
                 className="bg-white/5 border-white/10 text-white flex-1"
               />
@@ -149,11 +149,11 @@ export function AcademyPage({ onNavigate }: AcademyPageProps) {
                 type="submit"
                 className="bg-gradient-to-r from-[#00AEEF] to-[#9333EA] text-white hover:opacity-90 transition-opacity"
               >
-                Get Started Free
+                Începe Gratuit
               </Button>
             </form>
             <p className="text-xs text-white/40 mt-4">
-              No credit card required. Instant access to all courses.
+              Nu este necesar card de credit. Acces instant la toate cursurile.
             </p>
           </div>
         </motion.div>
@@ -168,7 +168,7 @@ export function AcademyPage({ onNavigate }: AcademyPageProps) {
               type="text"
               value={searchTerm}
               onChange={(e) => setSearchTerm(e.target.value)}
-              placeholder="Search courses..."
+              placeholder="Caută cursuri..."
               className="bg-white/5 border-white/10 text-white pl-10"
             />
           </div>
@@ -211,25 +211,9 @@ export function AcademyPage({ onNavigate }: AcademyPageProps) {
 
         {filteredCourses.length === 0 && (
           <div className="text-center py-20">
-            <p className="text-white/60 text-xl">No courses found matching your search.</p>
+            <p className="text-white/60 text-xl">Nu s-au găsit cursuri care să corespundă căutării tale.</p>
           </div>
         )}
-      </section>
-
-      {/* Hosting Upsell */}
-      <section className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 mt-20">
-        <div className="glass-strong rounded-2xl p-8 md:p-12 text-center glow-indigo">
-          <h2 className="text-3xl mb-4">Ready to Launch Your Project?</h2>
-          <p className="text-white/70 mb-8 max-w-2xl mx-auto">
-            Get premium hosting and domain services to bring your skills to life. Professional infrastructure starting at just $29/month.
-          </p>
-          <Button
-            onClick={() => onNavigate('hosting')}
-            className="bg-gradient-to-r from-[#00AEEF] to-[#9333EA] text-white hover:opacity-90 transition-opacity"
-          >
-            View Hosting Plans
-          </Button>
-        </div>
       </section>
     </div>
   );

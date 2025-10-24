@@ -5,13 +5,11 @@ import { Header } from './components/Header';
 import { Footer } from './components/Footer';
 import { HomePage } from './components/pages/HomePage';
 import { AcademyPage } from './components/pages/AcademyPage';
-import { HostingPage } from './components/pages/HostingPage';
 import { ServicesPage } from './components/pages/ServicesPage';
 import { ServiceDetailPage } from './components/pages/ServiceDetailPage';
 import { PortfolioPage } from './components/pages/PortfolioPage';
 import { AboutPage } from './components/pages/AboutPage';
 import { ApplyPage } from './components/pages/ApplyPage';
-import { WebMediaAIPage } from './components/pages/WebMediaAIPage';
 
 type Page =
   | 'home'
@@ -22,8 +20,6 @@ type Page =
   | 'ai-automation'
   | 'portfolio'
   | 'academy'
-  | 'ai'
-  | 'hosting'
   | 'about'
   | 'apply';
 
@@ -265,10 +261,6 @@ export default function App() {
         return <PortfolioPage onNavigate={handleNavigate} />;
       case 'academy':
         return <AcademyPage onNavigate={handleNavigate} />;
-      case 'ai':
-        return <WebMediaAIPage />;
-      case 'hosting':
-        return <HostingPage onNavigate={handleNavigate} />;
       case 'about':
         return <AboutPage onNavigate={handleNavigate} />;
       case 'apply':

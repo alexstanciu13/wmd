@@ -575,24 +575,6 @@ export function HomePage({ onNavigate }: HomePageProps) {
         </div>
       </section>
 
-      {/* Hosting Promo */}
-      <section className="relative py-20">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="glass-strong rounded-2xl p-8 md:p-12 text-center glow-indigo">
-            <Rocket className="w-16 h-16 mx-auto mb-6 text-[#00AEEF]" />
-            <h2 className="text-3xl mb-4">Găzduire & Domenii Premium</h2>
-            <p className="text-white/70 mb-8 max-w-2xl mx-auto">
-              Infrastructură de nivel enterprise alimentată de ROMARG. Soluții de găzduire sigure, rapide și fiabile pentru afaceri care cer excelență.
-            </p>
-            <Button
-              onClick={() => onNavigate('hosting')}
-              className="bg-gradient-to-r from-[#00AEEF] to-[#9333EA] text-white hover:opacity-90 transition-opacity"
-            >
-              Explorează Planurile de Găzduire
-            </Button>
-          </div>
-        </div>
-      </section>
 
       {/* Industry Expertise */}
       <section className="relative py-20">

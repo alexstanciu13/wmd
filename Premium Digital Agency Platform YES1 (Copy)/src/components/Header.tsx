@@ -25,8 +25,6 @@ export function Header({ currentPage, onNavigate }: HeaderProps) {
     { name: 'Servicii', page: 'services' },
     { name: 'Portofoliu', page: 'portfolio' },
     { name: 'Academia WMD', page: 'academy' },
-    { name: 'Web Media AI', page: 'ai' },
-    { name: 'Găzduire', page: 'hosting' },
     { name: 'Despre', page: 'about' },
   ];
 
