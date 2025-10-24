@@ -111,7 +111,7 @@ export function HomePage({ onNavigate }: HomePageProps) {
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-12">
               <Button
                 onClick={() => onNavigate('apply')}
-                className="bg-gradient-to-r from-[#00AEEF] to-[#9333EA] text-white hover:opacity-90 transition-opacity h-14 px-8 glow-cyan text-lg"
+                className="bg-gradient-to-r from-[#00AEEF] to-[#1E40AF] text-white hover:opacity-90 transition-opacity h-14 px-8 glow-cyan text-lg"
               >
                 Aplică pentru Colaborare
                 <ArrowRight className="ml-2 w-5 h-5" />
@@ -170,9 +170,9 @@ export function HomePage({ onNavigate }: HomePageProps) {
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
             {[
               { icon: Users, value: '200+', label: 'Proiecte Finalizate', color: 'from-[#00AEEF] to-cyan-600' },
-              { icon: DollarSign, value: '$50M+', label: 'Venituri Generate', color: 'from-[#9333EA] to-purple-600' },
+              { icon: DollarSign, value: '$50M+', label: 'Venituri Generate', color: 'from-[#1E40AF] to-blue-700' },
               { icon: BarChart3, value: '247%', label: 'Creștere ROI Medie', color: 'from-[#00AEEF] to-[#1A237E]' },
-              { icon: Clock, value: '98%', label: 'Retenție Clienți', color: 'from-[#1A237E] to-[#9333EA]' },
+              { icon: Clock, value: '98%', label: 'Retenție Clienți', color: 'from-[#1A237E] to-[#1E40AF]' },
             ].map((stat, index) => (
               <motion.div
                 key={stat.label}
@@ -237,7 +237,7 @@ export function HomePage({ onNavigate }: HomePageProps) {
                 className="glass rounded-xl p-8 hover:glass-strong transition-all duration-300 group cursor-pointer"
                 onClick={() => onNavigate('services')}
               >
-                <div className="w-16 h-16 rounded-xl bg-gradient-to-br from-[#00AEEF] to-[#9333EA] flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+                <div className="w-16 h-16 rounded-xl bg-gradient-to-br from-[#00AEEF] to-[#1E40AF] flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
                   <service.icon className="w-8 h-8 text-white" />
                 </div>
                 <h3 className="text-2xl mb-3">{service.title}</h3>
@@ -286,7 +286,7 @@ export function HomePage({ onNavigate }: HomePageProps) {
                 transition={{ delay: index * 0.1 }}
                 className="glass rounded-xl p-6 hover:glass-strong transition-all duration-300"
               >
-                <div className="w-12 h-12 rounded-lg bg-gradient-to-br from-[#00AEEF] to-[#9333EA] flex items-center justify-center mb-4">
+                <div className="w-12 h-12 rounded-lg bg-gradient-to-br from-[#00AEEF] to-[#1E40AF] flex items-center justify-center mb-4">
                   <pillar.icon className="w-6 h-6 text-white" />
                 </div>
                 <h3 className="mb-2">{pillar.title}</h3>
@@ -465,7 +465,7 @@ export function HomePage({ onNavigate }: HomePageProps) {
                 </ul>
                 <Button
                   onClick={() => onNavigate('academy')}
-                  className="bg-gradient-to-r from-[#00AEEF] to-[#9333EA] text-white hover:opacity-90 transition-opacity h-12 px-8"
+                  className="bg-gradient-to-r from-[#00AEEF] to-[#1E40AF] text-white hover:opacity-90 transition-opacity h-12 px-8"
                 >
                   Începe să Înveți Gratuit
                   <ArrowRight className="ml-2 w-4 h-4" />
@@ -566,7 +566,7 @@ export function HomePage({ onNavigate }: HomePageProps) {
             </p>
             <Button
               onClick={() => onNavigate('apply')}
-              className="bg-gradient-to-r from-[#00AEEF] to-[#9333EA] text-white hover:opacity-90 transition-opacity h-12 px-8"
+              className="bg-gradient-to-r from-[#00AEEF] to-[#1E40AF] text-white hover:opacity-90 transition-opacity h-12 px-8"
             >
               Aplică Acum
               <ArrowRight className="ml-2 w-4 h-4" />
@@ -677,7 +677,7 @@ export function HomePage({ onNavigate }: HomePageProps) {
           </p>
           <Button
             onClick={() => onNavigate('apply')}
-            className="bg-gradient-to-r from-[#00AEEF] to-[#9333EA] text-white hover:opacity-90 transition-opacity h-14 px-8 text-lg glow-cyan"
+            className="bg-gradient-to-r from-[#00AEEF] to-[#1E40AF] text-white hover:opacity-90 transition-opacity h-14 px-8 text-lg glow-cyan"
           >
             Aplică pentru Colaborare
             <ArrowRight className="ml-2 w-5 h-5" />

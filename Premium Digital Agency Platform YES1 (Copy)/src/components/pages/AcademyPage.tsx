@@ -147,7 +147,7 @@ export function AcademyPage({ onNavigate }: AcademyPageProps) {
               />
               <Button
                 type="submit"
-                className="bg-gradient-to-r from-[#00AEEF] to-[#9333EA] text-white hover:opacity-90 transition-opacity"
+                className="bg-gradient-to-r from-[#00AEEF] to-[#1E40AF] text-white hover:opacity-90 transition-opacity"
               >
                 Începe Gratuit
               </Button>
@@ -180,7 +180,7 @@ export function AcademyPage({ onNavigate }: AcademyPageProps) {
                 onClick={() => setSelectedCategory(category.id)}
                 className={`px-4 py-2 rounded-lg transition-all ${
                   selectedCategory === category.id
-                    ? 'bg-gradient-to-r from-[#00AEEF] to-[#9333EA] text-white'
+                    ? 'bg-gradient-to-r from-[#00AEEF] to-[#1E40AF] text-white'
                     : 'glass text-white/70 hover:text-white'
                 }`}
               >
