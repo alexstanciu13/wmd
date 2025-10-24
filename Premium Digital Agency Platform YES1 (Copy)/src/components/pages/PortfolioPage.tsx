@@ -98,12 +98,12 @@ export function PortfolioPage({ onNavigate }: PortfolioPageProps) {
   ];
 
   const filters = [
-    { id: 'all', name: 'All Projects' },
-    { id: 'web-design', name: 'Web Design' },
+    { id: 'all', name: 'Toate Proiectele' },
+    { id: 'web-design', name: 'Design Web' },
     { id: 'ecommerce', name: 'E-Commerce' },
     { id: 'marketing', name: 'Marketing' },
     { id: 'branding', name: 'Branding' },
-    { id: 'automation', name: 'Automation' },
+    { id: 'automation', name: 'Automatizare' },
   ];
 
   const filteredStudies = selectedFilter === 'all'
@@ -120,11 +120,11 @@ export function PortfolioPage({ onNavigate }: PortfolioPageProps) {
           className="text-center"
         >
           <h1 className="text-5xl md:text-6xl mb-6">
-            Our <span className="text-gradient">Success Stories</span>
+            <span className="text-gradient">Povești de Succes</span>
           </h1>
 
           <p className="text-xl text-white/70 max-w-3xl mx-auto mb-8">
-            Real results from real partnerships. See how we've helped brands achieve exceptional growth.
+            Rezultate reale din parteneriate reale. Vezi cum am ajutat brandurile să atingă o creștere excepțională.
           </p>
         </motion.div>
       </section>
@@ -171,7 +171,7 @@ export function PortfolioPage({ onNavigate }: PortfolioPageProps) {
 
         {filteredStudies.length === 0 && (
           <div className="text-center py-20">
-            <p className="text-white/60 text-xl">No case studies found in this category.</p>
+            <p className="text-white/60 text-xl">Nu s-au găsit studii de caz în această categorie.</p>
           </div>
         )}
       </section>
@@ -182,19 +182,19 @@ export function PortfolioPage({ onNavigate }: PortfolioPageProps) {
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
             <div>
               <div className="text-4xl text-gradient mb-2">150+</div>
-              <div className="text-white/60">Projects Delivered</div>
+              <div className="text-white/60">Proiecte Finalizate</div>
             </div>
             <div>
               <div className="text-4xl text-gradient mb-2">$50M+</div>
-              <div className="text-white/60">Client Revenue</div>
+              <div className="text-white/60">Venituri Clienți</div>
             </div>
             <div>
               <div className="text-4xl text-gradient mb-2">98%</div>
-              <div className="text-white/60">Client Satisfaction</div>
+              <div className="text-white/60">Satisfacție Clienți</div>
             </div>
             <div>
               <div className="text-4xl text-gradient mb-2">4.9★</div>
-              <div className="text-white/60">Average Rating</div>
+              <div className="text-white/60">Evaluare Medie</div>
             </div>
           </div>
         </div>
