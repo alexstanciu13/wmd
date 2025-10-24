@@ -198,7 +198,7 @@ export function ApplicationForm({ title = "Aplică pentru Colaborare", descripti
         <Button
           type="submit"
           disabled={isSubmitting}
-          className="w-full bg-gradient-to-r from-[#00AEEF] to-[#1E40AF] text-white hover:opacity-90 transition-opacity h-12"
+          className="w-full bg-gradient-to-r from-[#00AEEF] to-[#2563EB] text-white hover:opacity-90 transition-opacity h-12"
         >
           {isSubmitting ? 'Se Trimite Aplicația...' : 'Trimite Aplicația'}
         </Button>

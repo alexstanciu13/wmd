@@ -25,7 +25,7 @@ export function Footer({ onNavigate }: FooterProps) {
           {/* Brand */}
           <div>
             <div className="flex items-center space-x-2 mb-4">
-              <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-[#00AEEF] to-[#1E40AF] flex items-center justify-center">
+              <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-[#00AEEF] to-[#2563EB] flex items-center justify-center">
                 <Sparkles className="w-6 h-6 text-white" />
               </div>
               <span className="text-gradient">WMD</span>

@@ -20,7 +20,7 @@
   --secondary-foreground: #FFFFFF;
   --muted: rgba(255, 255, 255, 0.1);
   --muted-foreground: rgba(255, 255, 255, 0.6);
-  --accent: #1E40AF;
+  --accent: #2563EB;
   --accent-foreground: #FFFFFF;
   --destructive: #EF4444;
   --destructive-foreground: #FFFFFF;
@@ -33,7 +33,7 @@
   --ring: #00AEEF;
   --chart-1: #00AEEF;
   --chart-2: #1A237E;
-  --chart-3: #1E40AF;
+  --chart-3: #2563EB;
   --chart-4: #06B6D4;
   --chart-5: #8B5CF6;
   --radius: 0.75rem;
@@ -169,7 +169,7 @@
   }
 
   .text-gradient {
-    background: linear-gradient(135deg, #00AEEF 0%, #1E40AF 100%);
+    background: linear-gradient(135deg, #00AEEF 0%, #2563EB 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
