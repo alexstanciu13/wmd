@@ -38,7 +38,7 @@ export function ServiceDetailPage({ service, onNavigate }: ServiceDetailPageProp
             </p>
             <Button
               onClick={() => onNavigate('apply')}
-              className="bg-gradient-to-r from-[#00AEEF] to-[#2563EB] text-white hover:opacity-90 transition-opacity h-12 px-8"
+              className="bg-gradient-to-r from-[#0070C9] to-[#002F6C] text-white hover:opacity-90 transition-opacity h-12 px-8"
             >
               Începe Acum
               <ArrowRight className="ml-2 w-5 h-5" />
@@ -97,7 +97,7 @@ export function ServiceDetailPage({ service, onNavigate }: ServiceDetailPageProp
                 transition={{ delay: index * 0.1 }}
                 className="flex items-start space-x-4"
               >
-                <div className="w-6 h-6 rounded-full bg-gradient-to-br from-[#00AEEF] to-[#2563EB] flex items-center justify-center flex-shrink-0 mt-1">
+                <div className="w-6 h-6 rounded-full bg-gradient-to-br from-[#0070C9] to-[#002F6C] flex items-center justify-center flex-shrink-0 mt-1">
                   <Check className="w-4 h-4 text-white" />
                 </div>
                 <p className="text-white/80">{benefit}</p>
@@ -145,7 +145,7 @@ export function ServiceDetailPage({ service, onNavigate }: ServiceDetailPageProp
           </p>
           <Button
             onClick={() => onNavigate('apply')}
-            className="bg-gradient-to-r from-[#00AEEF] to-[#2563EB] text-white hover:opacity-90 transition-opacity h-12 px-8"
+            className="bg-gradient-to-r from-[#0070C9] to-[#002F6C] text-white hover:opacity-90 transition-opacity h-12 px-8"
           >
             Solicită Propunere
           </Button>
@@ -162,7 +162,7 @@ export function ServiceDetailPage({ service, onNavigate }: ServiceDetailPageProp
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button
               onClick={() => onNavigate('apply')}
-              className="bg-gradient-to-r from-[#00AEEF] to-[#2563EB] text-white hover:opacity-90 transition-opacity h-12 px-8"
+              className="bg-gradient-to-r from-[#0070C9] to-[#002F6C] text-white hover:opacity-90 transition-opacity h-12 px-8"
             >
               Aplică Acum
             </Button>

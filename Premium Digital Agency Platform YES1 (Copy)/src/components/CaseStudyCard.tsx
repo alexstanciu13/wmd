@@ -50,7 +50,7 @@ export function CaseStudyCard({
         </div>
 
         <div className="mb-4">
-          <h4 className="text-[#2563EB] mb-2">Our Solution</h4>
+          <h4 className="text-[#0070C9] mb-2">Our Solution</h4>
           <p className="text-white/70 line-clamp-2">{solution}</p>
         </div>
 

@@ -34,8 +34,8 @@ export function CodeRain() {
         const x = i * fontSize;
         const y = drops[i] * fontSize;
 
-        // Cyan and violet colors
-        const colors = ['#00AEEF', '#2563EB', '#1A237E'];
+        // Blue gradient colors
+        const colors = ['#0070C9', '#002F6C', '#1E3A8A'];
         ctx.fillStyle = colors[Math.floor(Math.random() * colors.length)];
         
         ctx.fillText(char, x, y);

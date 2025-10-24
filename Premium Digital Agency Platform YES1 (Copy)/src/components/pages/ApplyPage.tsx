@@ -69,7 +69,7 @@ export function ApplyPage() {
               { step: '4', title: 'Lansare Proiect', time: '1-2 săptămâni' },
             ].map((item) => (
               <div key={item.step} className="text-center">
-                <div className="w-10 h-10 rounded-full bg-gradient-to-br from-[#00AEEF] to-[#2563EB] flex items-center justify-center mx-auto mb-2">
+                <div className="w-10 h-10 rounded-full bg-gradient-to-br from-[#0070C9] to-[#002F6C] flex items-center justify-center mx-auto mb-2">
                   <span>{item.step}</span>
                 </div>
                 <h4 className="text-sm mb-1">{item.title}</h4>
