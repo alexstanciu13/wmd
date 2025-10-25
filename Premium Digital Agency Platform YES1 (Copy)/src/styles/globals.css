@@ -160,6 +160,10 @@
     box-shadow: 0 0 20px rgba(0, 174, 239, 0.3);
   }
 
+  .glow-blue {
+    box-shadow: 0 0 30px rgba(0, 112, 201, 0.4), 0 0 60px rgba(0, 47, 108, 0.2);
+  }
+
   .glow-violet {
     box-shadow: 0 0 20px rgba(0, 112, 201, 0.3);
   }
