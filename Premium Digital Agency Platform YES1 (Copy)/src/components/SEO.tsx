@@ -10,7 +10,7 @@ interface SEOProps {
 
 export function SEO({ title, description, path, image, type = 'website' }: SEOProps) {
   const siteName = 'Web Media Design';
-  const siteUrl = 'https://webmediadesign.com'; // Update with actual domain
+  const siteUrl = 'https://webmediadesign.ro';
   const fullTitle = title.includes(siteName) ? title : `${title} | ${siteName}`;
   const canonical = `${siteUrl}${path}`;
   const ogImage = image || `${siteUrl}/og-image.jpg`; // Default OG image

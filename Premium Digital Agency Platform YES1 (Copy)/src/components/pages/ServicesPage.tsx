@@ -2,6 +2,7 @@ import { motion } from 'motion/react';
 import { Link } from 'react-router-dom';
 import { Palette, TrendingUp, Sparkles, Bot, ArrowRight } from 'lucide-react';
 import { Button } from '../ui/button';
+import { SEO } from '../SEO';
 
 export function ServicesPage() {
   const services = [
@@ -84,6 +85,11 @@ export function ServicesPage() {
 
   return (
     <div className="relative pt-32 pb-20">
+      <SEO
+        title="Servicii"
+        description="Servicii digitale premium: design web, marketing digital, branding și automatizare AI pentru branduri în creștere rapidă din România."
+        path="/servicii"
+      />
       {/* Hero Section */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-20">
         <motion.div
