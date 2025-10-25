@@ -69,7 +69,7 @@ export function CaseStudyCard({
           </div>
         </div>
 
-        <button className="flex items-center space-x-2 text-[#00AEEF] group-hover:space-x-3 transition-all">
+        <button className="flex items-center space-x-2 text-[#00AEEF] group-hover:space-x-3 transition-all rounded-xl px-4 py-2 hover:bg-[#00AEEF]/10">
           <span>View Full Case Study</span>
           <ArrowRight className="w-4 h-4" />
         </button>

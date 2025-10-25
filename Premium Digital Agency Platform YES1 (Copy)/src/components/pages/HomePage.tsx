@@ -130,7 +130,7 @@ export function HomePage() {
             </h1>
 
             <p className="text-xl text-white/70 mb-8 max-w-2xl mx-auto">
-              Parteneriate exclusive pentru branduri în creștere rapidă care caută design excepțional, marketing bazat pe date și automatizare alimentată de AI.
+              Parteneriate exclusive pentru branduri în creștere rapidă care caută <Link to="/servicii" className="text-[#00AEEF] hover:underline">design excepțional, marketing bazat pe date și automatizare alimentată de AI</Link>.
             </p>
 
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-12">
@@ -332,7 +332,7 @@ export function HomePage() {
           <div className="text-center mb-16">
             <h2 className="text-4xl mb-4">Rezultate Dovedite</h2>
             <p className="text-white/60 max-w-2xl mx-auto">
-              Transformări reale, impact măsurabil și creștere excepțională pentru partenerii noștri.
+              <Link to="/studii-de-caz" className="text-[#00AEEF] hover:underline">Transformări reale</Link>, impact măsurabil și creștere excepțională pentru partenerii noștri.
             </p>
           </div>
 

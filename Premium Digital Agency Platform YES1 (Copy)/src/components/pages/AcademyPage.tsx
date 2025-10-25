@@ -6,6 +6,7 @@ import { Input } from '../ui/input';
 import { Button } from '../ui/button';
 import { Label } from '../ui/label';
 import { toast } from 'sonner@2.0.3';
+import { SEO } from '../SEO';
 
 
 export function AcademyPage() {
@@ -107,6 +108,11 @@ export function AcademyPage() {
 
   return (
     <div className="relative pt-32 pb-20">
+      <SEO
+        title="Academia WMD"
+        description="Cursuri gratuite de design web, marketing digital, e-commerce și automatizare AI. Învață de la experți și dezvoltă-ți afacerea online."
+        path="/academia"
+      />
       {/* Hero Section */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-20">
         <motion.div

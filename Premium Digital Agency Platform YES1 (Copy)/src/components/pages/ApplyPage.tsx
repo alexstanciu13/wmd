@@ -1,6 +1,7 @@
 import { motion } from 'motion/react';
 import { CheckCircle, Clock, Award } from 'lucide-react';
 import { ApplicationForm } from '../ApplicationForm';
+import { SEO } from '../SEO';
 
 export function ApplyPage() {
   const benefits = [
@@ -32,6 +33,11 @@ export function ApplyPage() {
 
   return (
     <div className="relative pt-32 pb-20">
+      <SEO
+        title="Aplică pentru Colaborare"
+        description="Aplică pentru parteneriat cu Web Media Design. Acceptăm 12 clienți pe trimestru pentru proiecte de design web și marketing digital premium."
+        path="/aplica"
+      />
       {/* Hero Section */}
       <section className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 mb-12">
         <motion.div

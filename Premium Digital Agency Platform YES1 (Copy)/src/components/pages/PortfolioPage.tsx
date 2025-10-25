@@ -2,6 +2,7 @@ import { motion } from 'motion/react';
 import { useState } from 'react';
 import { CaseStudyCard } from '../CaseStudyCard';
 import { Badge } from '../ui/badge';
+import { SEO } from '../SEO';
 
 
 export function PortfolioPage() {
@@ -109,6 +110,11 @@ export function PortfolioPage() {
 
   return (
     <div className="relative pt-32 pb-20">
+      <SEO
+        title="Studii de Caz"
+        description="Studii de caz reale cu rezultate măsurabile: proiecte de design web, marketing digital și automatizare AI pentru branduri din România."
+        path="/studii-de-caz"
+      />
       {/* Hero Section */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-20">
         <motion.div
