@@ -35,7 +35,7 @@
   --chart-2: #1A237E;
   --chart-3: #2563EB;
   --chart-4: #06B6D4;
-  --chart-5: #8B5CF6;
+  --chart-5: #0070C9;
   --radius: 0.75rem;
   --sidebar: #0A0A0A;
   --sidebar-foreground: #FFFFFF;
@@ -161,7 +161,7 @@
   }
 
   .glow-violet {
-    box-shadow: 0 0 20px rgba(147, 51, 234, 0.3);
+    box-shadow: 0 0 20px rgba(0, 112, 201, 0.3);
   }
 
   .glow-indigo {
@@ -176,7 +176,7 @@
   }
 
   .text-gradient-indigo {
-    background: linear-gradient(135deg, #1A237E 0%, #00AEEF 100%);
+    background: linear-gradient(135deg, #0070C9 0%, #002F6C 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
