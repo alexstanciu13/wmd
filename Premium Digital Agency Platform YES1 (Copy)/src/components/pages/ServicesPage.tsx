@@ -1,12 +1,9 @@
 import { motion } from 'motion/react';
+import { Link } from 'react-router-dom';
 import { Palette, TrendingUp, Sparkles, Bot, ArrowRight } from 'lucide-react';
 import { Button } from '../ui/button';
 
-interface ServicesPageProps {
-  onNavigate: (page: string) => void;
-}
-
-export function ServicesPage({ onNavigate }: ServicesPageProps) {
+export function ServicesPage() {
   const services = [
     {
       icon: Palette,
@@ -19,7 +16,7 @@ export function ServicesPage({ onNavigate }: ServicesPageProps) {
         'Integrare CMS',
         'Soluții E-Commerce',
       ],
-      page: 'web-design',
+      path: '/servicii/design-web',
       color: 'from-[#0070C9] to-[#002F6C]',
     },
     {
@@ -33,7 +30,7 @@ export function ServicesPage({ onNavigate }: ServicesPageProps) {
         'Email Marketing',
         'Analytics & Raportare',
       ],
-      page: 'marketing',
+      path: '/servicii/marketing-digital',
       color: 'from-[#002F6C] to-[#0070C9]',
     },
     {
@@ -47,7 +44,7 @@ export function ServicesPage({ onNavigate }: ServicesPageProps) {
         'Materiale Marketing',
         'Poziționare Brand',
       ],
-      page: 'branding',
+      path: '/servicii/branding',
       color: 'from-[#002F6C] to-[#0070C9]',
     },
     {
@@ -61,7 +58,7 @@ export function ServicesPage({ onNavigate }: ServicesPageProps) {
         'Optimizare Fluxuri',
         'Soluții AI Personalizate',
       ],
-      page: 'ai-automation',
+      path: '/servicii/automatizare-ai',
       color: 'from-[#0070C9] to-[#002F6C]',
     },
   ];
@@ -134,11 +131,13 @@ export function ServicesPage({ onNavigate }: ServicesPageProps) {
                 </ul>
 
                 <Button
-                  onClick={() => onNavigate(service.page)}
+                  asChild
                   className="btn-primary w-full group"
                 >
-                  Află Mai Multe
-                  <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                  <Link to={service.path}>
+                    Află Mai Multe
+                    <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                  </Link>
                 </Button>
               </div>
             </motion.div>
@@ -186,11 +185,13 @@ export function ServicesPage({ onNavigate }: ServicesPageProps) {
             Alătură-te grupului exclusiv de branduri în creștere rapidă cu care ne asociem. Locuri limitate disponibile.
           </p>
           <Button
-            onClick={() => onNavigate('apply')}
+            asChild
             className="btn-primary h-12 px-8"
           >
-            Aplică pentru Colaborare
-            <ArrowRight className="ml-2 w-5 h-5" />
+            <Link to="/aplica">
+              Aplică pentru Colaborare
+              <ArrowRight className="ml-2 w-5 h-5" />
+            </Link>
           </Button>
         </div>
       </section>

@@ -3,11 +3,8 @@ import { useState } from 'react';
 import { CaseStudyCard } from '../CaseStudyCard';
 import { Badge } from '../ui/badge';
 
-interface PortfolioPageProps {
-  onNavigate: (page: string) => void;
-}
 
-export function PortfolioPage({ onNavigate }: PortfolioPageProps) {
+export function PortfolioPage() {
   const [selectedFilter, setSelectedFilter] = useState('all');
 
   const caseStudies = [

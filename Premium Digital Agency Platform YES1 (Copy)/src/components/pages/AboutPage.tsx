@@ -1,13 +1,10 @@
 import { motion } from 'motion/react';
+import { Link } from 'react-router-dom';
 import { Award, Users, Target, Zap, Heart, Shield } from 'lucide-react';
 import { Button } from '../ui/button';
 import { ImageWithFallback } from '../figma/ImageWithFallback';
 
-interface AboutPageProps {
-  onNavigate: (page: string) => void;
-}
-
-export function AboutPage({ onNavigate }: AboutPageProps) {
+export function AboutPage() {
   const values = [
     {
       icon: Target,
@@ -216,10 +213,12 @@ export function AboutPage({ onNavigate }: AboutPageProps) {
             Suntem selectivi cu cine lucrăm și căutăm branduri gata să facă un impact real.
           </p>
           <Button
-            onClick={() => onNavigate('apply')}
+            asChild
             className="btn-primary h-14 px-8 text-lg glow-blue"
           >
-            Aplică pentru Colaborare
+            <Link to="/aplica">
+              Aplică pentru Colaborare
+            </Link>
           </Button>
         </div>
       </section>

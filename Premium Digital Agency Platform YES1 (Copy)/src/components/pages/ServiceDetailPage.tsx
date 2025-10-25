@@ -1,23 +1,15 @@
 import { motion } from 'motion/react';
+import { Link } from 'react-router-dom';
 import { ArrowRight, Check } from 'lucide-react';
 import { Button } from '../ui/button';
 import { ImageWithFallback } from '../figma/ImageWithFallback';
+import { ServiceConfig } from '../../config/services';
 
 interface ServiceDetailPageProps {
-  service: {
-    title: string;
-    subtitle: string;
-    description: string;
-    image: string;
-    features: string[];
-    benefits: string[];
-    process: { title: string; description: string }[];
-    pricing: string;
-  };
-  onNavigate: (page: string) => void;
+  service: ServiceConfig;
 }
 
-export function ServiceDetailPage({ service, onNavigate }: ServiceDetailPageProps) {
+export function ServiceDetailPage({ service }: ServiceDetailPageProps) {
   return (
     <div className="relative pt-32 pb-20">
       {/* Hero Section */}
@@ -37,11 +29,13 @@ export function ServiceDetailPage({ service, onNavigate }: ServiceDetailPageProp
               {service.description}
             </p>
             <Button
-              onClick={() => onNavigate('apply')}
+              asChild
               className="btn-primary h-12 px-8"
             >
+              <Link to="/aplica">
               Începe Acum
               <ArrowRight className="ml-2 w-5 h-5" />
+              </Link>
             </Button>
           </motion.div>
 
@@ -144,10 +138,12 @@ export function ServiceDetailPage({ service, onNavigate }: ServiceDetailPageProp
             Soluții personalizate adaptate nevoilor și obiectivelor tale specifice
           </p>
           <Button
-            onClick={() => onNavigate('apply')}
+            asChild
             className="btn-primary h-12 px-8"
           >
-            Solicită Propunere
+            <Link to="/aplica">
+              Solicită Propunere
+            </Link>
           </Button>
         </div>
       </section>
@@ -161,16 +157,20 @@ export function ServiceDetailPage({ service, onNavigate }: ServiceDetailPageProp
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button
-              onClick={() => onNavigate('apply')}
+              asChild
               className="btn-primary h-12 px-8"
             >
+              <Link to="/aplica">
               Aplică Acum
+              </Link>
             </Button>
             <Button
-              onClick={() => onNavigate('portfolio')}
+              asChild
               className="btn-primary h-12 px-8 border border-white/20"
             >
-              Vezi Studii de Caz
+              <Link to="/studii-de-caz">
+                Vezi Studii de Caz
+              </Link>
             </Button>
           </div>
         </div>

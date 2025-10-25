@@ -11,7 +11,7 @@ interface CaseStudyCardProps {
     metric: string;
     value: string;
   }[];
-  onClick: () => void;
+  onClick?: () => void;
 }
 
 export function CaseStudyCard({

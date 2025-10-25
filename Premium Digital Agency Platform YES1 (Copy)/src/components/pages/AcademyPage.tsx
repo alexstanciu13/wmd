@@ -7,11 +7,8 @@ import { Button } from '../ui/button';
 import { Label } from '../ui/label';
 import { toast } from 'sonner@2.0.3';
 
-interface AcademyPageProps {
-  onNavigate: (page: string) => void;
-}
 
-export function AcademyPage({ onNavigate }: AcademyPageProps) {
+export function AcademyPage() {
   const [email, setEmail] = useState('');
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('all');
