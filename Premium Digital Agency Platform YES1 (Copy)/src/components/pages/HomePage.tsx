@@ -1,4 +1,5 @@
 import { motion } from 'motion/react';
+import { Link } from 'react-router-dom';
 import { ArrowRight, Sparkles, Rocket, Target, Zap, Shield, Award, TrendingUp, Users, DollarSign, BarChart3, Clock, Code2, Palette, Megaphone, Brain, CheckCircle2, GraduationCap, Star, Globe, Lock, Briefcase } from 'lucide-react';
 import { Button } from '../ui/button';
 import { Badge } from '../ui/badge';
@@ -7,12 +8,10 @@ import { TestimonialCard } from '../TestimonialCard';
 import { CodeRain } from '../CodeRain';
 import { ImageWithFallback } from '../figma/ImageWithFallback';
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '../ui/accordion';
+import { SEO } from '../SEO';
+import { StructuredData } from '../StructuredData';
 
-interface HomePageProps {
-  onNavigate: (page: string) => void;
-}
-
-export function HomePage({ onNavigate }: HomePageProps) {
+export function HomePage() {
   const caseStudies = [
     {
       client: 'TechFlow Solutions',
@@ -86,6 +85,29 @@ export function HomePage({ onNavigate }: HomePageProps) {
 
   return (
     <div className="relative">
+      <SEO
+        title="Web Media Design"
+        description="Agenție digitală premium specializată în design web, marketing digital, branding și automatizare AI. Parteneriate exclusive pentru branduri în creștere rapidă care caută excelență digitală."
+        path="/"
+      />
+      <StructuredData
+        organization={{
+          name: 'Web Media Design',
+          description: 'Agenție digitală premium care creează experiențe excepționale pentru branduri în creștere rapidă',
+          url: 'https://webmediadesign.com',
+          logo: 'https://webmediadesign.com/logo.png',
+          contactPoint: {
+            telephone: '+1-555-123-4567',
+            contactType: 'Customer Service',
+            email: 'hello@webmediadesign.com',
+          },
+        }}
+        webpage={{
+          name: 'Web Media Design - Agenție Digitală Premium',
+          description: 'Design web, marketing digital, branding și automatizare AI pentru branduri în creștere rapidă',
+          url: 'https://webmediadesign.com/',
+        }}
+      />
       <CodeRain />
 
       {/* Hero Section */}
@@ -112,17 +134,21 @@ export function HomePage({ onNavigate }: HomePageProps) {
 
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-12">
               <Button
-                onClick={() => onNavigate('apply')}
+                asChild
                 className="btn-primary h-14 px-8 glow-blue text-lg"
               >
-                Aplică pentru Colaborare
-                <ArrowRight className="ml-2 w-5 h-5" />
+                <Link to="/aplica">
+                  Aplică pentru Colaborare
+                  <ArrowRight className="ml-2 w-5 h-5" />
+                </Link>
               </Button>
               <Button
-                onClick={() => onNavigate('portfolio')}
+                asChild
                 className="btn-ghost h-14 px-8 text-lg"
               >
-                Vezi Munca Noastră
+                <Link to="/studii-de-caz">
+                  Vezi Munca Noastră
+                </Link>
               </Button>
             </div>
 
@@ -230,14 +256,13 @@ export function HomePage({ onNavigate }: HomePageProps) {
                 features: ['Automatizare Fluxuri', 'Chatbot-uri AI', 'Analiză Predictivă'],
               },
             ].map((service, index) => (
-              <motion.div
-                key={service.title}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ delay: index * 0.1 }}
-                className="glass rounded-xl p-8 hover:glass-strong transition-all duration-300 group cursor-pointer"
-                onClick={() => onNavigate('services')}
-              >
+              <Link to="/servicii" key={service.title}>
+                <motion.div
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ delay: index * 0.1 }}
+                  className="glass rounded-xl p-8 hover:glass-strong transition-all duration-300 group cursor-pointer"
+                >
                 <div className="w-16 h-16 rounded-xl bg-gradient-to-br from-[#0070C9] to-[#002F6C] flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
                   <service.icon className="w-8 h-8 text-white" />
                 </div>
@@ -251,17 +276,20 @@ export function HomePage({ onNavigate }: HomePageProps) {
                     </li>
                   ))}
                 </ul>
-              </motion.div>
+                </motion.div>
+              </Link>
             ))}
           </div>
 
           <div className="text-center mt-12">
             <Button
-              onClick={() => onNavigate('services')}
+              asChild
               className="btn-ghost h-12 px-8"
             >
-              Explorează Toate Serviciile
-              <ArrowRight className="ml-2 w-4 h-4" />
+              <Link to="/servicii">
+                Explorează Toate Serviciile
+                <ArrowRight className="ml-2 w-4 h-4" />
+              </Link>
             </Button>
           </div>
         </div>
@@ -315,18 +343,22 @@ export function HomePage({ onNavigate }: HomePageProps) {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ delay: index * 0.1 }}
               >
-                <CaseStudyCard {...study} onClick={() => onNavigate('portfolio')} />
+                <Link to="/studii-de-caz">
+                  <CaseStudyCard {...study} />
+                </Link>
               </motion.div>
             ))}
           </div>
 
           <div className="text-center mt-12">
             <Button
-              onClick={() => onNavigate('portfolio')}
+              asChild
               className="btn-ghost"
             >
-              Vezi Toate Studiile de Caz
-              <ArrowRight className="ml-2 w-4 h-4" />
+              <Link to="/studii-de-caz">
+                Vezi Toate Studiile de Caz
+                <ArrowRight className="ml-2 w-4 h-4" />
+              </Link>
             </Button>
           </div>
         </div>
@@ -463,11 +495,13 @@ export function HomePage({ onNavigate }: HomePageProps) {
                   ))}
                 </ul>
                 <Button
-                  onClick={() => onNavigate('academy')}
+                  asChild
                   className="btn-primary h-12 px-8"
                 >
-                  Începe să Înveți Gratuit
-                  <ArrowRight className="ml-2 w-4 h-4" />
+                  <Link to="/academia">
+                    Începe să Înveți Gratuit
+                    <ArrowRight className="ml-2 w-4 h-4" />
+                  </Link>
                 </Button>
               </div>
               <div className="grid grid-cols-2 gap-4">
@@ -564,11 +598,13 @@ export function HomePage({ onNavigate }: HomePageProps) {
               Limitat la <span className="text-[#00AEEF]">12 parteneriate noi pe trimestru</span>
             </p>
             <Button
-              onClick={() => onNavigate('apply')}
+              asChild
               className="btn-primary h-12 px-8"
             >
-              Aplică Acum
-              <ArrowRight className="ml-2 w-4 h-4" />
+              <Link to="/aplica">
+                Aplică Acum
+                <ArrowRight className="ml-2 w-4 h-4" />
+              </Link>
             </Button>
           </div>
         </div>
@@ -675,11 +711,13 @@ export function HomePage({ onNavigate }: HomePageProps) {
             Alătură-te grupului exclusiv de branduri în creștere rapidă cu care ne asociem.
           </p>
           <Button
-            onClick={() => onNavigate('apply')}
+            asChild
             className="btn-primary h-14 px-8 text-lg glow-blue"
           >
-            Aplică pentru Colaborare
-            <ArrowRight className="ml-2 w-5 h-5" />
+            <Link to="/aplica">
+              Aplică pentru Colaborare
+              <ArrowRight className="ml-2 w-5 h-5" />
+            </Link>
           </Button>
         </div>
       </section>

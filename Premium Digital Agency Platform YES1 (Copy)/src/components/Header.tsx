@@ -1,15 +1,12 @@
 import { useState, useEffect } from 'react';
+import { Link, useLocation } from 'react-router-dom';
 import { Menu, X, Sparkles } from 'lucide-react';
 import { Button } from './ui/button';
 
-interface HeaderProps {
-  currentPage: string;
-  onNavigate: (page: string) => void;
-}
-
-export function Header({ currentPage, onNavigate }: HeaderProps) {
+export function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const location = useLocation();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -21,12 +18,19 @@ export function Header({ currentPage, onNavigate }: HeaderProps) {
   }, []);
 
   const navigation = [
-    { name: 'Acasă', page: 'home' },
-    { name: 'Servicii', page: 'services' },
-    { name: 'Portofoliu', page: 'portfolio' },
-    { name: 'Academia WMD', page: 'academy' },
-    { name: 'Despre', page: 'about' },
+    { name: 'Acasă', path: '/' },
+    { name: 'Servicii', path: '/servicii' },
+    { name: 'Portofoliu', path: '/studii-de-caz' },
+    { name: 'Academia WMD', path: '/academia' },
+    { name: 'Despre', path: '/despre' },
   ];
+
+  const isActive = (path: string) => {
+    if (path === '/') {
+      return location.pathname === '/';
+    }
+    return location.pathname.startsWith(path);
+  };
 
   return (
     <header
@@ -37,8 +41,8 @@ export function Header({ currentPage, onNavigate }: HeaderProps) {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
-          <button
-            onClick={() => onNavigate('home')}
+          <Link
+            to="/"
             className="flex items-center space-x-2 group"
           >
             <div className="w-10 h-10 rounded-lg flex items-center justify-center glow-blue" style={{ backgroundImage: 'linear-gradient(135deg, #0B61D6 0%, #06306F 100%)' }}>
@@ -47,30 +51,30 @@ export function Header({ currentPage, onNavigate }: HeaderProps) {
             <span className="text-xl tracking-tight">
               <span className="text-gradient">Web Media Design</span>
             </span>
-          </button>
+          </Link>
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-8">
             {navigation.map((item) => (
-              <button
-                key={item.page}
-                onClick={() => onNavigate(item.page)}
+              <Link
+                key={item.path}
+                to={item.path}
                 className={`transition-colors hover:text-[#00AEEF] ${
-                  currentPage === item.page ? 'text-[#00AEEF]' : 'text-white/80'
+                  isActive(item.path) ? 'text-[#00AEEF]' : 'text-white/80'
                 }`}
               >
                 {item.name}
-              </button>
+              </Link>
             ))}
           </nav>
 
           {/* CTA Button */}
           <div className="hidden md:block">
             <Button
-              onClick={() => onNavigate('apply')}
+              asChild
               className="btn-primary glow-blue"
             >
-              Aplică Acum
+              <Link to="/aplica">Aplică Acum</Link>
             </Button>
           </div>
 
@@ -89,27 +93,24 @@ export function Header({ currentPage, onNavigate }: HeaderProps) {
         <div className="md:hidden glass-strong border-t border-white/10">
           <div className="px-4 py-6 space-y-4">
             {navigation.map((item) => (
-              <button
-                key={item.page}
-                onClick={() => {
-                  onNavigate(item.page);
-                  setIsMobileMenuOpen(false);
-                }}
+              <Link
+                key={item.path}
+                to={item.path}
+                onClick={() => setIsMobileMenuOpen(false)}
                 className={`block w-full text-left py-2 transition-colors hover:text-[#00AEEF] ${
-                  currentPage === item.page ? 'text-[#00AEEF]' : 'text-white/80'
+                  isActive(item.path) ? 'text-[#00AEEF]' : 'text-white/80'
                 }`}
               >
                 {item.name}
-              </button>
+              </Link>
             ))}
             <Button
-              onClick={() => {
-                onNavigate('apply');
-                setIsMobileMenuOpen(false);
-              }}
+              asChild
               className="w-full btn-primary"
             >
-              Aplică Acum
+              <Link to="/aplica" onClick={() => setIsMobileMenuOpen(false)}>
+                Aplică Acum
+              </Link>
             </Button>
           </div>
         </div>

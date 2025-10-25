@@ -1,21 +1,18 @@
+import { Link } from 'react-router-dom';
 import { Facebook, Twitter, Instagram, Linkedin, Mail, Phone, MapPin, Sparkles } from 'lucide-react';
 
-interface FooterProps {
-  onNavigate: (page: string) => void;
-}
-
-export function Footer({ onNavigate }: FooterProps) {
+export function Footer() {
   const services = [
-    { name: 'Design Web', page: 'web-design' },
-    { name: 'Marketing Digital', page: 'marketing' },
-    { name: 'Branding', page: 'branding' },
-    { name: 'Automatizare AI', page: 'ai-automation' },
+    { name: 'Design Web', path: '/servicii/design-web' },
+    { name: 'Marketing Digital', path: '/servicii/marketing-digital' },
+    { name: 'Branding', path: '/servicii/branding' },
+    { name: 'Automatizare AI', path: '/servicii/automatizare-ai' },
   ];
 
   const company = [
-    { name: 'Despre Noi', page: 'about' },
-    { name: 'Portofoliu', page: 'portfolio' },
-    { name: 'Academia WMD', page: 'academy' },
+    { name: 'Despre Noi', path: '/despre' },
+    { name: 'Portofoliu', path: '/studii-de-caz' },
+    { name: 'Academia WMD', path: '/academia' },
   ];
 
   return (
@@ -54,13 +51,13 @@ export function Footer({ onNavigate }: FooterProps) {
             <h3 className="mb-4">Servicii</h3>
             <ul className="space-y-3">
               {services.map((item) => (
-                <li key={item.page}>
-                  <button
-                    onClick={() => onNavigate(item.page)}
+                <li key={item.path}>
+                  <Link
+                    to={item.path}
                     className="text-white/60 hover:text-[#00AEEF] transition-colors"
                   >
                     {item.name}
-                  </button>
+                  </Link>
                 </li>
               ))}
             </ul>
@@ -71,13 +68,13 @@ export function Footer({ onNavigate }: FooterProps) {
             <h3 className="mb-4">Companie</h3>
             <ul className="space-y-3">
               {company.map((item) => (
-                <li key={item.page}>
-                  <button
-                    onClick={() => onNavigate(item.page)}
+                <li key={item.path}>
+                  <Link
+                    to={item.path}
                     className="text-white/60 hover:text-[#00AEEF] transition-colors"
                   >
                     {item.name}
-                  </button>
+                  </Link>
                 </li>
               ))}
             </ul>
