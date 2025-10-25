@@ -1,6 +1,7 @@
 import { motion } from 'motion/react';
 import { ArrowRight, Sparkles, Rocket, Target, Zap, Shield, Award, TrendingUp, Users, DollarSign, BarChart3, Clock, Code2, Palette, Megaphone, Brain, CheckCircle2, GraduationCap, Star, Globe, Lock, Briefcase } from 'lucide-react';
 import { Button } from '../ui/button';
+import { Badge } from '../ui/badge';
 import { CaseStudyCard } from '../CaseStudyCard';
 import { TestimonialCard } from '../TestimonialCard';
 import { CodeRain } from '../CodeRain';
@@ -95,9 +96,10 @@ export function HomePage({ onNavigate }: HomePageProps) {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
-            <div className="inline-block glass-strong rounded-full px-6 py-2 mb-8">
-              <span className="text-[#00AEEF]">✦ Agenție Digitală de Elită ✦</span>
-            </div>
+            <Badge variant="outline" className="mb-6 border-[#00AEEF]/30 text-[#00AEEF] bg-[#00AEEF]/10 px-4 py-2 animate-glow">
+              <Zap className="w-4 h-4 mr-2" />
+              Parteneri Digitali de Elită — Doar pe Bază de Aplicație
+            </Badge>
 
             <h1 className="text-5xl md:text-7xl mb-6 max-w-4xl mx-auto">
               Ridică-ți Brandul cu{' '}
