@@ -59,7 +59,7 @@ export function CourseCard({
 
         <Button
           onClick={onEnroll}
-          className="w-full bg-gradient-to-r from-[#0070C9] to-[#002F6C] text-white hover:opacity-90 transition-opacity"
+          className="w-full btn-primary"
         >
           Enroll for Free
         </Button>

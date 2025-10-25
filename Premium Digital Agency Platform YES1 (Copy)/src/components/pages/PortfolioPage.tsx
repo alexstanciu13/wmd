@@ -138,7 +138,7 @@ export function PortfolioPage({ onNavigate }: PortfolioPageProps) {
               onClick={() => setSelectedFilter(filter.id)}
               className={`px-6 py-2 rounded-full transition-all ${
                 selectedFilter === filter.id
-                  ? 'bg-gradient-to-r from-[#0070C9] to-[#002F6C] text-white'
+                  ? 'btn-primary'
                   : 'glass text-white/70 hover:text-white'
               }`}
             >

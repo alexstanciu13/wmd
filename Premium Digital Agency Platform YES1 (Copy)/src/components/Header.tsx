@@ -41,7 +41,7 @@ export function Header({ currentPage, onNavigate }: HeaderProps) {
             onClick={() => onNavigate('home')}
             className="flex items-center space-x-2 group"
           >
-            <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-[#0070C9] to-[#002F6C] flex items-center justify-center glow-blue">
+            <div className="w-10 h-10 rounded-lg flex items-center justify-center glow-blue" style={{ backgroundImage: 'linear-gradient(135deg, #0B61D6 0%, #06306F 100%)' }}>
               <Sparkles className="w-6 h-6 text-white" />
             </div>
             <span className="text-xl tracking-tight">
@@ -68,7 +68,7 @@ export function Header({ currentPage, onNavigate }: HeaderProps) {
           <div className="hidden md:block">
             <Button
               onClick={() => onNavigate('apply')}
-              className="bg-gradient-to-r from-[#0070C9] to-[#002F6C] text-white hover:from-[#0084E8] hover:to-[#003D85] transition-all glow-blue"
+              className="btn-primary glow-blue"
             >
               Aplică Acum
             </Button>
@@ -107,7 +107,7 @@ export function Header({ currentPage, onNavigate }: HeaderProps) {
                 onNavigate('apply');
                 setIsMobileMenuOpen(false);
               }}
-              className="w-full bg-gradient-to-r from-[#0070C9] to-[#002F6C] text-white hover:from-[#0084E8] hover:to-[#003D85] transition-all"
+              className="w-full btn-primary"
             >
               Aplică Acum
             </Button>

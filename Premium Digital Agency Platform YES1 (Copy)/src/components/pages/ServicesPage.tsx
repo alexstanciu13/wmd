@@ -135,7 +135,7 @@ export function ServicesPage({ onNavigate }: ServicesPageProps) {
 
                 <Button
                   onClick={() => onNavigate(service.page)}
-                  className="bg-gradient-to-r from-[#0070C9] to-[#002F6C] text-white hover:opacity-90 transition-opacity w-full group"
+                  className="btn-primary w-full group"
                 >
                   Află Mai Multe
                   <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
@@ -187,7 +187,7 @@ export function ServicesPage({ onNavigate }: ServicesPageProps) {
           </p>
           <Button
             onClick={() => onNavigate('apply')}
-            className="bg-gradient-to-r from-[#0070C9] to-[#002F6C] text-white hover:opacity-90 transition-opacity h-12 px-8"
+            className="btn-primary h-12 px-8"
           >
             Aplică pentru Colaborare
             <ArrowRight className="ml-2 w-5 h-5" />

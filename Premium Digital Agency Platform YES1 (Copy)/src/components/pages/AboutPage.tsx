@@ -217,7 +217,7 @@ export function AboutPage({ onNavigate }: AboutPageProps) {
           </p>
           <Button
             onClick={() => onNavigate('apply')}
-            className="bg-gradient-to-r from-[#0070C9] to-[#002F6C] text-white hover:from-[#0084E8] hover:to-[#003D85] transition-all h-14 px-8 text-lg glow-blue"
+            className="btn-primary h-14 px-8 text-lg glow-blue"
           >
             Aplică pentru Colaborare
           </Button>

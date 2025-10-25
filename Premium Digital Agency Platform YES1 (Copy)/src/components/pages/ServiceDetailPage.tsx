@@ -38,7 +38,7 @@ export function ServiceDetailPage({ service, onNavigate }: ServiceDetailPageProp
             </p>
             <Button
               onClick={() => onNavigate('apply')}
-              className="bg-gradient-to-r from-[#0070C9] to-[#002F6C] text-white hover:opacity-90 transition-opacity h-12 px-8"
+              className="btn-primary h-12 px-8"
             >
               Începe Acum
               <ArrowRight className="ml-2 w-5 h-5" />
@@ -145,7 +145,7 @@ export function ServiceDetailPage({ service, onNavigate }: ServiceDetailPageProp
           </p>
           <Button
             onClick={() => onNavigate('apply')}
-            className="bg-gradient-to-r from-[#0070C9] to-[#002F6C] text-white hover:opacity-90 transition-opacity h-12 px-8"
+            className="btn-primary h-12 px-8"
           >
             Solicită Propunere
           </Button>
@@ -162,13 +162,13 @@ export function ServiceDetailPage({ service, onNavigate }: ServiceDetailPageProp
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button
               onClick={() => onNavigate('apply')}
-              className="bg-gradient-to-r from-[#0070C9] to-[#002F6C] text-white hover:opacity-90 transition-opacity h-12 px-8"
+              className="btn-primary h-12 px-8"
             >
               Aplică Acum
             </Button>
             <Button
               onClick={() => onNavigate('portfolio')}
-              className="bg-gradient-to-r from-[#0070C9] to-[#002F6C] text-white hover:from-[#0084E8] hover:to-[#003D85] transition-all h-12 px-8 border border-[#0070C9]/30"
+              className="btn-primary h-12 px-8 border border-white/20"
             >
               Vezi Studii de Caz
             </Button>

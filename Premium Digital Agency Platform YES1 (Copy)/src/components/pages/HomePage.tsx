@@ -111,14 +111,14 @@ export function HomePage({ onNavigate }: HomePageProps) {
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-12">
               <Button
                 onClick={() => onNavigate('apply')}
-                className="bg-gradient-to-r from-[#0070C9] to-[#002F6C] text-white hover:from-[#0084E8] hover:to-[#003D85] transition-all h-14 px-8 glow-blue text-lg"
+                className="btn-primary h-14 px-8 glow-blue text-lg"
               >
                 Aplică pentru Colaborare
                 <ArrowRight className="ml-2 w-5 h-5" />
               </Button>
               <Button
                 onClick={() => onNavigate('portfolio')}
-                className="bg-gradient-to-r from-[#0070C9] to-[#002F6C] text-white hover:from-[#0084E8] hover:to-[#003D85] transition-all h-14 px-8 text-lg border border-[#0070C9]/30"
+                className="btn-primary h-14 px-8 text-lg border border-white/20"
               >
                 Vezi Munca Noastră
               </Button>
@@ -256,7 +256,7 @@ export function HomePage({ onNavigate }: HomePageProps) {
           <div className="text-center mt-12">
             <Button
               onClick={() => onNavigate('services')}
-              className="bg-gradient-to-r from-[#0070C9] to-[#002F6C] text-white hover:from-[#0084E8] hover:to-[#003D85] transition-all h-12 px-8 border border-[#0070C9]/30"
+              className="btn-primary h-12 px-8 border border-white/20"
             >
               Explorează Toate Serviciile
               <ArrowRight className="ml-2 w-4 h-4" />
@@ -321,7 +321,7 @@ export function HomePage({ onNavigate }: HomePageProps) {
           <div className="text-center mt-12">
             <Button
               onClick={() => onNavigate('portfolio')}
-              className="bg-gradient-to-r from-[#0070C9] to-[#002F6C] text-white hover:from-[#0084E8] hover:to-[#003D85] transition-all border border-[#0070C9]/30"
+              className="btn-primary border border-white/20"
             >
               Vezi Toate Studiile de Caz
               <ArrowRight className="ml-2 w-4 h-4" />
@@ -462,7 +462,7 @@ export function HomePage({ onNavigate }: HomePageProps) {
                 </ul>
                 <Button
                   onClick={() => onNavigate('academy')}
-                  className="bg-gradient-to-r from-[#0070C9] to-[#002F6C] text-white hover:opacity-90 transition-opacity h-12 px-8"
+                  className="btn-primary h-12 px-8"
                 >
                   Începe să Înveți Gratuit
                   <ArrowRight className="ml-2 w-4 h-4" />
@@ -563,7 +563,7 @@ export function HomePage({ onNavigate }: HomePageProps) {
             </p>
             <Button
               onClick={() => onNavigate('apply')}
-              className="bg-gradient-to-r from-[#0070C9] to-[#002F6C] text-white hover:opacity-90 transition-opacity h-12 px-8"
+              className="btn-primary h-12 px-8"
             >
               Aplică Acum
               <ArrowRight className="ml-2 w-4 h-4" />
@@ -674,7 +674,7 @@ export function HomePage({ onNavigate }: HomePageProps) {
           </p>
           <Button
             onClick={() => onNavigate('apply')}
-            className="bg-gradient-to-r from-[#0070C9] to-[#002F6C] text-white hover:from-[#0084E8] hover:to-[#003D85] transition-all h-14 px-8 text-lg glow-blue"
+            className="btn-primary h-14 px-8 text-lg glow-blue"
           >
             Aplică pentru Colaborare
             <ArrowRight className="ml-2 w-5 h-5" />
