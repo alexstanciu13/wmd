@@ -384,7 +384,7 @@ export function HomePage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl mb-4">Alimentat de Tehnologie de Ultimă Generație</h2>
-            <p className="text-white/60 max-w-2xl mx-auto">
+            <p className="text-white/60 max-w-2xl mx-auto text-xl font-semibold">
               Folosim cele mai recente instrumente și framework-uri pentru a livra performanță și scalabilitate excepționale
             </p>
           </div>

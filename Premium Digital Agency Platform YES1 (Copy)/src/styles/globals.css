@@ -160,7 +160,6 @@
 
   .btn-primary:hover:not(:disabled) {
     background-image: linear-gradient(90deg, var(--btn-blue-1-hover, #1673F0) 0%, var(--btn-blue-2-hover, #0A3B8F) 100%);
-    opacity: 0.9;
   }
 
   .btn-primary:active:not(:disabled) {
@@ -195,7 +194,6 @@
   .btn-ghost:hover:not(:disabled) {
     background: rgba(255, 255, 255, 0.18);
     border-color: rgba(255, 255, 255, 0.20);
-    opacity: 0.9;
   }
 
   .btn-ghost:active:not(:disabled) {
@@ -233,7 +231,7 @@ a.btn-primary,
 button.btn-primary:hover:not(:disabled),
 a.btn-primary:hover:not(:disabled),
 .btn.btn-primary:hover:not(:disabled) {
-  opacity: 0.9 !important;
+  opacity: 1 !important;
 }
 
 button.btn-primary:disabled,
@@ -255,7 +253,7 @@ a.btn-ghost,
 button.btn-ghost:hover:not(:disabled),
 a.btn-ghost:hover:not(:disabled),
 .btn.btn-ghost:hover:not(:disabled) {
-  opacity: 0.9 !important;
+  opacity: 1 !important;
 }
 
 button.btn-ghost:disabled,
