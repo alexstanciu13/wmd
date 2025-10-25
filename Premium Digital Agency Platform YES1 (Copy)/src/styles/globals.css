@@ -181,9 +181,39 @@
   .btn-primary.glow-blue {
     z-index: 1;
   }
+
+  /* Ghost Button Styles - For secondary/subtle actions */
+  .btn-ghost {
+    @apply inline-flex items-center justify-center rounded-xl px-5 py-3 font-medium text-white transition-all duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2;
+    position: relative;
+    background: rgba(255, 255, 255, 0.10);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    opacity: 1 !important;
+  }
+
+  .btn-ghost:hover:not(:disabled) {
+    background: rgba(255, 255, 255, 0.18);
+    border-color: rgba(255, 255, 255, 0.20);
+  }
+
+  .btn-ghost:active:not(:disabled) {
+    background: rgba(255, 255, 255, 0.12);
+    border-color: rgba(255, 255, 255, 0.15);
+  }
+
+  .btn-ghost:focus-visible {
+    outline: 2px solid rgba(255, 255, 255, 0.3);
+    outline-offset: 2px;
+  }
+
+  .btn-ghost:disabled {
+    opacity: 0.5 !important;
+    cursor: not-allowed;
+    filter: grayscale(0.5);
+  }
 }
 
-/* Hard overrides to kill any accidental transparency */
+/* Hard overrides to kill any accidental transparency on primary buttons */
 button.btn-primary,
 a.btn-primary,
 .btn.btn-primary {
@@ -210,11 +240,37 @@ a.btn-primary:disabled,
   opacity: 0.6 !important;
 }
 
+/* Hard overrides for ghost buttons */
+button.btn-ghost,
+a.btn-ghost,
+.btn.btn-ghost {
+  opacity: 1 !important;
+  mix-blend-mode: normal !important;
+  -webkit-text-fill-color: white !important;
+  color: white !important;
+}
+
+button.btn-ghost:hover:not(:disabled),
+a.btn-ghost:hover:not(:disabled),
+.btn.btn-ghost:hover:not(:disabled) {
+  opacity: 1 !important;
+}
+
+button.btn-ghost:disabled,
+a.btn-ghost:disabled,
+.btn.btn-ghost:disabled {
+  opacity: 0.5 !important;
+}
+
 /* Ensure pseudo-elements don't block interactions */
 button.btn-primary::before,
 button.btn-primary::after,
 a.btn-primary::before,
-a.btn-primary::after {
+a.btn-primary::after,
+button.btn-ghost::before,
+button.btn-ghost::after,
+a.btn-ghost::before,
+a.btn-ghost::after {
   pointer-events: none !important;
 }
 

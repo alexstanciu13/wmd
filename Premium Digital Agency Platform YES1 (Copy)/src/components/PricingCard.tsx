@@ -55,11 +55,7 @@ export function PricingCard({
 
       <Button
         onClick={onSelect}
-        className={`w-full ${
-          highlighted
-            ? 'btn-primary'
-            : 'bg-white/10 text-white hover:bg-white/20'
-        } transition-all`}
+        className={highlighted ? 'w-full btn-primary' : 'w-full btn-ghost'}
       >
         Get Started
       </Button>
