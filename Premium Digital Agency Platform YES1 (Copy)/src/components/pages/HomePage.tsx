@@ -5,6 +5,7 @@ import { Button } from '../ui/button';
 import { Badge } from '../ui/badge';
 import { CaseStudyCard } from '../CaseStudyCard';
 import { TestimonialCard } from '../TestimonialCard';
+import { InfiniteTestimonialSlider } from '../InfiniteTestimonialSlider';
 import { CodeRain } from '../CodeRain';
 import { ImageWithFallback } from '../figma/ImageWithFallback';
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '../ui/accordion';
@@ -165,7 +166,7 @@ export function HomePage() {
       {/* Trusted By */}
       <section className="relative py-12 border-y border-white/10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <p className="text-center text-white/60 mb-8">De Încredere pentru Liderii din Industrie</p>
+          <p className="text-center text-white/60 mb-8 text-xl">De Încredere pentru Liderii din Industrie</p>
           <div className="grid grid-cols-2 md:grid-cols-6 gap-8">
             {clientLogos.map((logo, index) => (
               <motion.div
@@ -209,7 +210,7 @@ export function HomePage() {
                 className="glass-strong rounded-xl p-6 text-center hover:scale-105 transition-transform duration-300"
               >
                 <div className={`w-14 h-14 rounded-lg bg-gradient-to-br ${stat.color} flex items-center justify-center mx-auto mb-4`}>
-                  <stat.icon className="w-7 h-7 text-white" />
+                  <stat.icon className="w-7 h-7 text-white icon-glow-cyan" />
                 </div>
                 <div className="text-3xl md:text-4xl mb-2 text-gradient">{stat.value}</div>
                 <p className="text-white/60 text-sm">{stat.label}</p>
@@ -256,22 +257,22 @@ export function HomePage() {
                 features: ['Automatizare Fluxuri', 'Chatbot-uri AI', 'Analiză Predictivă'],
               },
             ].map((service, index) => (
-              <Link to="/servicii" key={service.title}>
+              <Link to="/servicii" key={service.title} className="h-full flex">
                 <motion.div
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ delay: index * 0.1 }}
-                  className="glass rounded-xl p-8 hover:glass-strong transition-all duration-300 group cursor-pointer"
+                  className="glass rounded-xl p-8 hover:glass-strong transition-all duration-300 group cursor-pointer w-full flex flex-col"
                 >
-                <div className="w-16 h-16 rounded-xl bg-gradient-to-br from-[#0070C9] to-[#002F6C] flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
-                  <service.icon className="w-8 h-8 text-white" />
+                <div className="w-16 h-16 rounded-xl bg-gradient-to-br from-[#0070C9] to-[#002F6C] flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300 flex-shrink-0">
+                  <service.icon className="w-8 h-8 text-white icon-glow-cyan" />
                 </div>
                 <h3 className="text-2xl mb-3">{service.title}</h3>
-                <p className="text-white/60 mb-6">{service.description}</p>
+                <p className="text-white/60 mb-6 flex-grow">{service.description}</p>
                 <ul className="space-y-2">
                   {service.features.map((feature) => (
                     <li key={feature} className="flex items-center text-sm text-white/50">
-                      <CheckCircle2 className="w-4 h-4 mr-2 text-[#00AEEF]" />
+                      <CheckCircle2 className="w-4 h-4 mr-2 text-[#00AEEF] flex-shrink-0" />
                       {feature}
                     </li>
                   ))}
@@ -315,7 +316,7 @@ export function HomePage() {
                 className="glass rounded-xl p-6 hover:glass-strong transition-all duration-300"
               >
                 <div className="w-12 h-12 rounded-lg bg-gradient-to-br from-[#0070C9] to-[#002F6C] flex items-center justify-center mb-4">
-                  <pillar.icon className="w-6 h-6 text-white" />
+                  <pillar.icon className="w-6 h-6 text-white icon-glow-cyan" />
                 </div>
                 <h3 className="mb-2">{pillar.title}</h3>
                 <p className="text-white/60 text-sm">{pillar.description}</p>
@@ -374,18 +375,7 @@ export function HomePage() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {testimonials.map((testimonial, index) => (
-              <motion.div
-                key={testimonial.name}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ delay: index * 0.1 }}
-              >
-                <TestimonialCard {...testimonial} />
-              </motion.div>
-            ))}
-          </div>
+          <InfiniteTestimonialSlider testimonials={testimonials} />
         </div>
       </section>
 
@@ -394,7 +384,7 @@ export function HomePage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl mb-4">Alimentat de Tehnologie de Ultimă Generație</h2>
-            <p className="text-white/60 max-w-2xl mx-auto">
+            <p className="text-white/60 max-w-2xl mx-auto text-xl font-semibold">
               Folosim cele mai recente instrumente și framework-uri pentru a livra performanță și scalabilitate excepționale
             </p>
           </div>
@@ -458,8 +448,8 @@ export function HomePage() {
               >
                 <div className="text-4xl text-gradient flex-shrink-0">{item.step}</div>
                 <div>
-                  <h3 className="mb-2">{item.title}</h3>
-                  <p className="text-white/60">{item.description}</p>
+                  <h3 className="mb-2 text-xl">{item.title}</h3>
+                  <p className="text-white/60 text-base">{item.description}</p>
                 </div>
               </motion.div>
             ))}
@@ -518,7 +508,7 @@ export function HomePage() {
                     transition={{ delay: index * 0.1 }}
                     className="glass rounded-lg p-4 hover:scale-105 transition-transform duration-300"
                   >
-                    <GraduationCap className="w-8 h-8 mb-2 text-[#00AEEF]" />
+                    <GraduationCap className="w-8 h-8 mb-2 text-[#00AEEF] icon-glow-cyan" />
                     <h4 className="mb-1">{course.title}</h4>
                     <p className="text-sm text-white/50">{course.modules}</p>
                   </motion.div>

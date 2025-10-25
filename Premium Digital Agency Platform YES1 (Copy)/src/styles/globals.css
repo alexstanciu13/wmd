@@ -330,6 +330,11 @@ a.btn-ghost::after {
     -webkit-text-fill-color: transparent;
     background-clip: text;
   }
+
+  /* Icon cyan glow - keeps icon white while adding neon glow */
+  .icon-glow-cyan {
+    filter: drop-shadow(0 0 8px rgba(0, 174, 239, 0.6)) drop-shadow(0 0 12px rgba(0, 174, 239, 0.4));
+  }
 }
 
 /* Animations */
