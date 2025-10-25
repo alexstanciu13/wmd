@@ -111,15 +111,14 @@ export function HomePage({ onNavigate }: HomePageProps) {
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-12">
               <Button
                 onClick={() => onNavigate('apply')}
-                className="bg-gradient-to-r from-[#0070C9] to-[#002F6C] text-white hover:opacity-90 transition-opacity h-14 px-8 glow-cyan text-lg"
+                className="bg-gradient-to-r from-[#0070C9] to-[#002F6C] text-white hover:from-[#0084E8] hover:to-[#003D85] transition-all h-14 px-8 glow-blue text-lg"
               >
                 Aplică pentru Colaborare
                 <ArrowRight className="ml-2 w-5 h-5" />
               </Button>
               <Button
                 onClick={() => onNavigate('portfolio')}
-                variant="outline"
-                className="border-white/20 text-white hover:bg-white/10 h-14 px-8 text-lg"
+                className="bg-gradient-to-r from-[#0070C9] to-[#002F6C] text-white hover:from-[#0084E8] hover:to-[#003D85] transition-all h-14 px-8 text-lg border border-[#0070C9]/30"
               >
                 Vezi Munca Noastră
               </Button>
@@ -257,8 +256,7 @@ export function HomePage({ onNavigate }: HomePageProps) {
           <div className="text-center mt-12">
             <Button
               onClick={() => onNavigate('services')}
-              variant="outline"
-              className="border-white/20 text-white hover:bg-white/10 h-12 px-8"
+              className="bg-gradient-to-r from-[#0070C9] to-[#002F6C] text-white hover:from-[#0084E8] hover:to-[#003D85] transition-all h-12 px-8 border border-[#0070C9]/30"
             >
               Explorează Toate Serviciile
               <ArrowRight className="ml-2 w-4 h-4" />
@@ -323,8 +321,7 @@ export function HomePage({ onNavigate }: HomePageProps) {
           <div className="text-center mt-12">
             <Button
               onClick={() => onNavigate('portfolio')}
-              variant="outline"
-              className="border-white/20 text-white hover:bg-white/10"
+              className="bg-gradient-to-r from-[#0070C9] to-[#002F6C] text-white hover:from-[#0084E8] hover:to-[#003D85] transition-all border border-[#0070C9]/30"
             >
               Vezi Toate Studiile de Caz
               <ArrowRight className="ml-2 w-4 h-4" />
@@ -439,7 +436,7 @@ export function HomePage({ onNavigate }: HomePageProps) {
       {/* WMD Academy Promotion */}
       <section className="relative py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="glass-strong rounded-2xl p-8 md:p-12 glow-cyan overflow-hidden relative">
+          <div className="glass-strong rounded-2xl p-8 md:p-12 glow-blue overflow-hidden relative">
             <div className="absolute top-0 right-0 w-64 h-64 bg-gradient-to-br from-[#00AEEF]/20 to-transparent rounded-full blur-3xl"></div>
             <div className="relative grid md:grid-cols-2 gap-12 items-center">
               <div>
@@ -677,7 +674,7 @@ export function HomePage({ onNavigate }: HomePageProps) {
           </p>
           <Button
             onClick={() => onNavigate('apply')}
-            className="bg-gradient-to-r from-[#0070C9] to-[#002F6C] text-white hover:opacity-90 transition-opacity h-14 px-8 text-lg glow-cyan"
+            className="bg-gradient-to-r from-[#0070C9] to-[#002F6C] text-white hover:from-[#0084E8] hover:to-[#003D85] transition-all h-14 px-8 text-lg glow-blue"
           >
             Aplică pentru Colaborare
             <ArrowRight className="ml-2 w-5 h-5" />

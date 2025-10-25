@@ -178,7 +178,7 @@ export function ServicesPage({ onNavigate }: ServicesPageProps) {
 
       {/* CTA Section */}
       <section className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="glass-strong rounded-2xl p-8 md:p-12 text-center glow-cyan">
+        <div className="glass-strong rounded-2xl p-8 md:p-12 text-center glow-blue">
           <h2 className="text-3xl md:text-4xl mb-4">
             Ești Gata să Începi?
           </h2>

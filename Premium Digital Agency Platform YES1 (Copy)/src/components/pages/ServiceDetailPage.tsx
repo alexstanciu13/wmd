@@ -168,8 +168,7 @@ export function ServiceDetailPage({ service, onNavigate }: ServiceDetailPageProp
             </Button>
             <Button
               onClick={() => onNavigate('portfolio')}
-              variant="outline"
-              className="border-white/20 text-white hover:bg-white/10 h-12 px-8"
+              className="bg-gradient-to-r from-[#0070C9] to-[#002F6C] text-white hover:from-[#0084E8] hover:to-[#003D85] transition-all h-12 px-8 border border-[#0070C9]/30"
             >
               Vezi Studii de Caz
             </Button>
