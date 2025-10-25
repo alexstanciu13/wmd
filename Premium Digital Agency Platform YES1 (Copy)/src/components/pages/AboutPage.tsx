@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { Award, Users, Target, Zap, Heart, Shield } from 'lucide-react';
 import { Button } from '../ui/button';
 import { ImageWithFallback } from '../figma/ImageWithFallback';
+import { SEO } from '../SEO';
 
 export function AboutPage() {
   const values = [
@@ -53,6 +54,11 @@ export function AboutPage() {
 
   return (
     <div className="relative pt-32 pb-20">
+      <SEO
+        title="Despre Noi"
+        description="Agenție digitală premium fondată în 2018. Parteneriatul strategic, nu serviciul tranzacțional. Descoperă echipa și valorile Web Media Design."
+        path="/despre"
+      />
       {/* Hero Section */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-20">
         <motion.div
