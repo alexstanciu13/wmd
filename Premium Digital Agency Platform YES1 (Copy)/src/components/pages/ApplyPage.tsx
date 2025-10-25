@@ -69,8 +69,11 @@ export function ApplyPage() {
               { step: '4', title: 'Lansare Proiect', time: '1-2 săptămâni' },
             ].map((item) => (
               <div key={item.step} className="text-center">
-                <div className="w-12 h-12 rounded-full bg-gradient-to-b from-[#0070C9] to-[#002F6C] flex items-center justify-center mx-auto mb-2 glow-blue">
-                  <span className="text-white font-bold text-lg">{item.step}</span>
+                <div className="w-8 h-8 md:w-10 md:h-10 rounded-full flex items-center justify-center mx-auto mb-2 glow-blue" style={{
+                  backgroundImage: 'linear-gradient(180deg, #0070C9 0%, #002F6C 100%)',
+                  border: '1px solid rgba(255, 255, 255, 0.1)'
+                }}>
+                  <span className="text-white font-bold text-sm md:text-base">{item.step}</span>
                 </div>
                 <h4 className="text-sm mb-1">{item.title}</h4>
                 <p className="text-xs text-white/60">{item.time}</p>
