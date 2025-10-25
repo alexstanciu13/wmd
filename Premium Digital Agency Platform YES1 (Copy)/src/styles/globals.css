@@ -262,7 +262,7 @@ a.btn-ghost:disabled,
   opacity: 0.5 !important;
 }
 
-/* Ensure pseudo-elements don't block interactions */
+/* Ensure pseudo-elements don't block interactions and inherit border-radius */
 button.btn-primary::before,
 button.btn-primary::after,
 a.btn-primary::before,
@@ -272,6 +272,32 @@ button.btn-ghost::after,
 a.btn-ghost::before,
 a.btn-ghost::after {
   pointer-events: none !important;
+  border-radius: inherit !important;
+}
+
+/* Global fallback: ensure ALL buttons have 12px rounding */
+button,
+.btn,
+.btn-primary,
+.btn-ghost,
+a[role="button"],
+[data-slot="button"] {
+  border-radius: 12px !important;
+}
+
+button::before,
+button::after,
+.btn::before,
+.btn::after,
+.btn-primary::before,
+.btn-primary::after,
+.btn-ghost::before,
+.btn-ghost::after,
+a[role="button"]::before,
+a[role="button"]::after,
+[data-slot="button"]::before,
+[data-slot="button"]::after {
+  border-radius: inherit !important;
 }
 
 /* Glassmorphism utility classes */
