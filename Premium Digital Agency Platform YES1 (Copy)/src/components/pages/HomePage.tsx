@@ -118,7 +118,7 @@ export function HomePage({ onNavigate }: HomePageProps) {
               </Button>
               <Button
                 onClick={() => onNavigate('portfolio')}
-                className="btn-primary h-14 px-8 text-lg border border-white/20"
+                className="btn-ghost h-14 px-8 text-lg"
               >
                 Vezi Munca Noastră
               </Button>
@@ -256,7 +256,7 @@ export function HomePage({ onNavigate }: HomePageProps) {
           <div className="text-center mt-12">
             <Button
               onClick={() => onNavigate('services')}
-              className="btn-primary h-12 px-8 border border-white/20"
+              className="btn-ghost h-12 px-8"
             >
               Explorează Toate Serviciile
               <ArrowRight className="ml-2 w-4 h-4" />
@@ -321,7 +321,7 @@ export function HomePage({ onNavigate }: HomePageProps) {
           <div className="text-center mt-12">
             <Button
               onClick={() => onNavigate('portfolio')}
-              className="btn-primary border border-white/20"
+              className="btn-ghost"
             >
               Vezi Toate Studiile de Caz
               <ArrowRight className="ml-2 w-4 h-4" />
