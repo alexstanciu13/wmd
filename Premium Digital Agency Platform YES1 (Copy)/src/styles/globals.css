@@ -6,7 +6,13 @@
   --font-size: 16px;
   --font-heading: 'Space Grotesk', sans-serif;
   --font-body: 'Inter', sans-serif;
-  
+
+  /* Primary Button Colors */
+  --btn-blue-1: #0B61D6;
+  --btn-blue-2: #06306F;
+  --btn-blue-1-hover: #1673F0;
+  --btn-blue-2-hover: #0A3B8F;
+
   /* WMD Premium Dark Theme */
   --background: #0A0A0A;
   --foreground: #FFFFFF;
@@ -144,30 +150,43 @@
 @layer components {
   .btn-primary {
     @apply inline-flex items-center justify-center rounded-xl px-5 py-3 font-medium text-white shadow-md transition-all duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2;
-    background-image: linear-gradient(90deg, #0B61D6 0%, #06306F 100%);
+    position: relative;
+    background-image: linear-gradient(90deg, var(--btn-blue-1, #0B61D6) 0%, var(--btn-blue-2, #06306F) 100%);
     border: 1px solid rgba(255, 255, 255, 0.10);
-    opacity: 1 !important;
     background-color: transparent !important;
+    opacity: 1 !important;
     mix-blend-mode: normal !important;
   }
 
   .btn-primary:hover:not(:disabled) {
-    background-image: linear-gradient(90deg, #1673F0 0%, #0A3B8F 100%);
+    background-image: linear-gradient(90deg, var(--btn-blue-1-hover, #1673F0) 0%, var(--btn-blue-2-hover, #0A3B8F) 100%);
+  }
+
+  .btn-primary:active:not(:disabled) {
+    background-image: linear-gradient(90deg, var(--btn-blue-2, #06306F) 0%, var(--btn-blue-1, #0B61D6) 100%);
+  }
+
+  .btn-primary:focus-visible {
+    outline: 2px solid rgba(11, 97, 214, 0.5);
+    outline-offset: 2px;
   }
 
   .btn-primary:disabled {
     opacity: 0.6 !important;
     cursor: not-allowed;
+    filter: grayscale(0.3);
   }
 
-  .btn-primary:focus-visible {
-    ring: 2px solid rgba(11, 97, 214, 0.5);
+  /* Ensure glow doesn't cover button */
+  .btn-primary.glow-blue {
+    z-index: 1;
   }
 }
 
 /* Hard overrides to kill any accidental transparency */
 button.btn-primary,
-a.btn-primary {
+a.btn-primary,
+.btn.btn-primary {
   background-color: transparent !important;
   opacity: 1 !important;
   mix-blend-mode: normal !important;
@@ -176,11 +195,27 @@ a.btn-primary {
   -webkit-text-fill-color: white !important;
   background-clip: border-box !important;
   -webkit-background-clip: border-box !important;
+  color: white !important;
+}
+
+button.btn-primary:hover:not(:disabled),
+a.btn-primary:hover:not(:disabled),
+.btn.btn-primary:hover:not(:disabled) {
+  opacity: 1 !important;
 }
 
 button.btn-primary:disabled,
-a.btn-primary:disabled {
+a.btn-primary:disabled,
+.btn.btn-primary:disabled {
   opacity: 0.6 !important;
+}
+
+/* Ensure pseudo-elements don't block interactions */
+button.btn-primary::before,
+button.btn-primary::after,
+a.btn-primary::before,
+a.btn-primary::after {
+  pointer-events: none !important;
 }
 
 /* Glassmorphism utility classes */
@@ -199,20 +234,31 @@ a.btn-primary:disabled {
     border: 1px solid rgba(255, 255, 255, 0.2);
   }
 
+  /* Glow effects - outer only, don't interfere with backgrounds */
   .glow-cyan {
-    box-shadow: 0 0 20px rgba(0, 174, 239, 0.3);
+    box-shadow: 0 0 20px rgba(0, 174, 239, 0.3), 0 0 40px rgba(0, 174, 239, 0.15);
+    position: relative;
   }
 
   .glow-blue {
-    box-shadow: 0 0 30px rgba(11, 97, 214, 0.4), 0 0 60px rgba(6, 48, 111, 0.2);
+    box-shadow: 0 0 30px rgba(11, 97, 214, 0.5), 0 0 60px rgba(6, 48, 111, 0.3), 0 0 90px rgba(6, 48, 111, 0.15);
+    position: relative;
   }
 
   .glow-violet {
-    box-shadow: 0 0 20px rgba(11, 97, 214, 0.3);
+    box-shadow: 0 0 20px rgba(11, 97, 214, 0.4), 0 0 40px rgba(11, 97, 214, 0.2);
+    position: relative;
   }
 
   .glow-indigo {
-    box-shadow: 0 0 20px rgba(26, 35, 126, 0.5);
+    box-shadow: 0 0 20px rgba(26, 35, 126, 0.6), 0 0 40px rgba(26, 35, 126, 0.3);
+    position: relative;
+  }
+
+  /* Enhanced glow on hover for buttons */
+  button.glow-blue:hover:not(:disabled),
+  a.glow-blue:hover:not(:disabled) {
+    box-shadow: 0 0 40px rgba(22, 115, 240, 0.6), 0 0 80px rgba(10, 59, 143, 0.4), 0 0 120px rgba(10, 59, 143, 0.2);
   }
 
   .text-gradient {
