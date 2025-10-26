@@ -1,0 +1,140 @@
+/* ========================================
+   Seamless Testimonials Marquee Styles
+   ======================================== */
+
+.seamless-marquee {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+}
+
+.seamless-marquee__track {
+  display: flex;
+  width: max-content;
+  animation: seamless-scroll var(--loop-dur, 30s) linear infinite;
+  will-change: transform;
+}
+
+.seamless-marquee__sequence {
+  display: flex;
+  gap: 14px; /* Mobile default */
+  flex-shrink: 0;
+}
+
+/* Tablet breakpoint */
+@media (min-width: 640px) {
+  .seamless-marquee__sequence {
+    gap: 18px;
+  }
+}
+
+/* Desktop breakpoint */
+@media (min-width: 1024px) {
+  .seamless-marquee__sequence {
+    gap: 24px;
+  }
+}
+
+/* Card container */
+.seamless-marquee__card {
+  flex-shrink: 0;
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+  border-radius: 12px;
+
+  /* Responsive widths */
+  /* Mobile: ~1.15 cards visible */
+  width: calc((100vw - 2 * 16px) / 1.15);
+  max-width: calc((100vw - 2 * 16px) / 1.15);
+}
+
+/* Tablet: 2 cards visible */
+@media (min-width: 640px) {
+  .seamless-marquee__card {
+    width: calc((100vw - 2 * 24px - 18px) / 2);
+    max-width: calc((100vw - 2 * 24px - 18px) / 2);
+  }
+}
+
+/* Desktop: 3 cards visible */
+@media (min-width: 1024px) {
+  .seamless-marquee__card {
+    width: calc((1280px - 2 * 32px - 2 * 24px) / 3);
+    max-width: calc((1280px - 2 * 32px - 2 * 24px) / 3);
+  }
+}
+
+/* Extra large screens */
+@media (min-width: 1280px) {
+  .seamless-marquee__card {
+    width: calc((1280px - 2 * 32px - 2 * 24px) / 3);
+    max-width: calc((1280px - 2 * 32px - 2 * 24px) / 3);
+  }
+}
+
+/* Ensure card contents maintain proper styling */
+.seamless-marquee__card > * {
+  height: 100%;
+  border-radius: 12px;
+}
+
+/* Keyframes for seamless scrolling */
+@keyframes seamless-scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(-1 * var(--loop-w, 0px)));
+  }
+}
+
+/* Fade gradients */
+.seamless-marquee__gradient {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 64px;
+  pointer-events: none;
+  z-index: 10;
+}
+
+@media (min-width: 768px) {
+  .seamless-marquee__gradient {
+    width: 96px;
+  }
+}
+
+.seamless-marquee__gradient--left {
+  left: 0;
+  background: linear-gradient(to right, #0A0A0A, transparent);
+}
+
+.seamless-marquee__gradient--right {
+  right: 0;
+  background: linear-gradient(to left, #0A0A0A, transparent);
+}
+
+/* Pause on hover/touch */
+.seamless-marquee:hover .seamless-marquee__track {
+  animation-play-state: paused;
+}
+
+/* Prevent text selection during drag */
+.seamless-marquee {
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+/* Equal height cards - ensure all cards have the same height */
+.seamless-marquee__card {
+  display: flex;
+  align-items: stretch;
+}
+
+/* Ensure testimonial cards fill the container */
+.seamless-marquee__card > div {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
