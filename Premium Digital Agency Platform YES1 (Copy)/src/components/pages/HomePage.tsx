@@ -5,7 +5,7 @@ import { Button } from '../ui/button';
 import { Badge } from '../ui/badge';
 import { CaseStudyCard } from '../CaseStudyCard';
 import { TestimonialCard } from '../TestimonialCard';
-import { InfiniteTestimonialSlider } from '../InfiniteTestimonialSlider';
+import { SeamlessTestimonialsMarquee } from '../SeamlessTestimonialsMarquee';
 import { CodeRain } from '../CodeRain';
 import { ImageWithFallback } from '../figma/ImageWithFallback';
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '../ui/accordion';
@@ -391,7 +391,7 @@ export function HomePage() {
             </p>
           </div>
 
-          <InfiniteTestimonialSlider testimonials={testimonials} />
+          <SeamlessTestimonialsMarquee testimonials={testimonials} />
         </div>
       </section>
 
