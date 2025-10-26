@@ -1,22 +1,29 @@
 import React, { useEffect, useCallback, useRef } from 'react'
 import useEmblaCarousel from 'embla-carousel-react'
 
-const AUTOPLAY_SPEED = 0.3 // adjust for slower/faster scroll
+const AUTOPLAY_SPEED = 1 // pixels per frame for visible smooth scroll
 
 export default function TestimonialsCarousel({ slides }: { slides: React.ReactNode[] }) {
   const [emblaRef, emblaApi] = useEmblaCarousel({
     loop: true,
-    dragFree: false,
     align: 'start',
     skipSnaps: false,
-    slidesToScroll: 1
+    slidesToScroll: 1,
+    containScroll: false
   })
 
   const rafRef = useRef<number | null>(null)
 
   const animate = useCallback(() => {
     if (!emblaApi) return
-    emblaApi.scrollBy(AUTOPLAY_SPEED)
+
+    // Scroll by 1 pixel per frame for smooth visible motion
+    const engine = emblaApi.internalEngine()
+    const currentScroll = engine.location.get()
+    engine.location.set(currentScroll + AUTOPLAY_SPEED)
+    engine.translate.to(engine.location)
+    engine.animation.start()
+
     rafRef.current = requestAnimationFrame(animate)
   }, [emblaApi])
 

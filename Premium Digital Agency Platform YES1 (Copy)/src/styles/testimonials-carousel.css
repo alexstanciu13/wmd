@@ -54,36 +54,36 @@
 .testimonial-quote {
   flex: 1;
   display: -webkit-box;
-  -webkit-line-clamp: 6;
+  -webkit-line-clamp: 8;
   -webkit-box-orient: vertical;
   overflow: hidden;
   margin-bottom: 1.5rem;
 }
 
-/* Exact equal heights per breakpoint */
+/* Exact equal heights per breakpoint - increased to fit all text */
 @media (min-width: 1024px) {
   .embla__slide {
-    height: 360px;
+    height: 420px;
   }
   .testimonial-card {
-    height: 360px;
+    height: 420px;
   }
 }
 
 @media (min-width: 640px) and (max-width: 1023px) {
   .embla__slide {
-    height: 320px;
+    height: 400px;
   }
   .testimonial-card {
-    height: 320px;
+    height: 400px;
   }
 }
 
 @media (max-width: 639px) {
   .embla__slide {
-    height: 300px;
+    height: 380px;
   }
   .testimonial-card {
-    height: 300px;
+    height: 380px;
   }
 }
