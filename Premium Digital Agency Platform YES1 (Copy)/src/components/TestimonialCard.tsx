@@ -19,7 +19,7 @@ export function TestimonialCard({
   rating,
 }: TestimonialCardProps) {
   return (
-    <div className="glass rounded-xl p-6 hover:glass-strong transition-all duration-300">
+    <div className="glass rounded-xl p-6 hover:glass-strong transition-all duration-300 h-full flex flex-col" style={{ borderRadius: '12px' }}>
       <div className="flex items-center justify-between mb-4">
         <div className="flex space-x-1">
           {[...Array(5)].map((_, i) => (
@@ -36,9 +36,9 @@ export function TestimonialCard({
         <Quote className="w-8 h-8 text-[#00AEEF]/20" />
       </div>
 
-      <p className="text-white/80 mb-6 italic">"{testimonial}"</p>
+      <p className="text-white/80 mb-6 italic flex-grow line-clamp-5">"{testimonial}"</p>
 
-      <div className="flex items-center space-x-4">
+      <div className="flex items-center space-x-4 mt-auto">
         <div className="w-12 h-12 rounded-full overflow-hidden ring-2 ring-[#00AEEF]/30">
           <ImageWithFallback
             src={image}

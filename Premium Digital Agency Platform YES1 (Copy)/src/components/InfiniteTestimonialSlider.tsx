@@ -1,4 +1,6 @@
-import { useEffect, useRef, useState } from 'react';
+import { useCallback, useEffect, useRef } from 'react';
+import useEmblaCarousel from 'embla-carousel-react';
+import Autoplay from 'embla-carousel-autoplay';
 import { TestimonialCard } from './TestimonialCard';
 
 interface Testimonial {
@@ -15,117 +17,99 @@ interface InfiniteTestimonialSliderProps {
 }
 
 export function InfiniteTestimonialSlider({ testimonials }: InfiniteTestimonialSliderProps) {
-  const scrollerRef = useRef<HTMLDivElement>(null);
-  const [isPaused, setIsPaused] = useState(false);
-  const [isDragging, setIsDragging] = useState(false);
-  const [startX, setStartX] = useState(0);
-  const [scrollLeft, setScrollLeft] = useState(0);
+  const autoplayRef = useRef(
+    Autoplay({
+      delay: 5000,
+      stopOnInteraction: false,
+      stopOnMouseEnter: true,
+      stopOnFocusIn: true,
+    })
+  );
 
-  // Duplicate testimonials for infinite effect
-  const duplicatedTestimonials = [...testimonials, ...testimonials, ...testimonials];
+  const [emblaRef, emblaApi] = useEmblaCarousel(
+    {
+      loop: true,
+      align: 'start',
+      containScroll: 'trimSnaps',
+      skipSnaps: false,
+      dragFree: false,
+      duration: 25,
+    },
+    [autoplayRef.current]
+  );
+
+  const onPointerDown = useCallback(() => {
+    const autoplay = autoplayRef.current;
+    if (autoplay) autoplay.stop();
+  }, []);
+
+  const onPointerUp = useCallback(() => {
+    const autoplay = autoplayRef.current;
+    if (autoplay) autoplay.play();
+  }, []);
+
+  const handleKeyDown = useCallback(
+    (event: KeyboardEvent) => {
+      if (!emblaApi) return;
+
+      if (event.key === 'ArrowLeft') {
+        event.preventDefault();
+        emblaApi.scrollPrev();
+      } else if (event.key === 'ArrowRight') {
+        event.preventDefault();
+        emblaApi.scrollNext();
+      }
+    },
+    [emblaApi]
+  );
 
   useEffect(() => {
-    const scroller = scrollerRef.current;
-    if (!scroller || isPaused || isDragging) return;
+    const embla = emblaApi;
+    if (!embla) return;
 
-    let animationId: number;
-    let scrollPosition = 0;
-    const scrollSpeed = 0.5; // pixels per frame
-
-    const animate = () => {
-      scrollPosition += scrollSpeed;
-      scroller.scrollLeft = scrollPosition;
-
-      // Reset to middle section when reaching the end
-      const maxScroll = scroller.scrollWidth / 3;
-      if (scrollPosition >= maxScroll * 2) {
-        scrollPosition = maxScroll;
-        scroller.scrollLeft = scrollPosition;
-      }
-
-      animationId = requestAnimationFrame(animate);
-    };
-
-    // Start at the middle section
-    scroller.scrollLeft = scroller.scrollWidth / 3;
-    scrollPosition = scroller.scrollWidth / 3;
-
-    animationId = requestAnimationFrame(animate);
+    const rootNode = embla.rootNode();
+    rootNode.addEventListener('pointerdown', onPointerDown);
+    rootNode.addEventListener('pointerup', onPointerUp);
+    rootNode.addEventListener('touchstart', onPointerDown);
+    rootNode.addEventListener('touchend', onPointerUp);
+    rootNode.addEventListener('keydown', handleKeyDown);
 
     return () => {
-      cancelAnimationFrame(animationId);
+      rootNode.removeEventListener('pointerdown', onPointerDown);
+      rootNode.removeEventListener('pointerup', onPointerUp);
+      rootNode.removeEventListener('touchstart', onPointerDown);
+      rootNode.removeEventListener('touchend', onPointerUp);
+      rootNode.removeEventListener('keydown', handleKeyDown);
     };
-  }, [isPaused, isDragging]);
-
-  const handleMouseDown = (e: React.MouseEvent) => {
-    if (!scrollerRef.current) return;
-    setIsDragging(true);
-    setStartX(e.pageX - scrollerRef.current.offsetLeft);
-    setScrollLeft(scrollerRef.current.scrollLeft);
-  };
-
-  const handleTouchStart = (e: React.TouchEvent) => {
-    if (!scrollerRef.current) return;
-    setIsDragging(true);
-    setStartX(e.touches[0].pageX - scrollerRef.current.offsetLeft);
-    setScrollLeft(scrollerRef.current.scrollLeft);
-  };
-
-  const handleMouseMove = (e: React.MouseEvent) => {
-    if (!isDragging || !scrollerRef.current) return;
-    e.preventDefault();
-    const x = e.pageX - scrollerRef.current.offsetLeft;
-    const walk = (x - startX) * 2;
-    scrollerRef.current.scrollLeft = scrollLeft - walk;
-  };
-
-  const handleTouchMove = (e: React.TouchEvent) => {
-    if (!isDragging || !scrollerRef.current) return;
-    const x = e.touches[0].pageX - scrollerRef.current.offsetLeft;
-    const walk = (x - startX) * 2;
-    scrollerRef.current.scrollLeft = scrollLeft - walk;
-  };
-
-  const handleDragEnd = () => {
-    setIsDragging(false);
-  };
+  }, [emblaApi, onPointerDown, onPointerUp, handleKeyDown]);
 
   return (
     <div
       className="relative overflow-hidden"
-      onMouseEnter={() => setIsPaused(true)}
-      onMouseLeave={() => setIsPaused(false)}
+      role="region"
+      aria-roledescription="carousel"
+      aria-label="Testimoniale"
+      tabIndex={0}
     >
-      <div
-        ref={scrollerRef}
-        className="flex gap-8 overflow-x-hidden cursor-grab active:cursor-grabbing"
-        onMouseDown={handleMouseDown}
-        onMouseMove={handleMouseMove}
-        onMouseUp={handleDragEnd}
-        onMouseLeave={handleDragEnd}
-        onTouchStart={handleTouchStart}
-        onTouchMove={handleTouchMove}
-        onTouchEnd={handleDragEnd}
-        style={{
-          scrollbarWidth: 'none',
-          msOverflowStyle: 'none',
-          WebkitOverflowScrolling: 'touch',
-        }}
-      >
-        {duplicatedTestimonials.map((testimonial, index) => (
-          <div
-            key={`${testimonial.name}-${index}`}
-            className="flex-shrink-0 w-full md:w-[480px]"
-            style={{ userSelect: 'none' }}
-          >
-            <TestimonialCard {...testimonial} />
-          </div>
-        ))}
+      <div ref={emblaRef} className="overflow-hidden">
+        <div className="flex gap-[14px] md:gap-[18px] lg:gap-6 touch-pan-y">
+          {testimonials.map((testimonial, index) => (
+            <div
+              key={`${testimonial.name}-${index}`}
+              className="min-w-0 flex-[0_0_calc((100%-14px)/1.15)] md:flex-[0_0_calc((100%-18px)/2)] lg:flex-[0_0_calc((100%-48px)/3)]"
+              role="group"
+              aria-roledescription="slide"
+              aria-label={`${index + 1} of ${testimonials.length}`}
+            >
+              <TestimonialCard {...testimonial} />
+            </div>
+          ))}
+        </div>
       </div>
 
-      {/* Optional: Add fade edges */}
-      <div className="absolute top-0 left-0 bottom-0 w-32 bg-gradient-to-r from-[#0A0A0A] to-transparent pointer-events-none" />
-      <div className="absolute top-0 right-0 bottom-0 w-32 bg-gradient-to-l from-[#0A0A0A] to-transparent pointer-events-none" />
+      {/* Fade gradients */}
+      <div className="absolute top-0 left-0 bottom-0 w-16 md:w-24 bg-gradient-to-r from-[#0A0A0A] to-transparent pointer-events-none z-10" />
+      <div className="absolute top-0 right-0 bottom-0 w-16 md:w-24 bg-gradient-to-l from-[#0A0A0A] to-transparent pointer-events-none z-10" />
     </div>
   );
 }
