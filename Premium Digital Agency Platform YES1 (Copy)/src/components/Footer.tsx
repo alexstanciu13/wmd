@@ -24,10 +24,10 @@ export function Footer() {
 
   return (
     <footer className="relative mt-32 glass-strong border-t border-white/10">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 lg:gap-12 mb-12 items-start">
+      <div className="w-full max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <div className="grid w-full grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-[1.6fr_1fr_1fr_1fr_1fr] lg:gap-10 mb-12 items-start">
           {/* Brand */}
-          <div className="lg:pr-4">
+          <div className="w-full">
             <div className="flex items-center space-x-2 mb-4">
               <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-[#0070C9] to-[#002F6C] flex items-center justify-center">
                 <Sparkles className="w-6 h-6 text-white" />
@@ -54,7 +54,7 @@ export function Footer() {
           </div>
 
           {/* Services */}
-          <div>
+          <div className="w-full">
             <h3 className="mb-4 font-medium">Servicii</h3>
             <ul className="space-y-3">
               {services.map((item) => (
@@ -71,7 +71,7 @@ export function Footer() {
           </div>
 
           {/* Company */}
-          <div>
+          <div className="w-full">
             <h3 className="mb-4 font-medium">Companie</h3>
             <ul className="space-y-3">
               {company.map((item) => (
@@ -88,7 +88,7 @@ export function Footer() {
           </div>
 
           {/* Legal */}
-          <div>
+          <div className="w-full">
             <h3 className="mb-4 font-medium">Legal</h3>
             <ul className="space-y-3">
               {legal.map((item) => (
@@ -116,7 +116,7 @@ export function Footer() {
           </div>
 
           {/* Contact */}
-          <div>
+          <div className="w-full">
             <h3 className="mb-4 font-medium">Contact</h3>
             <ul className="space-y-3">
               <li className="flex items-start space-x-3 text-sm text-white/60">
