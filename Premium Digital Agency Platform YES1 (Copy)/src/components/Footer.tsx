@@ -25,7 +25,7 @@ export function Footer() {
   return (
     <footer className="relative mt-32 glass-strong border-t border-white/10">
       <div className="w-full max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <div className="grid w-full grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-[1.6fr_1fr_1fr_1fr_1fr] lg:gap-10 mb-12 items-start">
+        <div className="grid w-full grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-[1.6fr_1fr_1fr_1fr] lg:gap-12 mb-12 items-start">
           {/* Brand */}
           <div className="w-full">
             <div className="flex items-center space-x-2 mb-4">
@@ -53,24 +53,7 @@ export function Footer() {
             </div>
           </div>
 
-          {/* Services */}
-          <div className="w-full">
-            <h3 className="mb-4 font-medium">Servicii</h3>
-            <ul className="space-y-3">
-              {services.map((item) => (
-                <li key={item.path}>
-                  <Link
-                    to={item.path}
-                    className="text-sm text-white/60 hover:text-[#00AEEF] transition-colors"
-                  >
-                    {item.name}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          {/* Company */}
+          {/* Company + Legal */}
           <div className="w-full">
             <h3 className="mb-4 font-medium">Companie</h3>
             <ul className="space-y-3">
@@ -85,12 +68,9 @@ export function Footer() {
                 </li>
               ))}
             </ul>
-          </div>
 
-          {/* Legal */}
-          <div className="w-full">
-            <h3 className="mb-4 font-medium">Legal</h3>
-            <ul className="space-y-3">
+            {/* Legal Links - with separator */}
+            <ul className="space-y-3 mt-6 pt-6 border-t border-white/10">
               {legal.map((item) => (
                 <li key={item.path}>
                   <Link
@@ -112,6 +92,23 @@ export function Footer() {
                   <ExternalLink className="w-3 h-3 ml-1" />
                 </a>
               </li>
+            </ul>
+          </div>
+
+          {/* Services */}
+          <div className="w-full">
+            <h3 className="mb-4 font-medium">Servicii</h3>
+            <ul className="space-y-3">
+              {services.map((item) => (
+                <li key={item.path}>
+                  <Link
+                    to={item.path}
+                    className="text-sm text-white/60 hover:text-[#00AEEF] transition-colors"
+                  >
+                    {item.name}
+                  </Link>
+                </li>
+              ))}
             </ul>
           </div>
 
