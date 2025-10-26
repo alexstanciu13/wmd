@@ -11,7 +11,6 @@
 
 .embla__container {
   display: flex;
-  gap: 24px;
   touch-action: pan-y pinch-zoom;
 }
 
@@ -20,27 +19,24 @@
   min-width: 0;
   display: flex;
   min-height: 420px;
+  margin-right: 24px;
 }
 
 /* Tablet: 2 cards per view */
 @media (max-width: 1023px) {
-  .embla__container {
-    gap: 18px;
-  }
   .embla__slide {
     flex: 0 0 calc((100% - 18px) / 2);
     min-height: 400px;
+    margin-right: 18px;
   }
 }
 
 /* Mobile: 1.15 cards per view (with peek) */
 @media (max-width: 639px) {
-  .embla__container {
-    gap: 14px;
-  }
   .embla__slide {
     flex: 0 0 calc(100% / 1.15);
     min-height: 380px;
+    margin-right: 14px;
   }
 }
 

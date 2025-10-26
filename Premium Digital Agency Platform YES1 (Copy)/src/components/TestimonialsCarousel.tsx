@@ -16,7 +16,7 @@ export default function TestimonialsCarousel({ slides }: TestimonialsCarouselPro
       align: 'start',
       skipSnaps: false,
       dragFree: false,
-      containScroll: 'trimSnaps',
+      slidesToScroll: 1,
     },
     [
       AutoScroll({
