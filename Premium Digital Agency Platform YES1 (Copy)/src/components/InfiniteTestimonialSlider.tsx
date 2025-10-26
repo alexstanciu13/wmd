@@ -22,14 +22,8 @@ export function InfiniteTestimonialSlider({ testimonials }: InfiniteTestimonialS
     <div className="relative overflow-hidden">
       <Swiper
         modules={[Autoplay, A11y, FreeMode]}
-        loop={true}
-        speed={450}
-        freeMode={{ enabled: true, momentum: true, momentumRatio: 1, sticky: false }}
-        autoplay={{
-          delay: 4500,
-          disableOnInteraction: false,
-          pauseOnMouseEnter: true,
-        }}
+        className="testimonial-swiper"
+        // Layout
         spaceBetween={24}
         slidesPerView={3}
         breakpoints={{
@@ -37,9 +31,20 @@ export function InfiniteTestimonialSlider({ testimonials }: InfiniteTestimonialS
           640: { slidesPerView: 2, spaceBetween: 18 },
           1024: { slidesPerView: 3, spaceBetween: 24 },
         }}
+        // Continuous motion
+        loop={true}
+        loopAdditionalSlides={8}
+        freeMode={{ enabled: true, momentum: false }}
+        speed={12000}
+        autoplay={{
+          delay: 0,
+          disableOnInteraction: false,
+          pauseOnMouseEnter: true,
+        }}
+        allowTouchMove={true}
+        // Pause while touching/dragging on mobile, resume afterward
         onTouchStart={(swiper: SwiperType) => swiper.autoplay?.stop()}
         onTouchEnd={(swiper: SwiperType) => swiper.autoplay?.start()}
-        className="testimonial-swiper"
         aria-roledescription="carousel"
         aria-label="Testimoniale"
       >
