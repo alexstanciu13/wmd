@@ -17,22 +17,8 @@
 
 .seamless-marquee__sequence {
   display: flex;
-  gap: 14px; /* Mobile default */
+  gap: 0; /* IMPORTANT: No flex gap - spacing is per-slide via margin */
   flex-shrink: 0;
-}
-
-/* Tablet breakpoint */
-@media (min-width: 640px) {
-  .seamless-marquee__sequence {
-    gap: 18px;
-  }
-}
-
-/* Desktop breakpoint */
-@media (min-width: 1024px) {
-  .seamless-marquee__sequence {
-    gap: 24px;
-  }
 }
 
 /* Card container */
@@ -43,33 +29,40 @@
   isolation: isolate;
   border-radius: 12px;
 
-  /* Responsive widths */
-  /* Mobile: ~1.15 cards visible */
-  width: calc((100vw - 2 * 16px) / 1.15);
-  max-width: calc((100vw - 2 * 16px) / 1.15);
+  /* Force GPU acceleration to prevent sub-pixel layout collapse */
+  transform: translateZ(0);
+  backface-visibility: hidden;
+
+  /* Mobile: ~1.15 cards visible, 14px total gap (7px margin each side) */
+  margin: 0 7px;
+  width: calc((100vw - 2 * 16px) / 1.15 - 14px);
+  max-width: calc((100vw - 2 * 16px) / 1.15 - 14px);
 }
 
-/* Tablet: 2 cards visible */
+/* Tablet: 2 cards visible, 18px total gap (9px margin each side) */
 @media (min-width: 640px) {
   .seamless-marquee__card {
-    width: calc((100vw - 2 * 24px - 18px) / 2);
-    max-width: calc((100vw - 2 * 24px - 18px) / 2);
+    margin: 0 9px;
+    width: calc((100vw - 2 * 24px) / 2 - 18px);
+    max-width: calc((100vw - 2 * 24px) / 2 - 18px);
   }
 }
 
-/* Desktop: 3 cards visible */
+/* Desktop: 3 cards visible, 24px total gap (12px margin each side) */
 @media (min-width: 1024px) {
   .seamless-marquee__card {
-    width: calc((1280px - 2 * 32px - 2 * 24px) / 3);
-    max-width: calc((1280px - 2 * 32px - 2 * 24px) / 3);
+    margin: 0 12px;
+    width: calc((1280px - 2 * 32px) / 3 - 24px);
+    max-width: calc((1280px - 2 * 32px) / 3 - 24px);
   }
 }
 
 /* Extra large screens */
 @media (min-width: 1280px) {
   .seamless-marquee__card {
-    width: calc((1280px - 2 * 32px - 2 * 24px) / 3);
-    max-width: calc((1280px - 2 * 32px - 2 * 24px) / 3);
+    margin: 0 12px;
+    width: calc((1280px - 2 * 32px) / 3 - 24px);
+    max-width: calc((1280px - 2 * 32px) / 3 - 24px);
   }
 }
 
