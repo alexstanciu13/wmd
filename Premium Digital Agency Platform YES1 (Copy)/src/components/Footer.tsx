@@ -24,17 +24,17 @@ export function Footer() {
 
   return (
     <footer className="relative mt-32 glass-strong border-t border-white/10">
-      <div className="w-full max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <div className="grid w-full grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-[1.6fr_1fr_1fr_1fr] lg:gap-12 mb-12 items-start">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
           {/* Brand */}
-          <div className="w-full">
+          <div>
             <div className="flex items-center space-x-2 mb-4">
               <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-[#0070C9] to-[#002F6C] flex items-center justify-center">
                 <Sparkles className="w-6 h-6 text-white" />
               </div>
               <span className="text-gradient">WMD</span>
             </div>
-            <p className="text-white/60 mb-4 text-sm">
+            <p className="text-white/60 mb-4">
               Agenție digitală premium care creează experiențe excepționale pentru branduri în creștere rapidă.
             </p>
             <div className="flex space-x-4">
@@ -53,29 +53,47 @@ export function Footer() {
             </div>
           </div>
 
-          {/* Company + Legal */}
-          <div className="w-full">
-            <h3 className="mb-4 font-medium">Companie</h3>
+          {/* Services */}
+          <div>
+            <h3 className="mb-4">Servicii</h3>
             <ul className="space-y-3">
-              {company.map((item) => (
+              {services.map((item) => (
                 <li key={item.path}>
                   <Link
                     to={item.path}
-                    className="text-sm text-white/60 hover:text-[#00AEEF] transition-colors"
+                    className="text-white/60 hover:text-[#00AEEF] transition-colors"
                   >
                     {item.name}
                   </Link>
                 </li>
               ))}
             </ul>
+          </div>
 
-            {/* Legal Links - with separator */}
-            <ul className="space-y-3 mt-6 pt-6 border-t border-white/10">
+          {/* Company */}
+          <div>
+            <h3 className="mb-4">Companie</h3>
+            <ul className="space-y-3">
+              {company.map((item) => (
+                <li key={item.path}>
+                  <Link
+                    to={item.path}
+                    className="text-white/60 hover:text-[#00AEEF] transition-colors"
+                  >
+                    {item.name}
+                  </Link>
+                </li>
+              ))}
+
+              {/* Separator */}
+              <li className="!mt-4 pt-4 border-t border-white/10"></li>
+
+              {/* Legal links */}
               {legal.map((item) => (
                 <li key={item.path}>
                   <Link
                     to={item.path}
-                    className="text-sm text-white/60 hover:text-[#00AEEF] transition-colors"
+                    className="text-white/60 hover:text-[#00AEEF] transition-colors"
                   >
                     {item.name}
                   </Link>
@@ -86,7 +104,7 @@ export function Footer() {
                   href="https://anpc.ro"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-sm text-white/60 hover:text-[#00AEEF] transition-colors inline-flex items-center"
+                  className="text-white/60 hover:text-[#00AEEF] transition-colors inline-flex items-center"
                 >
                   ANPC
                   <ExternalLink className="w-3 h-3 ml-1" />
@@ -95,34 +113,17 @@ export function Footer() {
             </ul>
           </div>
 
-          {/* Services */}
-          <div className="w-full">
-            <h3 className="mb-4 font-medium">Servicii</h3>
-            <ul className="space-y-3">
-              {services.map((item) => (
-                <li key={item.path}>
-                  <Link
-                    to={item.path}
-                    className="text-sm text-white/60 hover:text-[#00AEEF] transition-colors"
-                  >
-                    {item.name}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
-
           {/* Contact */}
-          <div className="w-full">
-            <h3 className="mb-4 font-medium">Contact</h3>
+          <div>
+            <h3 className="mb-4">Contact</h3>
             <ul className="space-y-3">
-              <li className="flex items-start space-x-3 text-sm text-white/60">
+              <li className="flex items-start space-x-3 text-white/60">
                 <Mail className="w-5 h-5 mt-0.5 flex-shrink-0" />
                 <a href="mailto:contact@webmediadesign.ro" className="hover:text-[#00AEEF] transition-colors">
                   contact@webmediadesign.ro
                 </a>
               </li>
-              <li className="flex items-start space-x-3 text-sm text-white/60">
+              <li className="flex items-start space-x-3 text-white/60">
                 <Phone className="w-5 h-5 mt-0.5 flex-shrink-0" />
                 <a href="tel:+40773335409" className="hover:text-[#00AEEF] transition-colors">
                   +40 (773) 335 409
@@ -138,7 +139,7 @@ export function Footer() {
 
         {/* Bottom Bar */}
         <div className="pt-8 border-t border-white/10 text-center md:text-left">
-          <p className="text-sm text-white/60">
+          <p className="text-white/60">
             © 2025 Web Media Design. Toate drepturile rezervate.
           </p>
         </div>
