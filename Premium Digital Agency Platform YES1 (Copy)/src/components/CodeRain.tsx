@@ -24,7 +24,7 @@ export function CodeRain() {
     };
 
     const draw = () => {
-      ctx.fillStyle = 'rgba(10, 10, 10, 0.03)';
+      ctx.fillStyle = 'rgba(10, 10, 10, 0.05)';
       ctx.fillRect(0, 0, canvas.width, canvas.height);
 
       ctx.font = `${fontSize}px monospace`;
@@ -34,8 +34,8 @@ export function CodeRain() {
         const x = i * fontSize;
         const y = drops[i] * fontSize;
 
-        // Brighter blue gradient colors for better visibility
-        const colors = ['#1E90FF', '#0070C9', '#00AEEF', '#4169E1'];
+        // Blue gradient colors
+        const colors = ['#0070C9', '#002F6C', '#1E3A8A'];
         ctx.fillStyle = colors[Math.floor(Math.random() * colors.length)];
 
         ctx.fillText(char, x, y);
