@@ -1,0 +1,54 @@
+/* Embla Carousel Base Styles */
+.embla {
+  overflow: hidden;
+  position: relative;
+}
+
+.embla__container {
+  display: flex;
+  backface-visibility: hidden;
+  touch-action: pan-y;
+}
+
+.embla__slide {
+  min-width: 0;
+  position: relative;
+}
+
+/* Testimonial Card - Equal Heights */
+.testimonial-card {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  border-radius: 12px;
+  transition: all 0.3s ease;
+}
+
+/* Quote area - flex grow with line clamp */
+.testimonial-quote {
+  flex: 1;
+  display: -webkit-box;
+  -webkit-line-clamp: 6;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  margin-bottom: 1.5rem;
+}
+
+/* Responsive min-heights for consistent card sizing */
+@media (min-width: 1024px) {
+  .testimonial-card {
+    min-height: 360px;
+  }
+}
+
+@media (min-width: 640px) and (max-width: 1023px) {
+  .testimonial-card {
+    min-height: 320px;
+  }
+}
+
+@media (max-width: 639px) {
+  .testimonial-card {
+    min-height: 300px;
+  }
+}
