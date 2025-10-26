@@ -1,21 +1,21 @@
-/* Embla Carousel Base Styles */
+/* Embla Carousel Container */
 .embla {
   overflow: hidden;
+  margin: 0 auto;
 }
 
 .embla__container {
   display: flex;
   gap: 24px;
-  backface-visibility: hidden;
 }
 
 .embla__slide {
   flex: 0 0 calc((100% - 48px) / 3);
   min-width: 0;
-  height: auto;
+  display: flex;
 }
 
-/* Tablet: 2 per view */
+/* Tablet: 2 cards per view */
 @media (max-width: 1023px) {
   .embla__container {
     gap: 18px;
@@ -25,7 +25,7 @@
   }
 }
 
-/* Mobile: 1.15 per view (peek) */
+/* Mobile: 1.15 cards per view (with peek) */
 @media (max-width: 639px) {
   .embla__container {
     gap: 14px;
@@ -35,55 +35,38 @@
   }
 }
 
-/* Ensure all slides have equal height */
-.embla__slide {
-  display: flex;
-}
-
-/* Testimonial Card - Equal Heights & Widths */
+/* Testimonial Card Styles */
 .testimonial-card {
   width: 100%;
   height: 100%;
   display: flex;
   flex-direction: column;
   border-radius: 12px;
-  transition: all 0.3s ease;
 }
 
-/* Quote area - flex grow with line clamp */
 .testimonial-quote {
   flex: 1;
   display: -webkit-box;
   -webkit-line-clamp: 8;
   -webkit-box-orient: vertical;
   overflow: hidden;
-  margin-bottom: 1.5rem;
 }
 
-/* Exact equal heights per breakpoint - increased to fit all text */
+/* Fixed heights per breakpoint */
 @media (min-width: 1024px) {
   .embla__slide {
-    height: 420px;
-  }
-  .testimonial-card {
-    height: 420px;
+    min-height: 420px;
   }
 }
 
 @media (min-width: 640px) and (max-width: 1023px) {
   .embla__slide {
-    height: 400px;
-  }
-  .testimonial-card {
-    height: 400px;
+    min-height: 400px;
   }
 }
 
 @media (max-width: 639px) {
   .embla__slide {
-    height: 380px;
-  }
-  .testimonial-card {
-    height: 380px;
+    min-height: 380px;
   }
 }
