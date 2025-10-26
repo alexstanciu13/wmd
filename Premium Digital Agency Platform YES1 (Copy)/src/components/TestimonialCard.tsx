@@ -19,7 +19,7 @@ export function TestimonialCard({
   rating,
 }: TestimonialCardProps) {
   return (
-    <div className="glass rounded-xl p-6 hover:glass-strong transition-all duration-300 h-full flex flex-col" style={{ borderRadius: '12px' }}>
+    <article className="testimonial-card glass rounded-xl p-6 hover:glass-strong transition-all duration-300 border border-white/10 bg-black/30 shadow-sm">
       <div className="flex items-center justify-between mb-4">
         <div className="flex space-x-1">
           {[...Array(5)].map((_, i) => (
@@ -36,10 +36,10 @@ export function TestimonialCard({
         <Quote className="w-8 h-8 text-[#00AEEF]/20" />
       </div>
 
-      <p className="text-white/80 mb-6 italic flex-grow line-clamp-5">"{testimonial}"</p>
+      <p className="testimonial-quote text-white/80 mb-6 italic">"{testimonial}"</p>
 
-      <div className="flex items-center space-x-4 mt-auto">
-        <div className="w-12 h-12 rounded-full overflow-hidden ring-2 ring-[#00AEEF]/30">
+      <footer className="mt-6 flex items-center gap-3">
+        <div className="w-12 h-12 rounded-full overflow-hidden ring-2 ring-[#00AEEF]/30 flex-shrink-0">
           <ImageWithFallback
             src={image}
             alt={name}
@@ -47,12 +47,12 @@ export function TestimonialCard({
           />
         </div>
         <div>
-          <h4 className="text-sm">{name}</h4>
+          <h4 className="text-sm font-medium text-white">{name}</h4>
           <p className="text-sm text-white/60">
             {role}, {company}
           </p>
         </div>
-      </div>
-    </div>
+      </footer>
+    </article>
   );
 }
