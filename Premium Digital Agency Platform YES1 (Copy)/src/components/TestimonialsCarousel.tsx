@@ -1,15 +1,15 @@
 import React, { useEffect, useCallback, useRef } from 'react'
 import useEmblaCarousel from 'embla-carousel-react'
 
-const AUTOPLAY_SPEED = 0.006 // adjust for slower/faster scroll
+const AUTOPLAY_SPEED = 0.3 // adjust for slower/faster scroll
 
 export default function TestimonialsCarousel({ slides }: { slides: React.ReactNode[] }) {
   const [emblaRef, emblaApi] = useEmblaCarousel({
     loop: true,
-    dragFree: true,
+    dragFree: false,
     align: 'start',
     skipSnaps: false,
-    containScroll: 'trimSnaps'
+    slidesToScroll: 1
   })
 
   const rafRef = useRef<number | null>(null)
