@@ -71,6 +71,14 @@ export function HomePage() {
       testimonial: 'Parteneriatul cu WMD a fost o investiție strategică excelentă. Expertiza lor în automatizare și design ne-a ajutat să ne scalăm rapid afacerea fără a compromite calitatea serviciilor noastre.',
       rating: 5,
     },
+    {
+      name: 'Maria Dumitrescu',
+      role: 'Director Operations',
+      company: 'Catalyst Group',
+      image: 'https://images.unsplash.com/photo-1580489944761-15a19d654956?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxwcm9mZXNzaW9uYWwlMjBidXNpbmVzcyUyMHdvbWFufGVufDF8fHx8MTc2MTI5MDkwOHww&ixlib=rb-4.1.0&q=80&w=1080',
+      testimonial: 'Calitatea livrabilelor și profesionalismul echipei WMD sunt de neegalat. Platforma noastră digitală a devenit un avantaj competitiv major. Recomand cu încredere serviciile lor.',
+      rating: 5,
+    },
   ];
 
   const valuePillars = [
