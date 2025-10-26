@@ -12,6 +12,10 @@ import { ServiceDetailPage } from './components/pages/ServiceDetailPage';
 import { PortfolioPage } from './components/pages/PortfolioPage';
 import { AboutPage } from './components/pages/AboutPage';
 import { ApplyPage } from './components/pages/ApplyPage';
+import { TermsPage } from './components/pages/TermsPage';
+import { PrivacyPage } from './components/pages/PrivacyPage';
+import { CookiesPage } from './components/pages/CookiesPage';
+import { GDPRPage } from './components/pages/GDPRPage';
 import { NotFoundPage } from './components/pages/NotFoundPage';
 import { getServiceBySlug } from './config/services';
 
@@ -57,6 +61,10 @@ function AppContent() {
           <Route path="/academia" element={<AcademyPage />} />
           <Route path="/despre" element={<AboutPage />} />
           <Route path="/aplica" element={<ApplyPage />} />
+          <Route path="/termeni-conditii" element={<TermsPage />} />
+          <Route path="/politica-confidentialitate" element={<PrivacyPage />} />
+          <Route path="/politica-cookies" element={<CookiesPage />} />
+          <Route path="/gdpr" element={<GDPRPage />} />
           <Route path="*" element={<NotFoundPage />} />
         </Routes>
       </main>
