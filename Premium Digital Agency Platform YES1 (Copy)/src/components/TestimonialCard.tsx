@@ -20,6 +20,7 @@ export function TestimonialCard({
 }: TestimonialCardProps) {
   return (
     <article className="testimonial-card glass rounded-xl p-6 hover:glass-strong transition-all duration-300 border border-white/10 bg-black/30 shadow-sm">
+      {/* Stars and Quote Icon */}
       <div className="flex items-center justify-between mb-4">
         <div className="flex space-x-1">
           {[...Array(5)].map((_, i) => (
@@ -36,9 +37,13 @@ export function TestimonialCard({
         <Quote className="w-8 h-8 text-[#00AEEF]/20" />
       </div>
 
-      <p className="testimonial-quote text-white/80 mb-6 italic">"{testimonial}"</p>
+      {/* Quote Text - flex-grow with line clamp */}
+      <p className="testimonial-quote text-white/80 italic">
+        "{testimonial}"
+      </p>
 
-      <footer className="mt-6 flex items-center gap-3">
+      {/* Author Info */}
+      <footer className="mt-auto flex items-center gap-3">
         <div className="w-12 h-12 rounded-full overflow-hidden ring-2 ring-[#00AEEF]/30 flex-shrink-0">
           <ImageWithFallback
             src={image}

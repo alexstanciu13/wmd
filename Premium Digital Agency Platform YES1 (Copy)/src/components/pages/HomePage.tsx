@@ -5,12 +5,13 @@ import { Button } from '../ui/button';
 import { Badge } from '../ui/badge';
 import { CaseStudyCard } from '../CaseStudyCard';
 import { TestimonialCard } from '../TestimonialCard';
-import { InfiniteTestimonialSlider } from '../InfiniteTestimonialSlider';
+import TestimonialsCarousel from '../TestimonialsCarousel';
 import { CodeRain } from '../CodeRain';
 import { ImageWithFallback } from '../figma/ImageWithFallback';
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '../ui/accordion';
 import { SEO } from '../SEO';
 import { StructuredData } from '../StructuredData';
+import '../../styles/testimonials-carousel.css';
 
 export function HomePage() {
   const caseStudies = [
@@ -399,7 +400,11 @@ export function HomePage() {
             </p>
           </div>
 
-          <InfiniteTestimonialSlider testimonials={testimonials} />
+          <TestimonialsCarousel
+            slides={testimonials.map((testimonial, index) => (
+              <TestimonialCard key={index} {...testimonial} />
+            ))}
+          />
         </div>
       </section>
 
