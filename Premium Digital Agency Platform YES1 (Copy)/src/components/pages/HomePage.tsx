@@ -55,6 +55,22 @@ export function HomePage() {
       testimonial: 'Colaborarea cu WMD a fost ca și cum am avea o echipă internă de clasă mondială. Soluțiile lor de automatizare AI ne-au economisit nenumărate ore și au îmbunătățit semnificativ experiența clienților noștri.',
       rating: 5,
     },
+    {
+      name: 'Elena Popescu',
+      role: 'Director Marketing',
+      company: 'Innovate Digital',
+      image: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxwcm9mZXNzaW9uYWwlMjB3b21hbiUyMHBvcnRyYWl0fGVufDF8fHx8MTc2MTI5MDkwOHww&ixlib=rb-4.1.0&q=80&w=1080',
+      testimonial: 'Echipa WMD a depășit toate așteptările noastre. Atenția la detalii și dedicarea lor pentru succesul nostru au fost remarcabile. Rezultatele vorbesc de la sine - conversiile noastre au crescut cu peste 200%.',
+      rating: 5,
+    },
+    {
+      name: 'Alexandru Ionescu',
+      role: 'CEO',
+      company: 'Nexus Solutions',
+      image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxidXNpbmVzcyUyMG1hbiUyMHBvcnRyYWl0fGVufDF8fHx8MTc2MTI5MDkwOHww&ixlib=rb-4.1.0&q=80&w=1080',
+      testimonial: 'Parteneriatul cu WMD a fost o investiție strategică excelentă. Expertiza lor în automatizare și design ne-a ajutat să ne scalăm rapid afacerea fără a compromite calitatea serviciilor noastre.',
+      rating: 5,
+    },
   ];
 
   const valuePillars = [
