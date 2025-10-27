@@ -66,7 +66,7 @@ export const services: Record<string, ServiceConfig> = {
           'Lansare strategică cu monitorizare continuă, testare A/B și îmbunătățire continuă.',
       },
     ],
-    pricing: 'Începând de la $50k',
+    pricing: 'Începând de la $3k',
   },
   'marketing-digital': {
     title: 'Marketing Digital',
@@ -116,7 +116,7 @@ export const services: Record<string, ServiceConfig> = {
           'Testare continuă, rafinare și scalare a tacticilor de succes.',
       },
     ],
-    pricing: 'Începând de la $75k',
+    pricing: 'Începând de la $3k',
   },
   branding: {
     title: 'Identitate & Strategie de Brand',
@@ -166,7 +166,7 @@ export const services: Record<string, ServiceConfig> = {
           'Dezvoltăm ghiduri de brand cuprinzătoare și sprijinim implementarea pe toate canalele.',
       },
     ],
-    pricing: 'Începând de la $60k',
+    pricing: 'Începând de la $3k',
   },
   'automatizare-ai': {
     title: 'Soluții AI & Automatizare',
@@ -216,7 +216,7 @@ export const services: Record<string, ServiceConfig> = {
           'Implementăm soluții, monitorizăm performanța și optimizăm continuu pentru rezultate mai bune.',
       },
     ],
-    pricing: 'Începând de la $85k',
+    pricing: 'Începând de la $10k',
   },
 };
 
