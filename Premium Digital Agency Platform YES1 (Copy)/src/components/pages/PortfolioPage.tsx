@@ -97,11 +97,11 @@ export function PortfolioPage() {
         <div className="glass-strong rounded-2xl p-8">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
             <div>
-              <div className="text-4xl text-gradient mb-2">150+</div>
+              <div className="text-4xl text-gradient mb-2">100+</div>
               <div className="text-white/60">Proiecte Finalizate</div>
             </div>
             <div>
-              <div className="text-4xl text-gradient mb-2">$50M+</div>
+              <div className="text-4xl text-gradient mb-2">$4.4M+</div>
               <div className="text-white/60">Venituri Clienți</div>
             </div>
             <div>

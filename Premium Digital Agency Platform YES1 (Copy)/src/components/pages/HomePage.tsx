@@ -40,17 +40,17 @@ export function HomePage() {
 
   const testimonials = [
     {
-      name: 'Sarah Chen',
+      name: 'Daniel Lăpădatu',
       role: 'CEO',
-      company: 'TechFlow Solutions',
+      company: 'Alfa Rom Consulting',
       image: 'https://images.unsplash.com/photo-1531545514256-b1400bc00f31?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx0ZWFtJTIwY29sbGFib3JhdGlvbiUyMG1lZXRpbmd8ZW58MXx8fHwxNzYxMjkwOTA4fDA&ixlib=rb-4.1.0&q=80&w=1080',
       testimonial: 'WMD ne-a transformat complet prezența digitală. ROI-ul a fost excepțional, iar abordarea lor strategică pentru creșterea noastră a fost inestimabilă. Acesta este parteneriatul premium pe care îl căutam.',
       rating: 5,
     },
     {
-      name: 'Michael Rodriguez',
+      name: 'Mihai Roșu',
       role: 'Fondator',
-      company: 'LuxeCommerce',
+      company: 'RideGreen',
       image: 'https://images.unsplash.com/photo-1640109341881-1cd3eaf50909?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxsdXh1cnklMjBvZmZpY2UlMjB3b3Jrc3BhY2V8ZW58MXx8fHwxNzYxMjMzMzI1fDA&ixlib=rb-4.1.0&q=80&w=1080',
       testimonial: 'Colaborarea cu WMD a fost ca și cum am avea o echipă internă de clasă mondială. Soluțiile lor de automatizare AI ne-au economisit nenumărate ore și au îmbunătățit semnificativ experiența clienților noștri.',
       rating: 5,
@@ -192,7 +192,7 @@ export function HomePage() {
                 transition={{ delay: index * 0.1 }}
                 className="flex items-center justify-center"
               >
-                <span className="text-2xl text-white/40 hover:text-white/80 transition-colors">
+                <span className="text-2xl text-white/40 transition-colors">
                   {logo}
                 </span>
               </motion.div>
@@ -213,10 +213,10 @@ export function HomePage() {
 
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
             {[
-              { icon: Users, value: '200+', label: 'Proiecte Finalizate', color: 'from-[#0070C9] to-[#002F6C]' },
-              { icon: DollarSign, value: '$50M+', label: 'Venituri Generate', color: 'from-[#0070C9] to-[#002F6C]' },
+              { icon: Users, value: '100+', label: 'Proiecte Finalizate', color: 'from-[#0070C9] to-[#002F6C]' },
+              { icon: DollarSign, value: '$4.4M+', label: 'Venituri Generate', color: 'from-[#0070C9] to-[#002F6C]' },
               { icon: BarChart3, value: '247%', label: 'Creștere ROI Medie', color: 'from-[#0070C9] to-[#002F6C]' },
-              { icon: Clock, value: '98%', label: 'Retenție Clienți', color: 'from-[#002F6C] to-[#0070C9]' },
+              { icon: Clock, value: '79%', label: 'Retenție Clienți', color: 'from-[#002F6C] to-[#0070C9]' },
             ].map((stat, index) => (
               <motion.div
                 key={stat.label}
@@ -555,7 +555,7 @@ export function HomePage() {
                 title: 'Parteneri Ideali',
                 icon: CheckCircle2,
                 items: [
-                  'Venit anual $500K+',
+                  'Venit anual $50K+',
                   'Angajați pentru creștere și inovație',
                   'Apreciază parteneriatul strategic',
                   'Pregătiți să investească în soluții premium',

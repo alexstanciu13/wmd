@@ -298,7 +298,9 @@ export function ApplicationForm({ title = "Aplică pentru Colaborare", descripti
               <SelectContent className="bg-[#1A1A1A] border-white/10">
                 <SelectItem value="web-design">Design Web</SelectItem>
                 <SelectItem value="ecommerce">E-Commerce</SelectItem>
+                <SelectItem value="seo">SEO</SelectItem>
                 <SelectItem value="marketing">Marketing Digital</SelectItem>
+                <SelectItem value="email-marketing">E-mail Marketing</SelectItem>
                 <SelectItem value="branding">Branding</SelectItem>
                 <SelectItem value="ai-automation">Automatizare AI</SelectItem>
                 <SelectItem value="comprehensive">Pachet Complet</SelectItem>
@@ -315,10 +317,10 @@ export function ApplicationForm({ title = "Aplică pentru Colaborare", descripti
                 <SelectValue placeholder="Selectează cronologia" />
               </SelectTrigger>
               <SelectContent className="bg-[#1A1A1A] border-white/10">
-                <SelectItem value="asap">Cât mai curând (În 1 lună)</SelectItem>
-                <SelectItem value="1-3">1-3 luni</SelectItem>
-                <SelectItem value="3-6">3-6 luni</SelectItem>
-                <SelectItem value="6+">6+ luni</SelectItem>
+                <SelectItem value="asap">Cât mai curând (1 săptămână)</SelectItem>
+                <SelectItem value="1-3">1-3 săptămâni</SelectItem>
+                <SelectItem value="3-6">3-6 săptămâni</SelectItem>
+                <SelectItem value="6+">6+ săptămâni</SelectItem>
               </SelectContent>
             </Select>
             {errors.timeline && (

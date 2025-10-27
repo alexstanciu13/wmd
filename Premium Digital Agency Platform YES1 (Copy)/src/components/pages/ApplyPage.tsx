@@ -15,7 +15,7 @@ export function ApplyPage() {
   const qualifications = [
     {
       title: 'Angajament Bugetar',
-      description: 'Buget minim pentru proiect de $50.000',
+      description: 'Buget minim pentru proiect de $3.000',
     },
     {
       title: 'Mentalitate de Creștere',
@@ -124,7 +124,7 @@ export function ApplyPage() {
             <div className="glass rounded-xl p-6 text-center">
               <div className="text-3xl text-gradient mb-2">98%</div>
               <div className="text-sm text-white/60 mb-3">Rată Satisfacție Clienți</div>
-              <div className="text-3xl text-gradient mb-2">$50M+</div>
+              <div className="text-3xl text-gradient mb-2">$4.4M+</div>
               <div className="text-sm text-white/60">Generat în Venituri Clienți</div>
             </div>
           </div>
@@ -150,7 +150,7 @@ export function ApplyPage() {
             },
             {
               q: 'Care este bugetul minim pentru proiect?',
-              a: 'Proiectele noastre încep de obicei de la $50.000. Acest nivel de investiție asigură că avem resursele necesare pentru a livra rezultate transformaționale.',
+              a: 'Proiectele noastre încep de obicei de la $3.000. Acest nivel de investiție asigură că avem resursele necesare pentru a livra rezultate transformaționale.',
             },
             {
               q: 'Cât durează procesul de aplicare?',

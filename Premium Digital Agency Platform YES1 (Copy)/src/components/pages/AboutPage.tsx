@@ -31,23 +31,23 @@ export function AboutPage() {
 
   const team = [
     {
-      name: 'Sarah Che',
-      role: 'Fondator & CEO',
+      name: 'Darius Setareh',
+      role: 'Co-Fondator & Director Marketing',
       image: 'https://images.unsplash.com/photo-1531545514256-b1400bc00f31?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx0ZWFtJTIwY29sbGFib3JhdGlvbiUyMG1lZXRpbmd8ZW58MXx8fHwxNzYxMjkwOTA4fDA&ixlib=rb-4.1.0&q=80&w=1080',
     },
     {
-      name: 'Michael Rodriguez',
-      role: 'Director Creativ',
+      name: 'Alex Stanciu',
+      role: 'Co-Fondator & Dezvoltator Principal',
       image: 'https://images.unsplash.com/photo-1640109341881-1cd3eaf50909?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxsdXh1cnklMjBvZmZpY2UlMjB3b3Jrc3BhY2V8ZW58MXx8fHwxNzYxMjMzMzI1fDA&ixlib=rb-4.1.0&q=80&w=1080',
     },
     {
-      name: 'Emily Watson',
+      name: 'Alexandru Stoica',
       role: 'Șef Strategie',
       image: 'https://images.unsplash.com/photo-1599658880436-c61792e70672?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxkaWdpdGFsJTIwbWFya2V0aW5nJTIwYW5hbHl0aWNzfGVufDF8fHx8MTc2MTIzMDUwNHww&ixlib=rb-4.1.0&q=80&w=1080',
     },
     {
-      name: 'David Kim',
-      role: 'Dezvoltator Principal',
+      name: 'Maria Coman',
+      role: 'Implementare Logistica',
       image: 'https://images.unsplash.com/photo-1697577418970-95d99b5a55cf?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxhcnRpZmljaWFsJTIwaW50ZWxsaWdlbmNlJTIwdGVjaG5vbG9neXxlbnwxfHx8fDE3NjEyMTA4MTV8MA&ixlib=rb-4.1.0&q=80&w=1080',
     },
   ];
@@ -165,19 +165,19 @@ export function AboutPage() {
         <div className="glass-strong rounded-2xl p-8">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
             <div>
-              <div className="text-4xl text-gradient mb-2">7+ Ani</div>
+              <div className="text-4xl text-gradient mb-2">8+ Ani</div>
               <div className="text-white/60">În Afaceri</div>
             </div>
             <div>
-              <div className="text-4xl text-gradient mb-2">150+</div>
+              <div className="text-4xl text-gradient mb-2">100+</div>
               <div className="text-white/60">Proiecte Finalizate</div>
             </div>
             <div>
-              <div className="text-4xl text-gradient mb-2">$50M+</div>
+              <div className="text-4xl text-gradient mb-2">$4.4M+</div>
               <div className="text-white/60">Venituri Clienți</div>
             </div>
             <div>
-              <div className="text-4xl text-gradient mb-2">98%</div>
+              <div className="text-4xl text-gradient mb-2">79%</div>
               <div className="text-white/60">Rată Retenție</div>
             </div>
           </div>
