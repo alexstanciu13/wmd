@@ -3,6 +3,7 @@ import { Link, useLocation } from 'react-router-dom';
 import { Menu, X } from 'lucide-react';
 import { Button } from './ui/button';
 import logoImage from './images/logo.png';
+import webMediaDesignLogo from './images/webmediadesign.png';
 
 export function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -51,9 +52,11 @@ export function Header() {
               alt="Web Media Design Logo"
               className="h-10 w-auto"
             />
-            <span className="text-xl tracking-tight">
-              <span className="text-gradient">Web Media Design</span>
-            </span>
+            <img
+              src={webMediaDesignLogo}
+              alt="Web Media Design"
+              className="h-8 w-auto"
+            />
           </Link>
 
           {/* Desktop Navigation */}
