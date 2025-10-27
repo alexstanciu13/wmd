@@ -40,9 +40,9 @@ export function HomePage() {
 
   const testimonials = [
     {
-      name: 'Daniel Lăpădatu',
+      name: 'Daniel Dumitrescu',
       role: 'CEO',
-      company: 'Alfa Rom Consulting',
+      company: 'TechFlow Solutions',
       image: 'https://images.unsplash.com/photo-1531545514256-b1400bc00f31?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx0ZWFtJTIwY29sbGFib3JhdGlvbiUyMG1lZXRpbmd8ZW58MXx8fHwxNzYxMjkwOTA4fDA&ixlib=rb-4.1.0&q=80&w=1080',
       testimonial: 'WMD ne-a transformat complet prezența digitală. ROI-ul a fost excepțional, iar abordarea lor strategică pentru creșterea noastră a fost inestimabilă. Acesta este parteneriatul premium pe care îl căutam.',
       rating: 5,
