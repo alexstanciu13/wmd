@@ -112,7 +112,7 @@ export function HomePage() {
           name: 'Web Media Design',
           description: 'Agenție digitală premium care creează experiențe excepționale pentru branduri în creștere rapidă',
           url: 'https://webmediadesign.com',
-          logo: 'https://webmediadesign.com/logo.png',
+          logo: 'https://webmediadesign.com/favicon.png',
           contactPoint: {
             telephone: '+1-555-123-4567',
             contactType: 'Customer Service',
