@@ -32,373 +32,373 @@ export function CaseStudyDetailPage({
       case 'TechFlow Solutions':
         return {
           location: 'San Francisco, CA',
-          timeline: '6 months',
-          team: '8 specialists',
-          overview: 'TechFlow Solutions is a leading SaaS platform providing workflow automation tools for enterprise teams. Despite having a powerful product, their digital presence was failing to convert qualified leads, resulting in missed opportunities and slow growth.',
+          timeline: '6 luni',
+          team: '8 specialiști',
+          overview: 'TechFlow Solutions este o platformă SaaS de top care oferă instrumente de automatizare a fluxurilor de lucru pentru echipele enterprise. În ciuda unui produs puternic, prezența lor digitală nu reușea să convertească lead-uri calificate, rezultând oportunități pierdute și creștere lentă.',
           challenges: [
-            'Outdated website design that didn\'t reflect their innovative product',
-            'Complex navigation confusing potential customers',
-            'Poor mobile experience affecting 65% of traffic',
-            'Slow page load times (4.2s average) hurting SEO rankings',
-            'No clear conversion paths or CTAs',
-            'Minimal trust signals and social proof'
+            'Design învechit al site-ului care nu reflecta produsul lor inovator',
+            'Navigare complexă care confunda potențialii clienți',
+            'Experiență slabă pe mobil afectând 65% din trafic',
+            'Timpii lenți de încărcare pagină (medie 4,2s) afectând rankingurile SEO',
+            'Nicio cale clară de conversie sau CTA-uri',
+            'Semnale minime de încredere și dovezi sociale'
           ],
           approach: [
             {
-              title: 'Discovery & Research',
-              description: 'Conducted comprehensive user research, competitor analysis, and stakeholder interviews to understand pain points and opportunities.'
+              title: 'Descoperire & Cercetare',
+              description: 'Am efectuat cercetare cuprinzătoare a utilizatorilor, analiză competitivă și interviuri cu stakeholderi pentru a înțelege punctele critice și oportunitățile.'
             },
             {
-              title: 'Strategic Planning',
-              description: 'Developed a conversion-focused information architecture with clear user journeys and optimized content strategy.'
+              title: 'Planificare Strategică',
+              description: 'Am dezvoltat o arhitectură informațională focusată pe conversie cu călătorii clare ale utilizatorilor și strategie de conținut optimizată.'
             },
             {
-              title: 'UX/UI Design',
-              description: 'Created modern, intuitive interface with emphasis on clarity, trust-building, and conversion optimization.'
+              title: 'Design UX/UI',
+              description: 'Am creat o interfață modernă și intuitivă cu accent pe claritate, construirea încrederii și optimizarea conversiei.'
             },
             {
-              title: 'Development',
-              description: 'Built with React and Next.js for optimal performance, implementing AI-powered personalization and advanced analytics.'
+              title: 'Dezvoltare',
+              description: 'Construit cu React și Next.js pentru performanță optimă, implementând personalizare alimentată de AI și analiză avansată.'
             },
             {
-              title: 'Optimization',
-              description: 'Continuous A/B testing and data-driven refinements to maximize conversion rates and user engagement.'
+              title: 'Optimizare',
+              description: 'Testare A/B continuă și rafinări bazate pe date pentru a maximiza ratele de conversie și implicarea utilizatorilor.'
             }
           ],
           features: [
-            'AI-powered product recommendations',
-            'Interactive product demos',
-            'Dynamic pricing calculator',
-            'Advanced analytics dashboard',
-            'Personalized user journeys',
-            'Integrated CRM and marketing automation'
+            'Recomandări de produse alimentate de AI',
+            'Demo-uri interactive de produse',
+            'Calculator dinamic de prețuri',
+            'Dashboard analitică avansată',
+            'Călătorii personalizate ale utilizatorilor',
+            'CRM integrat și automatizare marketing'
           ],
           testimonial: {
-            quote: 'WMD transformed our digital presence completely. The ROI has been exceptional, and their strategic approach to our growth has been invaluable. Within 6 months, we saw a 247% increase in conversions and our demo requests tripled.',
+            quote: 'WMD ne-a transformat complet prezența digitală. ROI-ul a fost excepțional, iar abordarea lor strategică pentru creșterea noastră a fost inestimabilă. În 6 luni, am văzut o creștere de 247% în conversii, iar cererile noastre de demo s-au triplat.',
             author: 'Sarah Chen',
             role: 'CEO, TechFlow Solutions'
           },
           additionalMetrics: [
-            { label: 'Page Load Time', before: '4.2s', after: '0.8s' },
-            { label: 'Mobile Traffic', before: '35%', after: '58%' },
-            { label: 'SEO Rankings', before: 'Page 3-5', after: 'Page 1' },
-            { label: 'Customer Satisfaction', before: '3.2/5', after: '4.8/5' }
+            { label: 'Timp Încărcare Pagină', before: '4,2s', after: '0,8s' },
+            { label: 'Trafic Mobil', before: '35%', after: '58%' },
+            { label: 'Rankinguri SEO', before: 'Pagina 3-5', after: 'Pagina 1' },
+            { label: 'Satisfacție Clienți', before: '3,2/5', after: '4,8/5' }
           ]
         };
 
       case 'LuxeCommerce':
         return {
           location: 'New York, NY',
-          timeline: '8 months',
-          team: '10 specialists',
-          overview: 'LuxeCommerce is a premium fashion e-commerce brand offering curated luxury collections. They were struggling with high cart abandonment and poor mobile conversion rates, significantly impacting revenue potential.',
+          timeline: '8 luni',
+          team: '10 specialiști',
+          overview: 'LuxeCommerce este un brand premium de e-commerce de modă care oferă colecții de lux curate. Se confruntau cu abandon ridicat al coșului și rate slabe de conversie pe mobil, afectând semnificativ potențialul de venituri.',
           challenges: [
-            'Cart abandonment rate of 78% - well above industry average',
-            'Poor mobile experience driving away 60% of traffic',
-            'Low average order value compared to competitors',
-            'Inefficient checkout process with 7+ steps',
-            'No personalization or product recommendations',
-            'Limited post-purchase engagement'
+            'Rată de abandon al coșului de 78% - mult peste media industriei',
+            'Experiență slabă pe mobil îndepărtând 60% din trafic',
+            'Valoare medie scăzută a comenzii comparativ cu competitorii',
+            'Proces ineficient de checkout cu 7+ pași',
+            'Nicio personalizare sau recomandări de produse',
+            'Implicare limitată post-achiziție'
           ],
           approach: [
             {
-              title: 'Platform Audit',
-              description: 'Comprehensive analysis of existing platform, user behavior data, and competitive benchmarking.'
+              title: 'Audit Platformă',
+              description: 'Analiză cuprinzătoare a platformei existente, date comportament utilizatori și benchmarking competitiv.'
             },
             {
-              title: 'Headless Commerce Migration',
-              description: 'Rebuilt platform using headless commerce architecture for maximum flexibility and performance.'
+              title: 'Migrare Headless Commerce',
+              description: 'Reconstruire platformă folosind arhitectura headless commerce pentru flexibilitate și performanță maximă.'
             },
             {
-              title: 'Mobile-First Design',
-              description: 'Designed premium mobile experience with thumb-friendly navigation and streamlined purchasing flow.'
+              title: 'Design Mobile-First',
+              description: 'Design premium de experiență mobilă cu navigare prietenoasă și flux de achiziție simplificat.'
             },
             {
-              title: 'AI Integration',
-              description: 'Implemented AI-powered sizing recommendations, personalized product suggestions, and dynamic upselling.'
+              title: 'Integrare AI',
+              description: 'Implementare recomandări de dimensiuni alimentate de AI, sugestii personalizate de produse și upselling dinamic.'
             },
             {
-              title: 'Retention Automation',
-              description: 'Built automated email sequences, abandoned cart recovery, and post-purchase engagement campaigns.'
+              title: 'Automatizare Retenție',
+              description: 'Creare secvențe automate de email, recuperare coș abandonat și campanii de implicare post-achiziție.'
             }
           ],
           features: [
-            'Headless commerce architecture',
-            'AI-powered sizing recommendations',
-            'One-click checkout',
-            'Virtual try-on technology',
-            'Smart product bundles',
-            'Automated cart recovery'
+            'Arhitectură headless commerce',
+            'Recomandări de dimensiuni alimentate de AI',
+            'Checkout la un click',
+            'Tehnologie încercare virtuală',
+            'Pachete inteligente de produse',
+            'Recuperare automată coș'
           ],
           testimonial: {
-            quote: 'Working with WMD felt like having a world-class in-house team. Their platform rebuild transformed our business. Revenue increased by 312%, and cart abandonment dropped by 68%. The mobile experience alone has been a game-changer.',
+            quote: 'Colaborarea cu WMD a fost ca și cum am avea o echipă internă de clasă mondială. Reconstruirea platformei lor ne-a transformat afacerea. Veniturile au crescut cu 312%, iar abandonul coșului a scăzut cu 68%. Doar experiența mobilă a fost un factor decisiv.',
             author: 'Michael Rodriguez',
-            role: 'Founder, LuxeCommerce'
+            role: 'Fondator, LuxeCommerce'
           },
           additionalMetrics: [
-            { label: 'Checkout Steps', before: '7 steps', after: '3 steps' },
-            { label: 'Mobile Conversion', before: '0.8%', after: '4.2%' },
-            { label: 'Email Revenue', before: '12%', after: '34%' },
-            { label: 'Return Rate', before: '18%', after: '7%' }
+            { label: 'Pași Checkout', before: '7 pași', after: '3 pași' },
+            { label: 'Conversie Mobil', before: '0,8%', after: '4,2%' },
+            { label: 'Venituri Email', before: '12%', after: '34%' },
+            { label: 'Rată Returnări', before: '18%', after: '7%' }
           ]
         };
 
       case 'Innovate Marketing':
         return {
           location: 'Austin, TX',
-          timeline: '5 months',
-          team: '6 specialists',
-          overview: 'Innovate Marketing is a full-service marketing agency struggling to generate qualified leads and establish thought leadership in a competitive market.',
+          timeline: '5 luni',
+          team: '6 specialiști',
+          overview: 'Innovate Marketing este o agenție de marketing cu servicii complete care se lupta să genereze lead-uri calificate și să stabilească leadership de gândire într-o piață competitivă.',
           challenges: [
-            'Minimal organic traffic and poor SEO performance',
-            'Low-quality leads not converting to clients',
-            'Limited brand awareness in target market',
-            'Content marketing efforts yielding minimal ROI',
-            'Lack of thought leadership positioning',
-            'No systematic lead nurturing process'
+            'Trafic organic minimal și performanță SEO slabă',
+            'Lead-uri de calitate scăzută care nu se convertesc în clienți',
+            'Conștientizare limitată de brand pe piața țintă',
+            'Eforturi de marketing de conținut cu ROI minimal',
+            'Lipsă de poziționare ca lider de gândire',
+            'Niciun proces sistematic de cultivare lead-uri'
           ],
           approach: [
             {
-              title: 'SEO Foundation',
-              description: 'Technical SEO audit and optimization, keyword strategy development, and on-page optimization.'
+              title: 'Fundație SEO',
+              description: 'Audit și optimizare SEO tehnică, dezvoltare strategie cuvinte cheie și optimizare on-page.'
             },
             {
-              title: 'Content Strategy',
-              description: 'Developed comprehensive content calendar focused on thought leadership and high-value topics.'
+              title: 'Strategie Conținut',
+              description: 'Dezvoltare calendar cuprinzător de conținut focusat pe leadership de gândire și subiecte de valoare înaltă.'
             },
             {
-              title: 'PPC Campaigns',
-              description: 'Strategic paid advertising on Google and LinkedIn targeting high-intent decision-makers.'
+              title: 'Campanii PPC',
+              description: 'Publicitate plătită strategică pe Google și LinkedIn țintind decidenți cu intenție ridicată.'
             },
             {
-              title: 'Marketing Automation',
-              description: 'Implemented lead scoring, automated nurture sequences, and personalized engagement workflows.'
+              title: 'Automatizare Marketing',
+              description: 'Implementare scoring lead-uri, secvențe automate de cultivare și fluxuri personalizate de implicare.'
             },
             {
-              title: 'Analytics & Optimization',
-              description: 'Continuous monitoring, A/B testing, and data-driven optimizations for maximum ROI.'
+              title: 'Analiză & Optimizare',
+              description: 'Monitorizare continuă, testare A/B și optimizări bazate pe date pentru ROI maxim.'
             }
           ],
           features: [
-            'Comprehensive SEO strategy',
-            'Thought leadership content',
-            'Multi-channel PPC campaigns',
-            'Marketing automation platform',
-            'Lead scoring system',
-            'Advanced analytics dashboard'
+            'Strategie SEO cuprinzătoare',
+            'Conținut de leadership de gândire',
+            'Campanii PPC multi-canal',
+            'Platformă automatizare marketing',
+            'Sistem scoring lead-uri',
+            'Dashboard analitică avansată'
           ],
           testimonial: {
-            quote: 'The results speak for themselves. Organic traffic increased by 428%, and we\'re now generating 3x more qualified leads. WMD\'s strategic approach to digital marketing has completely transformed our business.',
+            quote: 'Rezultatele vorbesc de la sine. Traficul organic a crescut cu 428%, iar acum generăm de 3 ori mai multe lead-uri calificate. Abordarea strategică a WMD pentru marketing digital ne-a transformat complet afacerea.',
             author: 'Jennifer Williams',
-            role: 'Managing Partner, Innovate Marketing'
+            role: 'Partener Conducător, Innovate Marketing'
           },
           additionalMetrics: [
-            { label: 'Blog Traffic', before: '2.4K/mo', after: '12.7K/mo' },
-            { label: 'Lead Quality Score', before: '2.8/10', after: '8.4/10' },
-            { label: 'Marketing ROI', before: '140%', after: '420%' },
-            { label: 'Brand Search Volume', before: '120/mo', after: '890/mo' }
+            { label: 'Trafic Blog', before: '2,4K/lună', after: '12,7K/lună' },
+            { label: 'Scor Calitate Lead', before: '2,8/10', after: '8,4/10' },
+            { label: 'ROI Marketing', before: '140%', after: '420%' },
+            { label: 'Volum Căutări Brand', before: '120/lună', after: '890/lună' }
           ]
         };
 
       case 'Catalyst Ventures':
         return {
           location: 'Boston, MA',
-          timeline: '4 months',
-          team: '5 specialists',
-          overview: 'Catalyst Ventures is a premium investment firm managing high-net-worth client portfolios. Their brand identity was outdated and inconsistent, undermining credibility with discerning clients.',
+          timeline: '4 luni',
+          team: '5 specialiști',
+          overview: 'Catalyst Ventures este o firmă premium de investiții care gestionează portofolii pentru clienți cu avere mare. Identitatea lor de brand era învechită și inconsistentă, subminând credibilitatea cu clienți pretențioși.',
           challenges: [
-            'Outdated visual identity from 2008',
-            'Inconsistent messaging across channels',
-            'Lack of premium positioning in materials',
-            'No clear brand guidelines for team',
-            'Poor differentiation from competitors',
-            'Minimal digital presence and thought leadership'
+            'Identitate vizuală învechită din 2008',
+            'Mesaje inconsistente pe toate canalele',
+            'Lipsă de poziționare premium în materiale',
+            'Niciun ghid clar de brand pentru echipă',
+            'Diferențiere slabă față de competitori',
+            'Prezență digitală minimă și leadership de gândire'
           ],
           approach: [
             {
-              title: 'Brand Discovery',
-              description: 'Extensive stakeholder interviews, competitive analysis, and positioning strategy development.'
+              title: 'Descoperire Brand',
+              description: 'Interviuri extinse cu stakeholderi, analiză competitivă și dezvoltare strategie de poziționare.'
             },
             {
-              title: 'Visual Identity',
-              description: 'Created sophisticated logo system, color palette, typography, and brand elements reflecting premium positioning.'
+              title: 'Identitate Vizuală',
+              description: 'Creare sistem sofisticat de logo, paletă de culori, tipografie și elemente de brand reflectând poziționare premium.'
             },
             {
-              title: 'Messaging Framework',
-              description: 'Developed clear brand voice, messaging pillars, and communication guidelines.'
+              title: 'Cadru de Mesaje',
+              description: 'Dezvoltare voce clară de brand, piloni de mesaje și ghiduri de comunicare.'
             },
             {
-              title: 'Collateral Design',
-              description: 'Designed premium pitch decks, reports, business cards, and digital assets.'
+              title: 'Design Materiale',
+              description: 'Design pitch deck-uri premium, rapoarte, cărți de vizită și active digitale.'
             },
             {
-              title: 'Implementation',
-              description: 'Comprehensive brand guidelines, team training, and rollout support across all channels.'
+              title: 'Implementare',
+              description: 'Ghiduri cuprinzătoare de brand, training echipă și suport lansare pe toate canalele.'
             }
           ],
           features: [
-            'Premium logo and visual system',
-            'Comprehensive brand guidelines',
-            'Luxury marketing collateral',
-            'Digital brand assets',
-            'Messaging framework',
-            'Team training and support'
+            'Logo premium și sistem vizual',
+            'Ghiduri cuprinzătoare de brand',
+            'Materiale marketing de lux',
+            'Active digitale de brand',
+            'Cadru de mesaje',
+            'Training și suport echipă'
           ],
           testimonial: {
-            quote: 'WMD elevated our brand to match our service quality. The new identity has dramatically improved our perception in the market. Client inquiries are up 198%, and referrals have nearly tripled.',
+            quote: 'WMD ne-a ridicat brandul pentru a se potrivi cu calitatea serviciilor noastre. Noua identitate a îmbunătățit dramatic percepția noastră pe piață. Întrebările clienților au crescut cu 198%, iar recomandările s-au aproape triplat.',
             author: 'David Thompson',
-            role: 'Managing Director, Catalyst Ventures'
+            role: 'Director Executiv, Catalyst Ventures'
           },
           additionalMetrics: [
-            { label: 'Brand Consistency', before: '3/10', after: '9.5/10' },
-            { label: 'Perceived Value', before: '+0%', after: '+67%' },
-            { label: 'Website Sessions', before: '890/mo', after: '3,240/mo' },
-            { label: 'Media Mentions', before: '2/yr', after: '18/yr' }
+            { label: 'Consistență Brand', before: '3/10', after: '9,5/10' },
+            { label: 'Valoare Percepută', before: '+0%', after: '+67%' },
+            { label: 'Sesiuni Website', before: '890/lună', after: '3.240/lună' },
+            { label: 'Mențiuni Media', before: '2/an', after: '18/an' }
           ]
         };
 
       case 'AutomateX':
         return {
           location: 'Seattle, WA',
-          timeline: '6 months',
-          team: '7 specialists',
-          overview: 'AutomateX provides business services but was overwhelmed by manual processes consuming 40+ hours weekly and creating customer service bottlenecks.',
+          timeline: '6 luni',
+          team: '7 specialiști',
+          overview: 'AutomateX oferă servicii business dar era copleșit de procese manuale consumând peste 40 de ore săptămânal și creând blocaje la serviciul clienți.',
           challenges: [
-            'Manual processes consuming 40+ hours per week',
-            'Customer service response times of 24+ hours',
-            'High operational costs limiting scalability',
-            'Frequent errors in manual data entry',
-            'Limited ability to handle growth',
-            'Poor customer satisfaction scores'
+            'Procese manuale consumând peste 40 de ore pe săptămână',
+            'Timpii de răspuns serviciu clienți de peste 24 de ore',
+            'Costuri operaționale ridicate limitând scalabilitatea',
+            'Erori frecvente în introducerea manuală a datelor',
+            'Capacitate limitată de a gestiona creșterea',
+            'Scoruri slabe de satisfacție clienți'
           ],
           approach: [
             {
-              title: 'Process Mapping',
-              description: 'Detailed analysis of workflows to identify automation opportunities and pain points.'
+              title: 'Mapare Procese',
+              description: 'Analiză detaliată a fluxurilor de lucru pentru a identifica oportunități de automatizare și puncte critice.'
             },
             {
-              title: 'AI Chatbot Development',
-              description: 'Custom-trained chatbot handling 80% of common customer inquiries instantly.'
+              title: 'Dezvoltare Chatbot AI',
+              description: 'Chatbot antrenat personalizat gestionând 80% din întrebările comune ale clienților instant.'
             },
             {
-              title: 'Workflow Automation',
-              description: 'Automated data entry, reporting, invoicing, and internal communications.'
+              title: 'Automatizare Fluxuri',
+              description: 'Automatizare introducere date, raportare, facturare și comunicări interne.'
             },
             {
-              title: 'Predictive Analytics',
-              description: 'Implemented ML models for demand forecasting and resource optimization.'
+              title: 'Analiză Predictivă',
+              description: 'Implementare modele ML pentru prognoza cererii și optimizarea resurselor.'
             },
             {
-              title: 'Integration & Training',
-              description: 'Seamless integration with existing systems and comprehensive team training.'
+              title: 'Integrare & Training',
+              description: 'Integrare perfectă cu sistemele existente și training cuprinzător al echipei.'
             }
           ],
           features: [
-            'AI-powered customer support',
-            'Automated workflow systems',
-            'Predictive analytics dashboard',
-            'Automated reporting',
-            'Smart resource allocation',
-            'Integration with existing tools'
+            'Suport clienți alimentat de AI',
+            'Sisteme automate de fluxuri',
+            'Dashboard analitică predictivă',
+            'Raportare automată',
+            'Alocare inteligentă resurse',
+            'Integrare cu instrumentele existente'
           ],
           testimonial: {
-            quote: 'The automation solutions WMD implemented have been transformative. We\'ve saved 40 hours per week, response times are down 85%, and customer satisfaction has never been higher. It\'s allowed us to scale without proportional cost increases.',
+            quote: 'Soluțiile de automatizare implementate de WMD au fost transformatoare. Am economisit 40 de ore pe săptămână, timpii de răspuns au scăzut cu 85%, iar satisfacția clienților nu a fost niciodată mai mare. Ne-a permis să scalăm fără creșteri proporționale de costuri.',
             author: 'Amanda Foster',
             role: 'CEO, AutomateX'
           },
           additionalMetrics: [
-            { label: 'Manual Hours', before: '40hrs/wk', after: '8hrs/wk' },
-            { label: 'Error Rate', before: '12%', after: '0.8%' },
-            { label: 'Capacity', before: '100 clients', after: '320 clients' },
-            { label: 'Cost per Transaction', before: '$12', after: '$3.20' }
+            { label: 'Ore Manuale', before: '40ore/săpt', after: '8ore/săpt' },
+            { label: 'Rată Erori', before: '12%', after: '0,8%' },
+            { label: 'Capacitate', before: '100 clienți', after: '320 clienți' },
+            { label: 'Cost per Tranzacție', before: '$12', after: '$3,20' }
           ]
         };
 
       case 'GlobalTech Corp':
         return {
           location: 'Denver, CO',
-          timeline: '7 months',
-          team: '12 specialists',
-          overview: 'GlobalTech needed to rebrand and launch a new SaaS product in a competitive market with aggressive timelines and limited budget.',
+          timeline: '7 luni',
+          team: '12 specialiști',
+          overview: 'GlobalTech trebuia să rebranduiască și să lanseze un nou produs SaaS pe o piață competitivă cu termene limită agresive și buget limitat.',
           challenges: [
-            'Tight launch deadline (6 months)',
-            'Competitive market with established players',
-            'Limited brand awareness',
-            'No existing marketing infrastructure',
-            'Budget constraints for customer acquisition',
-            'Need for immediate market traction'
+            'Termen limită strâns de lansare (6 luni)',
+            'Piață competitivă cu jucători consacrați',
+            'Conștientizare limitată de brand',
+            'Nicio infrastructură existentă de marketing',
+            'Constrângeri bugetare pentru achiziția de clienți',
+            'Nevoie de tracțiune imediată pe piață'
           ],
           approach: [
             {
-              title: 'Brand Development',
-              description: 'Fast-tracked brand strategy and identity creation with focus on differentiation.'
+              title: 'Dezvoltare Brand',
+              description: 'Strategie de brand accelerată și creare identitate cu focus pe diferențiere.'
             },
             {
-              title: 'Product Website',
-              description: 'Built high-converting product site with demo capabilities and clear value proposition.'
+              title: 'Website Produs',
+              description: 'Construire site produs cu conversie ridicată cu capabilități demo și propunere de valoare clară.'
             },
             {
-              title: 'Go-to-Market Strategy',
-              description: 'Comprehensive launch plan integrating PR, content, paid ads, and influencer partnerships.'
+              title: 'Strategie Go-to-Market',
+              description: 'Plan cuprinzător de lansare integrând PR, conținut, reclame plătite și parteneriate cu influenceri.'
             },
             {
-              title: 'Marketing Automation',
-              description: 'Set up complete marketing stack with CRM, email automation, and analytics.'
+              title: 'Automatizare Marketing',
+              description: 'Configurare stack complet de marketing cu CRM, automatizare email și analitică.'
             },
             {
-              title: 'Launch Campaigns',
-              description: 'Coordinated multi-channel launch with PR outreach, paid campaigns, and content marketing.'
+              title: 'Campanii Lansare',
+              description: 'Lansare coordonată multi-canal cu PR outreach, campanii plătite și marketing de conținut.'
             }
           ],
           features: [
-            'Complete brand identity',
-            'Product launch website',
-            'Marketing automation setup',
-            'Multi-channel campaigns',
-            'PR and media outreach',
-            'Influencer partnerships'
+            'Identitate completă de brand',
+            'Website lansare produs',
+            'Configurare automatizare marketing',
+            'Campanii multi-canal',
+            'PR și outreach media',
+            'Parteneriate cu influenceri'
           ],
           testimonial: {
-            quote: 'WMD delivered everything we needed on time and under budget. We launched with 12,500 signups, coverage in 45+ publications, and achieved 340% of our market penetration targets. Truly exceptional work.',
+            quote: 'WMD a livrat tot ce aveam nevoie la timp și sub buget. Am lansat cu 12.500 de înscrieri, acoperire în peste 45 de publicații și am atins 340% din țintele noastre de penetrare pe piață. Lucru cu adevărat excepțional.',
             author: 'Robert Chen',
-            role: 'VP Product, GlobalTech Corp'
+            role: 'VP Produs, GlobalTech Corp'
           },
           additionalMetrics: [
-            { label: 'Launch Timeline', before: 'N/A', after: 'On time' },
-            { label: 'Budget Efficiency', before: 'N/A', after: '92%' },
+            { label: 'Cronologie Lansare', before: 'N/A', after: 'La timp' },
+            { label: 'Eficiență Buget', before: 'N/A', after: '92%' },
             { label: 'Trial-to-Paid', before: 'N/A', after: '28%' },
-            { label: 'NPS Score', before: 'N/A', after: '72' }
+            { label: 'Scor NPS', before: 'N/A', after: '72' }
           ]
         };
 
       default:
         return {
-          location: 'United States',
-          timeline: '6 months',
-          team: '8 specialists',
+          location: 'Statele Unite',
+          timeline: '6 luni',
+          team: '8 specialiști',
           overview: problem,
           challenges: [problem],
           approach: [
             {
-              title: 'Discovery',
-              description: 'Understanding business goals and challenges.'
+              title: 'Descoperire',
+              description: 'Înțelegerea obiectivelor de business și provocărilor.'
             },
             {
-              title: 'Strategy',
-              description: 'Developing comprehensive solution roadmap.'
+              title: 'Strategie',
+              description: 'Dezvoltarea unui plan cuprinzător de soluții.'
             },
             {
-              title: 'Implementation',
-              description: 'Executing with precision and attention to detail.'
+              title: 'Implementare',
+              description: 'Executare cu precizie și atenție la detalii.'
             },
             {
-              title: 'Optimization',
-              description: 'Continuous improvement and refinement.'
+              title: 'Optimizare',
+              description: 'Îmbunătățire și rafinare continuă.'
             }
           ],
           features: [solution],
           testimonial: {
-            quote: 'Working with Web Media Design was an exceptional experience. They delivered outstanding results.',
+            quote: 'Colaborarea cu Web Media Design a fost o experiență excepțională. Au livrat rezultate remarcabile.',
             author: 'Client',
             role: client
           },
