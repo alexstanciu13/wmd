@@ -39,7 +39,7 @@ export function Footer() {
               <img
                 src={webMediaDesignLogo}
                 alt="Web Media Design"
-                className="h-8 w-auto"
+                className="h-12 w-auto"
               />
             </div>
             <p className="text-white/60 mb-4">
