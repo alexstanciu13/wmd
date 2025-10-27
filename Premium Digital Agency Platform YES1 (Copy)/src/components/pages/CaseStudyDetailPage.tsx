@@ -423,7 +423,7 @@ export function CaseStudyDetailPage({
             className="flex items-center space-x-2 text-white/60 hover:text-[#00AEEF] mb-8 transition-colors"
           >
             <ArrowLeft className="w-4 h-4" />
-            <span>Back to Portfolio</span>
+            <span>Înapoi la Portofoliu</span>
           </motion.button>
 
           <div className="grid lg:grid-cols-2 gap-12 items-center">
@@ -440,17 +440,17 @@ export function CaseStudyDetailPage({
               <div className="grid grid-cols-3 gap-6 mb-8">
                 <div className="glass rounded-lg p-4">
                   <MapPin className="w-5 h-5 text-[#00AEEF] mb-2" />
-                  <div className="text-sm text-white/60">Location</div>
+                  <div className="text-sm text-white/60">Locație</div>
                   <div className="text-white">{details.location}</div>
                 </div>
                 <div className="glass rounded-lg p-4">
                   <Calendar className="w-5 h-5 text-[#00AEEF] mb-2" />
-                  <div className="text-sm text-white/60">Timeline</div>
+                  <div className="text-sm text-white/60">Durată</div>
                   <div className="text-white">{details.timeline}</div>
                 </div>
                 <div className="glass rounded-lg p-4">
                   <Users className="w-5 h-5 text-[#00AEEF] mb-2" />
-                  <div className="text-sm text-white/60">Team</div>
+                  <div className="text-sm text-white/60">Echipă</div>
                   <div className="text-white">{details.team}</div>
                 </div>
               </div>
@@ -482,8 +482,8 @@ export function CaseStudyDetailPage({
             className="text-center mb-12"
           >
             <TrendingUp className="w-12 h-12 mx-auto mb-4 text-[#00AEEF]" />
-            <h2 className="text-4xl mb-4">Key Results</h2>
-            <p className="text-white/60">Measurable impact that exceeded expectations</p>
+            <h2 className="text-4xl mb-4">Rezultate Cheie</h2>
+            <p className="text-white/60">Impact măsurabil care a depășit așteptările</p>
           </motion.div>
 
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
@@ -512,7 +512,7 @@ export function CaseStudyDetailPage({
             className="mb-12"
           >
             <Target className="w-12 h-12 mb-4 text-[#00AEEF]" />
-            <h2 className="text-4xl mb-4">The Challenge</h2>
+            <h2 className="text-4xl mb-4">Provocarea</h2>
             <p className="text-xl text-white/70 mb-8">{problem}</p>
           </motion.div>
 
@@ -544,7 +544,7 @@ export function CaseStudyDetailPage({
             className="text-center mb-12"
           >
             <Zap className="w-12 h-12 mx-auto mb-4 text-[#00AEEF]" />
-            <h2 className="text-4xl mb-4">Our Approach</h2>
+            <h2 className="text-4xl mb-4">Abordarea Noastră</h2>
             <p className="text-white/60">{solution}</p>
           </motion.div>
 
@@ -578,8 +578,8 @@ export function CaseStudyDetailPage({
             whileInView={{ opacity: 1, y: 0 }}
             className="mb-12"
           >
-            <h2 className="text-4xl mb-4">Features Implemented</h2>
-            <p className="text-white/60">Comprehensive solutions tailored to drive results</p>
+            <h2 className="text-4xl mb-4">Funcționalități Implementate</h2>
+            <p className="text-white/60">Soluții cuprinzătoare adaptate pentru a genera rezultate</p>
           </motion.div>
 
           <div className="grid md:grid-cols-2 gap-4">
@@ -608,8 +608,8 @@ export function CaseStudyDetailPage({
               whileInView={{ opacity: 1, y: 0 }}
               className="mb-12 text-center"
             >
-              <h2 className="text-4xl mb-4">Before & After</h2>
-              <p className="text-white/60">Comprehensive performance improvements</p>
+              <h2 className="text-4xl mb-4">Înainte & După</h2>
+              <p className="text-white/60">Îmbunătățiri cuprinzătoare de performanță</p>
             </motion.div>
 
             <div className="grid md:grid-cols-2 gap-6">
@@ -624,12 +624,12 @@ export function CaseStudyDetailPage({
                   <div className="text-white/60 mb-4">{metric.label}</div>
                   <div className="flex items-center justify-between">
                     <div>
-                      <div className="text-sm text-white/40 mb-1">Before</div>
+                      <div className="text-sm text-white/40 mb-1">Înainte</div>
                       <div className="text-xl text-white/60">{metric.before}</div>
                     </div>
                     <ArrowLeft className="w-8 h-8 text-[#00AEEF] rotate-180" />
                     <div className="text-right">
-                      <div className="text-sm text-white/40 mb-1">After</div>
+                      <div className="text-sm text-white/40 mb-1">După</div>
                       <div className="text-2xl text-gradient">{metric.after}</div>
                     </div>
                   </div>
@@ -666,24 +666,24 @@ export function CaseStudyDetailPage({
             whileInView={{ opacity: 1, y: 0 }}
           >
             <h2 className="text-4xl md:text-5xl mb-6">
-              Ready for <span className="text-gradient">Similar Results</span>?
+              Gata pentru <span className="text-gradient">Rezultate Similare</span>?
             </h2>
             <p className="text-xl text-white/70 mb-8">
-              Let's discuss how we can transform your digital presence and drive exceptional growth.
+              Să discutăm cum putem transforma prezența ta digitală și să generăm creștere excepțională.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button
                 onClick={() => onNavigate('apply')}
                 className="bg-gradient-to-r from-[#00AEEF] to-[#9333EA] text-white hover:opacity-90 transition-opacity h-14 px-8 text-lg glow-cyan"
               >
-                Apply for Collaboration
+                Aplică pentru Colaborare
               </Button>
               <Button
                 onClick={() => onNavigate('portfolio')}
                 variant="outline"
                 className="border-white/20 text-white hover:bg-white/10 h-14 px-8 text-lg"
               >
-                View More Case Studies
+                Vezi Mai Multe Studii de Caz
               </Button>
             </div>
           </motion.div>

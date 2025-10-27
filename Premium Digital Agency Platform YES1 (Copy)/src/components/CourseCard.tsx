@@ -61,7 +61,7 @@ export function CourseCard({
           onClick={onEnroll}
           className="w-full btn-primary"
         >
-          Enroll for Free
+          Înscrie-te Gratuit
         </Button>
       </div>
     </div>

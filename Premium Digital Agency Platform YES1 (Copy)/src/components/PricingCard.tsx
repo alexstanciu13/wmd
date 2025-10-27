@@ -30,7 +30,7 @@ export function PricingCard({
         <div className="absolute -top-4 left-1/2 -translate-x-1/2">
           <div className="text-white px-4 py-1 rounded-full text-sm flex items-center space-x-1" style={{ backgroundImage: 'linear-gradient(90deg, #0B61D6 0%, #06306F 100%)' }}>
             <Zap className="w-4 h-4" />
-            <span>Most Popular</span>
+            <span>Cel Mai Popular</span>
           </div>
         </div>
       )}
@@ -39,7 +39,7 @@ export function PricingCard({
         <h3 className="text-2xl mb-2">{name}</h3>
         <div className="mb-2">
           <span className="text-4xl text-gradient">{price}</span>
-          {price !== 'Custom' && <span className="text-white/60">/month</span>}
+          {price !== 'Personalizat' && <span className="text-white/60">/lună</span>}
         </div>
         <p className="text-white/60 text-sm">{description}</p>
       </div>
@@ -57,7 +57,7 @@ export function PricingCard({
         onClick={onSelect}
         className={highlighted ? 'w-full btn-primary' : 'w-full btn-ghost'}
       >
-        Get Started
+        Începe Acum
       </Button>
     </div>
   );
