@@ -1,7 +1,8 @@
 import { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Menu, X, Sparkles } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
 import { Button } from './ui/button';
+import logoImage from './images/logo.png';
 
 export function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -45,9 +46,11 @@ export function Header() {
             to="/"
             className="flex items-center space-x-2 group"
           >
-            <div className="w-10 h-10 rounded-lg flex items-center justify-center glow-blue" style={{ backgroundImage: 'linear-gradient(135deg, #0B61D6 0%, #06306F 100%)' }}>
-              <Sparkles className="w-6 h-6 text-white" />
-            </div>
+            <img
+              src={logoImage}
+              alt="Web Media Design Logo"
+              className="h-10 w-auto"
+            />
             <span className="text-xl tracking-tight">
               <span className="text-gradient">Web Media Design</span>
             </span>
