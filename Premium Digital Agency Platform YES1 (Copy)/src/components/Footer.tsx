@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
-import { Facebook, Twitter, Instagram, Linkedin, Mail, Phone, Sparkles, ExternalLink } from 'lucide-react';
+import { Facebook, Twitter, Instagram, Linkedin, Mail, Phone, ExternalLink } from 'lucide-react';
+import logoImage from './images/logo.png';
 
 export function Footer() {
   const services = [
@@ -29,9 +30,11 @@ export function Footer() {
           {/* Brand */}
           <div>
             <div className="flex items-center space-x-2 mb-4">
-              <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-[#0070C9] to-[#002F6C] flex items-center justify-center">
-                <Sparkles className="w-6 h-6 text-white" />
-              </div>
+              <img
+                src={logoImage}
+                alt="Web Media Design Logo"
+                className="h-10 w-auto"
+              />
               <span className="text-gradient">WMD</span>
             </div>
             <p className="text-white/60 mb-4">
