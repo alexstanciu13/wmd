@@ -1,5 +1,5 @@
 import { useEffect } from 'react';
-import { BrowserRouter as Router, Routes, Route, useLocation, useParams } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, useLocation, useParams, useNavigate } from 'react-router-dom';
 import { HelmetProvider } from 'react-helmet-async';
 import { Toaster } from './components/ui/sonner';
 import { ParticleBackground } from './components/ParticleBackground';
@@ -48,13 +48,23 @@ function ServiceDetail() {
 // Case study detail route wrapper
 function CaseStudyDetail() {
   const { id } = useParams<{ id: string }>();
+  const navigate = useNavigate();
   const caseStudy = getCaseStudyById(id || '');
 
   if (!caseStudy) {
     return <NotFoundPage />;
   }
 
-  return <CaseStudyDetailPage {...caseStudy} />;
+  // Convert React Router navigate to onNavigate prop
+  const handleNavigate = (page: string) => {
+    const routes: Record<string, string> = {
+      'portfolio': '/studii-de-caz',
+      'apply': '/aplica',
+    };
+    navigate(routes[page] || '/');
+  };
+
+  return <CaseStudyDetailPage {...caseStudy} onNavigate={handleNavigate} />;
 }
 
 function AppContent() {

@@ -1,5 +1,4 @@
 import { motion } from 'motion/react';
-import { useNavigate } from 'react-router-dom';
 import { ArrowLeft, CheckCircle2, TrendingUp, Calendar, MapPin, Users, Target, Zap, Award } from 'lucide-react';
 import { Button } from '../ui/button';
 import { ImageWithFallback } from '../figma/ImageWithFallback';
@@ -15,6 +14,7 @@ interface CaseStudyDetailProps {
     metric: string;
     value: string;
   }[];
+  onNavigate: (page: string) => void;
 }
 
 export function CaseStudyDetailPage({
@@ -24,8 +24,8 @@ export function CaseStudyDetailPage({
   problem,
   solution,
   results,
+  onNavigate,
 }: CaseStudyDetailProps) {
-  const navigate = useNavigate();
   // Enhanced data based on client
   const getCaseStudyDetails = () => {
     switch (client) {
@@ -416,30 +416,28 @@ export function CaseStudyDetailPage({
       {/* Hero Section */}
       <section className="relative pt-32 pb-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <motion.div
-              initial={{ opacity: 0, x: -20 }}
-              animate={{ opacity: 1, x: 0 }}
-            >
-              <motion.button
-                initial={{ opacity: 0, x: -20 }}
-                animate={{ opacity: 1, x: 0 }}
-                onClick={() => navigate('/studii-de-caz')}
-                className="flex items-center space-x-2 text-white/60 hover:text-[#00AEEF] mb-6 transition-colors"
-              >
-                <ArrowLeft className="w-4 h-4" />
-                <span>Back to Portfolio</span>
-              </motion.button>
+          <motion.button
+            initial={{ opacity: 0, x: -20 }}
+            animate={{ opacity: 1, x: 0 }}
+            onClick={() => onNavigate('portfolio')}
+            className="flex items-center space-x-2 text-white/60 hover:text-[#00AEEF] mb-8 transition-colors"
+          >
+            <ArrowLeft className="w-4 h-4" />
+            <span>Back to Portfolio</span>
+          </motion.button>
 
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+            >
               <div className="inline-block glass rounded-full px-4 py-1 mb-6">
                 <span className="text-[#00AEEF]">{industry}</span>
               </div>
-
               <h1 className="text-5xl md:text-6xl mb-6">{client}</h1>
-
               <p className="text-xl text-white/70 mb-8">{details.overview}</p>
 
-              <div className="grid grid-cols-3 gap-4">
+              <div className="grid grid-cols-3 gap-6 mb-8">
                 <div className="glass rounded-lg p-4">
                   <MapPin className="w-5 h-5 text-[#00AEEF] mb-2" />
                   <div className="text-sm text-white/60">Location</div>
@@ -459,8 +457,8 @@ export function CaseStudyDetailPage({
             </motion.div>
 
             <motion.div
-              initial={{ opacity: 0, x: 20 }}
-              animate={{ opacity: 1, x: 0 }}
+              initial={{ opacity: 0, scale: 0.95 }}
+              animate={{ opacity: 1, scale: 1 }}
               transition={{ delay: 0.2 }}
               className="relative rounded-2xl overflow-hidden glass-strong glow-cyan"
             >
@@ -675,13 +673,13 @@ export function CaseStudyDetailPage({
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button
-                onClick={() => navigate('/aplica')}
+                onClick={() => onNavigate('apply')}
                 className="bg-gradient-to-r from-[#00AEEF] to-[#9333EA] text-white hover:opacity-90 transition-opacity h-14 px-8 text-lg glow-cyan"
               >
                 Apply for Collaboration
               </Button>
               <Button
-                onClick={() => navigate('/studii-de-caz')}
+                onClick={() => onNavigate('portfolio')}
                 variant="outline"
                 className="border-white/20 text-white hover:bg-white/10 h-14 px-8 text-lg"
               >
