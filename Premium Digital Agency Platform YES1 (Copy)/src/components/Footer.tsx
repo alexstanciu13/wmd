@@ -130,10 +130,6 @@ export function Footer() {
                 </a>
               </li>
             </ul>
-            <div className="mt-6 text-xs text-white/50">
-              <p className="font-medium">STANCIU ALEX PFA</p>
-              <p>CUI: 51703420</p>
-            </div>
           </div>
         </div>
 
