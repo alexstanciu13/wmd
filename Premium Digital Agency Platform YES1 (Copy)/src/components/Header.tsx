@@ -55,7 +55,7 @@ export function Header() {
             <img
               src={webMediaDesignLogo}
               alt="Web Media Design"
-              className="h-12 w-auto"
+              className="h-[5.25rem] w-auto"
             />
           </Link>
 
