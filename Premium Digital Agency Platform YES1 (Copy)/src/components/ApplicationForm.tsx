@@ -45,6 +45,16 @@ export function ApplicationForm({ title = "Aplică pentru Colaborare", descripti
 
     if (!formData.phone.trim()) {
       newErrors.phone = 'Telefonul este obligatoriu';
+    } else {
+      // Normalize phone number by removing spaces, dashes, and parentheses
+      const normalizedPhone = formData.phone.replace(/[\s\-()]/g, '');
+      // Validate Romanian phone numbers
+      // Accepts: 07XXXXXXXX, 02XXXXXXXX, 03XXXXXXXX (mobile and landline)
+      // Also accepts with country code: +407XXXXXXXX, +402XXXXXXXX, +403XXXXXXXX
+      const romanianPhoneRegex = /^(\+?40|0)(7[0-9]{8}|[2-3][0-9]{8})$/;
+      if (!romanianPhoneRegex.test(normalizedPhone)) {
+        newErrors.phone = 'Telefonul trebuie să fie un număr românesc valid (ex: 0712345678 sau +40712345678)';
+      }
     }
 
     if (!formData.company.trim()) {
@@ -259,7 +269,7 @@ export function ApplicationForm({ title = "Aplică pentru Colaborare", descripti
             <Label htmlFor="website">Website (Opțional)</Label>
             <Input
               id="website"
-              type="url"
+              type="text"
               value={formData.website}
               onChange={(e) => handleChange('website', e.target.value)}
               className="bg-white/5 border-white/10 text-white"
