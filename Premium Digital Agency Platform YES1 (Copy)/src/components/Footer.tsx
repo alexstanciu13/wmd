@@ -1,7 +1,6 @@
 import { Link } from 'react-router-dom';
 import { Facebook, Twitter, Instagram, Linkedin, Mail, Phone, ExternalLink } from 'lucide-react';
 import logoImage from './images/logo.png';
-import webMediaDesignLogo from './images/webmediadesign.png';
 
 export function Footer() {
   const services = [
@@ -36,11 +35,7 @@ export function Footer() {
                 alt="Web Media Design Logo"
                 className="h-10 w-auto"
               />
-              <img
-                src={webMediaDesignLogo}
-                alt="Web Media Design"
-                className="h-12 w-auto"
-              />
+              <span className="text-gradient">WMD</span>
             </div>
             <p className="text-white/60 mb-4">
               Agenție digitală premium care creează experiențe excepționale pentru branduri în creștere rapidă.
