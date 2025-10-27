@@ -414,30 +414,32 @@ export function CaseStudyDetailPage({
       <CodeRain />
 
       {/* Hero Section */}
-      <section className="relative pt-32 pb-20">
+      <section className="relative pt-24 lg:pt-32 pb-20 lg:pb-28">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.button
-            initial={{ opacity: 0, x: -20 }}
-            animate={{ opacity: 1, x: 0 }}
-            onClick={() => onNavigate('portfolio')}
-            className="flex items-center space-x-2 text-white/60 hover:text-[#00AEEF] mb-8 transition-colors"
-          >
-            <ArrowLeft className="w-4 h-4" />
-            <span>Back to Portfolio</span>
-          </motion.button>
-
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-x-16 gap-y-12 items-start">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0, x: -20 }}
+              animate={{ opacity: 1, x: 0 }}
             >
+              <motion.button
+                initial={{ opacity: 0, x: -20 }}
+                animate={{ opacity: 1, x: 0 }}
+                onClick={() => onNavigate('portfolio')}
+                className="flex items-center space-x-2 text-white/60 hover:text-[#00AEEF] mb-6 transition-colors"
+              >
+                <ArrowLeft className="w-4 h-4" />
+                <span>Back to Portfolio</span>
+              </motion.button>
+
               <div className="inline-block glass rounded-full px-4 py-1 mb-6">
                 <span className="text-[#00AEEF]">{industry}</span>
               </div>
+
               <h1 className="text-5xl md:text-6xl mb-6">{client}</h1>
+
               <p className="text-xl text-white/70 mb-8">{details.overview}</p>
 
-              <div className="grid grid-cols-3 gap-6 mb-8">
+              <div className="grid grid-cols-3 gap-4">
                 <div className="glass rounded-lg p-4">
                   <MapPin className="w-5 h-5 text-[#00AEEF] mb-2" />
                   <div className="text-sm text-white/60">Location</div>
@@ -457,8 +459,8 @@ export function CaseStudyDetailPage({
             </motion.div>
 
             <motion.div
-              initial={{ opacity: 0, scale: 0.95 }}
-              animate={{ opacity: 1, scale: 1 }}
+              initial={{ opacity: 0, x: 20 }}
+              animate={{ opacity: 1, x: 0 }}
               transition={{ delay: 0.2 }}
               className="relative rounded-2xl overflow-hidden glass-strong glow-cyan"
             >
