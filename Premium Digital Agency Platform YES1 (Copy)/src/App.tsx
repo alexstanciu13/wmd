@@ -1,5 +1,5 @@
 import { useEffect } from 'react';
-import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, useLocation, useParams, useNavigate } from 'react-router-dom';
 import { HelmetProvider } from 'react-helmet-async';
 import { Toaster } from './components/ui/sonner';
 import { ParticleBackground } from './components/ParticleBackground';
@@ -10,6 +10,7 @@ import { AcademyPage } from './components/pages/AcademyPage';
 import { ServicesPage } from './components/pages/ServicesPage';
 import { ServiceDetailPage } from './components/pages/ServiceDetailPage';
 import { PortfolioPage } from './components/pages/PortfolioPage';
+import { CaseStudyDetailPage } from './components/pages/CaseStudyDetailPage';
 import { AboutPage } from './components/pages/AboutPage';
 import { ApplyPage } from './components/pages/ApplyPage';
 import { TermsPage } from './components/pages/TermsPage';
@@ -18,6 +19,7 @@ import { CookiesPage } from './components/pages/CookiesPage';
 import { GDPRPage } from './components/pages/GDPRPage';
 import { NotFoundPage } from './components/pages/NotFoundPage';
 import { getServiceBySlug } from './config/services';
+import { getCaseStudyById } from './data/caseStudies';
 
 // Scroll to top component
 function ScrollToTop() {
@@ -43,6 +45,28 @@ function ServiceDetail() {
   return <ServiceDetailPage service={service} />;
 }
 
+// Case study detail route wrapper
+function CaseStudyDetail() {
+  const { id } = useParams<{ id: string }>();
+  const navigate = useNavigate();
+  const caseStudy = getCaseStudyById(id || '');
+
+  if (!caseStudy) {
+    return <NotFoundPage />;
+  }
+
+  // Convert React Router navigate to onNavigate prop
+  const handleNavigate = (page: string) => {
+    const routes: Record<string, string> = {
+      'portfolio': '/studii-de-caz',
+      'apply': '/aplica',
+    };
+    navigate(routes[page] || '/');
+  };
+
+  return <CaseStudyDetailPage {...caseStudy} onNavigate={handleNavigate} />;
+}
+
 function AppContent() {
   return (
     <div className="min-h-screen bg-[#0A0A0A] text-white relative overflow-hidden">
@@ -58,6 +82,7 @@ function AppContent() {
           <Route path="/servicii/branding" element={<ServiceDetail />} />
           <Route path="/servicii/automatizare-ai" element={<ServiceDetail />} />
           <Route path="/studii-de-caz" element={<PortfolioPage />} />
+          <Route path="/studii-de-caz/:id" element={<CaseStudyDetail />} />
           <Route path="/academia" element={<AcademyPage />} />
           <Route path="/despre" element={<AboutPage />} />
           <Route path="/aplica" element={<ApplyPage />} />
