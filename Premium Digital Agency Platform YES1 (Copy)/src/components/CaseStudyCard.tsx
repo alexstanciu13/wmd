@@ -45,19 +45,19 @@ export function CaseStudyCard({
 
       <div className="p-6">
         <div className="mb-4">
-          <h4 className="text-[#00AEEF] mb-2">The Challenge</h4>
+          <h4 className="text-[#00AEEF] mb-2">Provocarea</h4>
           <p className="text-white/70 line-clamp-2">{problem}</p>
         </div>
 
         <div className="mb-4">
-          <h4 className="text-[#0070C9] mb-2">Our Solution</h4>
+          <h4 className="text-[#0070C9] mb-2">Soluția Noastră</h4>
           <p className="text-white/70 line-clamp-2">{solution}</p>
         </div>
 
         <div className="glass rounded-lg p-4 mb-4">
           <div className="flex items-center space-x-2 mb-3">
             <TrendingUp className="w-5 h-5 text-[#00AEEF]" />
-            <h4>Key Results</h4>
+            <h4>Rezultate Cheie</h4>
           </div>
           <div className="grid grid-cols-2 gap-4">
             {results.map((result, index) => (
@@ -70,7 +70,7 @@ export function CaseStudyCard({
         </div>
 
         <button className="flex items-center space-x-2 text-[#00AEEF] group-hover:space-x-3 transition-all rounded-xl px-4 py-2 hover:bg-[#00AEEF]/10">
-          <span>View Full Case Study</span>
+          <span>Vezi Studiul de Caz Complet</span>
           <ArrowRight className="w-4 h-4" />
         </button>
       </div>
