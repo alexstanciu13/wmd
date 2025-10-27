@@ -1,4 +1,5 @@
 import { motion } from 'motion/react';
+import { useNavigate } from 'react-router-dom';
 import { ArrowLeft, CheckCircle2, TrendingUp, Calendar, MapPin, Users, Target, Zap, Award } from 'lucide-react';
 import { Button } from '../ui/button';
 import { ImageWithFallback } from '../figma/ImageWithFallback';
@@ -14,7 +15,6 @@ interface CaseStudyDetailProps {
     metric: string;
     value: string;
   }[];
-  onNavigate: (page: string) => void;
 }
 
 export function CaseStudyDetailPage({
@@ -24,8 +24,8 @@ export function CaseStudyDetailPage({
   problem,
   solution,
   results,
-  onNavigate,
 }: CaseStudyDetailProps) {
+  const navigate = useNavigate();
   // Enhanced data based on client
   const getCaseStudyDetails = () => {
     switch (client) {
@@ -419,7 +419,7 @@ export function CaseStudyDetailPage({
           <motion.button
             initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: 1, x: 0 }}
-            onClick={() => onNavigate('portfolio')}
+            onClick={() => navigate('/studii-de-caz')}
             className="flex items-center space-x-2 text-white/60 hover:text-[#00AEEF] mb-8 transition-colors"
           >
             <ArrowLeft className="w-4 h-4" />
@@ -673,13 +673,13 @@ export function CaseStudyDetailPage({
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button
-                onClick={() => onNavigate('apply')}
+                onClick={() => navigate('/aplica')}
                 className="bg-gradient-to-r from-[#00AEEF] to-[#9333EA] text-white hover:opacity-90 transition-opacity h-14 px-8 text-lg glow-cyan"
               >
                 Apply for Collaboration
               </Button>
               <Button
-                onClick={() => onNavigate('portfolio')}
+                onClick={() => navigate('/studii-de-caz')}
                 variant="outline"
                 className="border-white/20 text-white hover:bg-white/10 h-14 px-8 text-lg"
               >
