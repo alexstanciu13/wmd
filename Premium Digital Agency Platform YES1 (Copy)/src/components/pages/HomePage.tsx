@@ -15,13 +15,15 @@ import danielDumitrescuImage from '../images/danieldumitrescu.png';
 import mihaiRosuImage from '../images/mihairosu.png';
 import elenaPopescuImage from '../images/elenapopescu.png';
 import alexandruIonescuImage from '../images/alexandruionescu.png';
+import techflowImage from '../images/techflow.png';
+import luxecommerceImage from '../images/luxecommerce.png';
 
 export function HomePage() {
   const caseStudies = [
     {
       client: 'TechFlow Solutions',
       industry: 'Tehnologie SaaS',
-      image: 'https://images.unsplash.com/photo-1677214467820-ab069619bbb6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtb2Rlcm4lMjB3ZWIlMjBkZXNpZ258ZW58MXx8fHwxNzYxMjI3OTQ4fDA&ixlib=rb-4.1.0&q=80&w=1080',
+      image: techflowImage,
       problem: 'Site web învechit cu rate de conversie slabe și implicare minimă a utilizatorilor pe paginile cheie ale produsului.',
       solution: 'Redesign complet cu UX orientat spre conversie, personalizare alimentată de AI și arhitectură de funnel optimizată.',
       results: [
@@ -32,7 +34,7 @@ export function HomePage() {
     {
       client: 'LuxeCommerce',
       industry: 'E-Commerce',
-      image: 'https://images.unsplash.com/photo-1658297063569-162817482fb6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxlY29tbWVyY2UlMjBzaG9wcGluZyUyMG9ubGluZXxlbnwxfHx8fDE3NjEyMzkzMjl8MA&ixlib=rb-4.1.0&q=80&w=1080',
+      image: luxecommerceImage,
       problem: 'Rate scăzute de conversie a coșului și rate ridicate de abandon care afectează creșterea veniturilor și valoarea pe viață a clienților.',
       solution: 'Platformă e-commerce reconstruită cu recomandări AI, checkout simplificat și automatizare de retenție.',
       results: [
