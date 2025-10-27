@@ -4,6 +4,7 @@ import { Award, Users, Target, Zap, Heart, Shield } from 'lucide-react';
 import { Button } from '../ui/button';
 import { ImageWithFallback } from '../figma/ImageWithFallback';
 import { SEO } from '../SEO';
+import mariaComanImage from '../images/mariacoman.png';
 
 export function AboutPage() {
   const values = [
@@ -48,7 +49,7 @@ export function AboutPage() {
     {
       name: 'Maria Coman',
       role: 'Implementare Logistica',
-      image: 'https://images.unsplash.com/photo-1697577418970-95d99b5a55cf?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxhcnRpZmljaWFsJTIwaW50ZWxsaWdlbmNlJTIwdGVjaG5vbG9neXxlbnwxfHx8fDE3NjEyMTA4MTV8MA&ixlib=rb-4.1.0&q=80&w=1080',
+      image: mariaComanImage,
     },
   ];
 

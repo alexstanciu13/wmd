@@ -11,6 +11,10 @@ import { ImageWithFallback } from '../figma/ImageWithFallback';
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '../ui/accordion';
 import { SEO } from '../SEO';
 import { StructuredData } from '../StructuredData';
+import danielDumitrescuImage from '../images/danieldumitrescu.png';
+import mihaiRosuImage from '../images/mihairosu.png';
+import elenaPopescuImage from '../images/elenapopescu.png';
+import alexandruIonescuImage from '../images/alexandruionescu.png';
 
 export function HomePage() {
   const caseStudies = [
@@ -43,7 +47,7 @@ export function HomePage() {
       name: 'Daniel Dumitrescu',
       role: 'CEO',
       company: 'TechFlow Solutions',
-      image: 'https://images.unsplash.com/photo-1531545514256-b1400bc00f31?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx0ZWFtJTIwY29sbGFib3JhdGlvbiUyMG1lZXRpbmd8ZW58MXx8fHwxNzYxMjkwOTA4fDA&ixlib=rb-4.1.0&q=80&w=1080',
+      image: danielDumitrescuImage,
       testimonial: 'WMD ne-a transformat complet prezența digitală. ROI-ul a fost excepțional, iar abordarea lor strategică pentru creșterea noastră a fost inestimabilă. Acesta este parteneriatul premium pe care îl căutam.',
       rating: 5,
     },
@@ -51,7 +55,7 @@ export function HomePage() {
       name: 'Mihai Roșu',
       role: 'Fondator',
       company: 'RideGreen',
-      image: 'https://images.unsplash.com/photo-1640109341881-1cd3eaf50909?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxsdXh1cnklMjBvZmZpY2UlMjB3b3Jrc3BhY2V8ZW58MXx8fHwxNzYxMjMzMzI1fDA&ixlib=rb-4.1.0&q=80&w=1080',
+      image: mihaiRosuImage,
       testimonial: 'Colaborarea cu WMD a fost ca și cum am avea o echipă internă de clasă mondială. Soluțiile lor de automatizare AI ne-au economisit nenumărate ore și au îmbunătățit semnificativ experiența clienților noștri.',
       rating: 5,
     },
@@ -59,7 +63,7 @@ export function HomePage() {
       name: 'Elena Popescu',
       role: 'Director Marketing',
       company: 'Innovate Digital',
-      image: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxwcm9mZXNzaW9uYWwlMjB3b21hbiUyMHBvcnRyYWl0fGVufDF8fHx8MTc2MTI5MDkwOHww&ixlib=rb-4.1.0&q=80&w=1080',
+      image: elenaPopescuImage,
       testimonial: 'Echipa WMD a depășit toate așteptările noastre. Atenția la detalii și dedicarea lor pentru succesul nostru au fost remarcabile. Rezultatele vorbesc de la sine - conversiile noastre au crescut cu peste 200%.',
       rating: 5,
     },
@@ -67,7 +71,7 @@ export function HomePage() {
       name: 'Alexandru Ionescu',
       role: 'CEO',
       company: 'Nexus Solutions',
-      image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxidXNpbmVzcyUyMG1hbiUyMHBvcnRyYWl0fGVufDF8fHx8MTc2MTI5MDkwOHww&ixlib=rb-4.1.0&q=80&w=1080',
+      image: alexandruIonescuImage,
       testimonial: 'Parteneriatul cu WMD a fost o investiție strategică excelentă. Expertiza lor în automatizare și design ne-a ajutat să ne scalăm rapid afacerea fără a compromite calitatea serviciilor noastre.',
       rating: 5,
     },
