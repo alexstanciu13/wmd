@@ -34,36 +34,42 @@ export function CaseStudyDetailPage({
           location: 'San Francisco, CA',
           timeline: '6 months',
           team: '8 specialists',
-          overview: 'TechFlow Solutions is a leading SaaS platform providing workflow automation tools for enterprise teams. Despite having a powerful product, their digital presence was failing to convert qualified leads, resulting in missed opportunities and slow growth.',
+          overview:
+            "TechFlow Solutions is a leading SaaS platform providing workflow automation tools for enterprise teams. Despite having a powerful product, their digital presence was failing to convert qualified leads, resulting in missed opportunities and slow growth.",
           challenges: [
-            'Outdated website design that didn\'t reflect their innovative product',
+            "Outdated website design that didn't reflect their innovative product",
             'Complex navigation confusing potential customers',
             'Poor mobile experience affecting 65% of traffic',
             'Slow page load times (4.2s average) hurting SEO rankings',
             'No clear conversion paths or CTAs',
-            'Minimal trust signals and social proof'
+            'Minimal trust signals and social proof',
           ],
           approach: [
             {
               title: 'Discovery & Research',
-              description: 'Conducted comprehensive user research, competitor analysis, and stakeholder interviews to understand pain points and opportunities.'
+              description:
+                'Conducted comprehensive user research, competitor analysis, and stakeholder interviews to understand pain points and opportunities.',
             },
             {
               title: 'Strategic Planning',
-              description: 'Developed a conversion-focused information architecture with clear user journeys and optimized content strategy.'
+              description:
+                'Developed a conversion-focused information architecture with clear user journeys and optimized content strategy.',
             },
             {
               title: 'UX/UI Design',
-              description: 'Created modern, intuitive interface with emphasis on clarity, trust-building, and conversion optimization.'
+              description:
+                'Created modern, intuitive interface with emphasis on clarity, trust-building, and conversion optimization.',
             },
             {
               title: 'Development',
-              description: 'Built with React and Next.js for optimal performance, implementing AI-powered personalization and advanced analytics.'
+              description:
+                'Built with React and Next.js for optimal performance, implementing AI-powered personalization and advanced analytics.',
             },
             {
               title: 'Optimization',
-              description: 'Continuous A/B testing and data-driven refinements to maximize conversion rates and user engagement.'
-            }
+              description:
+                'Continuous A/B testing and data-driven refinements to maximize conversion rates and user engagement.',
+            },
           ],
           features: [
             'AI-powered product recommendations',
@@ -71,19 +77,20 @@ export function CaseStudyDetailPage({
             'Dynamic pricing calculator',
             'Advanced analytics dashboard',
             'Personalized user journeys',
-            'Integrated CRM and marketing automation'
+            'Integrated CRM and marketing automation',
           ],
           testimonial: {
-            quote: 'WMD transformed our digital presence completely. The ROI has been exceptional, and their strategic approach to our growth has been invaluable. Within 6 months, we saw a 247% increase in conversions and our demo requests tripled.',
+            quote:
+              'WMD transformed our digital presence completely. The ROI has been exceptional, and their strategic approach to our growth has been invaluable. Within 6 months, we saw a 247% increase in conversions and our demo requests tripled.',
             author: 'Sarah Chen',
-            role: 'CEO, TechFlow Solutions'
+            role: 'CEO, TechFlow Solutions',
           },
           additionalMetrics: [
             { label: 'Page Load Time', before: '4.2s', after: '0.8s' },
             { label: 'Mobile Traffic', before: '35%', after: '58%' },
             { label: 'SEO Rankings', before: 'Page 3-5', after: 'Page 1' },
-            { label: 'Customer Satisfaction', before: '3.2/5', after: '4.8/5' }
-          ]
+            { label: 'Customer Satisfaction', before: '3.2/5', after: '4.8/5' },
+          ],
         };
 
       case 'LuxeCommerce':
@@ -91,36 +98,42 @@ export function CaseStudyDetailPage({
           location: 'New York, NY',
           timeline: '8 months',
           team: '10 specialists',
-          overview: 'LuxeCommerce is a premium fashion e-commerce brand offering curated luxury collections. They were struggling with high cart abandonment and poor mobile conversion rates, significantly impacting revenue potential.',
+          overview:
+            'LuxeCommerce is a premium fashion e-commerce brand offering curated luxury collections. They were struggling with high cart abandonment and poor mobile conversion rates, significantly impacting revenue potential.',
           challenges: [
             'Cart abandonment rate of 78% - well above industry average',
             'Poor mobile experience driving away 60% of traffic',
             'Low average order value compared to competitors',
             'Inefficient checkout process with 7+ steps',
             'No personalization or product recommendations',
-            'Limited post-purchase engagement'
+            'Limited post-purchase engagement',
           ],
           approach: [
             {
               title: 'Platform Audit',
-              description: 'Comprehensive analysis of existing platform, user behavior data, and competitive benchmarking.'
+              description:
+                'Comprehensive analysis of existing platform, user behavior data, and competitive benchmarking.',
             },
             {
               title: 'Headless Commerce Migration',
-              description: 'Rebuilt platform using headless commerce architecture for maximum flexibility and performance.'
+              description:
+                'Rebuilt platform using headless commerce architecture for maximum flexibility and performance.',
             },
             {
               title: 'Mobile-First Design',
-              description: 'Designed premium mobile experience with thumb-friendly navigation and streamlined purchasing flow.'
+              description:
+                'Designed premium mobile experience with thumb-friendly navigation and streamlined purchasing flow.',
             },
             {
               title: 'AI Integration',
-              description: 'Implemented AI-powered sizing recommendations, personalized product suggestions, and dynamic upselling.'
+              description:
+                'Implemented AI-powered sizing recommendations, personalized product suggestions, and dynamic upselling.',
             },
             {
               title: 'Retention Automation',
-              description: 'Built automated email sequences, abandoned cart recovery, and post-purchase engagement campaigns.'
-            }
+              description:
+                'Built automated email sequences, abandoned cart recovery, and post-purchase engagement campaigns.',
+            },
           ],
           features: [
             'Headless commerce architecture',
@@ -128,19 +141,20 @@ export function CaseStudyDetailPage({
             'One-click checkout',
             'Virtual try-on technology',
             'Smart product bundles',
-            'Automated cart recovery'
+            'Automated cart recovery',
           ],
           testimonial: {
-            quote: 'Working with WMD felt like having a world-class in-house team. Their platform rebuild transformed our business. Revenue increased by 312%, and cart abandonment dropped by 68%. The mobile experience alone has been a game-changer.',
+            quote:
+              "Working with WMD felt like having a world-class in-house team. Their platform rebuild transformed our business. Revenue increased by 312%, and cart abandonment dropped by 68%. The mobile experience alone has been a game-changer.",
             author: 'Michael Rodriguez',
-            role: 'Founder, LuxeCommerce'
+            role: 'Founder, LuxeCommerce',
           },
           additionalMetrics: [
             { label: 'Checkout Steps', before: '7 steps', after: '3 steps' },
             { label: 'Mobile Conversion', before: '0.8%', after: '4.2%' },
             { label: 'Email Revenue', before: '12%', after: '34%' },
-            { label: 'Return Rate', before: '18%', after: '7%' }
-          ]
+            { label: 'Return Rate', before: '18%', after: '7%' },
+          ],
         };
 
       case 'Innovate Marketing':
@@ -148,36 +162,42 @@ export function CaseStudyDetailPage({
           location: 'Austin, TX',
           timeline: '5 months',
           team: '6 specialists',
-          overview: 'Innovate Marketing is a full-service marketing agency struggling to generate qualified leads and establish thought leadership in a competitive market.',
+          overview:
+            'Innovate Marketing is a full-service marketing agency struggling to generate qualified leads and establish thought leadership in a competitive market.',
           challenges: [
             'Minimal organic traffic and poor SEO performance',
             'Low-quality leads not converting to clients',
             'Limited brand awareness in target market',
             'Content marketing efforts yielding minimal ROI',
             'Lack of thought leadership positioning',
-            'No systematic lead nurturing process'
+            'No systematic lead nurturing process',
           ],
           approach: [
             {
               title: 'SEO Foundation',
-              description: 'Technical SEO audit and optimization, keyword strategy development, and on-page optimization.'
+              description:
+                'Technical SEO audit and optimization, keyword strategy development, and on-page optimization.',
             },
             {
               title: 'Content Strategy',
-              description: 'Developed comprehensive content calendar focused on thought leadership and high-value topics.'
+              description:
+                'Developed comprehensive content calendar focused on thought leadership and high-value topics.',
             },
             {
               title: 'PPC Campaigns',
-              description: 'Strategic paid advertising on Google and LinkedIn targeting high-intent decision-makers.'
+              description:
+                'Strategic paid advertising on Google and LinkedIn targeting high-intent decision-makers.',
             },
             {
               title: 'Marketing Automation',
-              description: 'Implemented lead scoring, automated nurture sequences, and personalized engagement workflows.'
+              description:
+                'Implemented lead scoring, automated nurture sequences, and personalized engagement workflows.',
             },
             {
               title: 'Analytics & Optimization',
-              description: 'Continuous monitoring, A/B testing, and data-driven optimizations for maximum ROI.'
-            }
+              description:
+                'Continuous monitoring, A/B testing, and data-driven optimizations for maximum ROI.',
+            },
           ],
           features: [
             'Comprehensive SEO strategy',
@@ -185,19 +205,20 @@ export function CaseStudyDetailPage({
             'Multi-channel PPC campaigns',
             'Marketing automation platform',
             'Lead scoring system',
-            'Advanced analytics dashboard'
+            'Advanced analytics dashboard',
           ],
           testimonial: {
-            quote: 'The results speak for themselves. Organic traffic increased by 428%, and we\'re now generating 3x more qualified leads. WMD\'s strategic approach to digital marketing has completely transformed our business.',
+            quote:
+              "The results speak for themselves. Organic traffic increased by 428%, and we're now generating 3x more qualified leads. WMD's strategic approach to digital marketing has completely transformed our business.",
             author: 'Jennifer Williams',
-            role: 'Managing Partner, Innovate Marketing'
+            role: 'Managing Partner, Innovate Marketing',
           },
           additionalMetrics: [
             { label: 'Blog Traffic', before: '2.4K/mo', after: '12.7K/mo' },
             { label: 'Lead Quality Score', before: '2.8/10', after: '8.4/10' },
             { label: 'Marketing ROI', before: '140%', after: '420%' },
-            { label: 'Brand Search Volume', before: '120/mo', after: '890/mo' }
-          ]
+            { label: 'Brand Search Volume', before: '120/mo', after: '890/mo' },
+          ],
         };
 
       case 'Catalyst Ventures':
@@ -205,36 +226,42 @@ export function CaseStudyDetailPage({
           location: 'Boston, MA',
           timeline: '4 months',
           team: '5 specialists',
-          overview: 'Catalyst Ventures is a premium investment firm managing high-net-worth client portfolios. Their brand identity was outdated and inconsistent, undermining credibility with discerning clients.',
+          overview:
+            'Catalyst Ventures is a premium investment firm managing high-net-worth client portfolios. Their brand identity was outdated and inconsistent, undermining credibility with discerning clients.',
           challenges: [
             'Outdated visual identity from 2008',
             'Inconsistent messaging across channels',
             'Lack of premium positioning in materials',
             'No clear brand guidelines for team',
             'Poor differentiation from competitors',
-            'Minimal digital presence and thought leadership'
+            'Minimal digital presence and thought leadership',
           ],
           approach: [
             {
               title: 'Brand Discovery',
-              description: 'Extensive stakeholder interviews, competitive analysis, and positioning strategy development.'
+              description:
+                'Extensive stakeholder interviews, competitive analysis, and positioning strategy development.',
             },
             {
               title: 'Visual Identity',
-              description: 'Created sophisticated logo system, color palette, typography, and brand elements reflecting premium positioning.'
+              description:
+                'Created sophisticated logo system, color palette, typography, and brand elements reflecting premium positioning.',
             },
             {
               title: 'Messaging Framework',
-              description: 'Developed clear brand voice, messaging pillars, and communication guidelines.'
+              description:
+                'Developed clear brand voice, messaging pillars, and communication guidelines.',
             },
             {
               title: 'Collateral Design',
-              description: 'Designed premium pitch decks, reports, business cards, and digital assets.'
+              description:
+                'Designed premium pitch decks, reports, business cards, and digital assets.',
             },
             {
               title: 'Implementation',
-              description: 'Comprehensive brand guidelines, team training, and rollout support across all channels.'
-            }
+              description:
+                'Comprehensive brand guidelines, team training, and rollout support across all channels.',
+            },
           ],
           features: [
             'Premium logo and visual system',
@@ -242,19 +269,20 @@ export function CaseStudyDetailPage({
             'Luxury marketing collateral',
             'Digital brand assets',
             'Messaging framework',
-            'Team training and support'
+            'Team training and support',
           ],
           testimonial: {
-            quote: 'WMD elevated our brand to match our service quality. The new identity has dramatically improved our perception in the market. Client inquiries are up 198%, and referrals have nearly tripled.',
+            quote:
+              'WMD elevated our brand to match our service quality. The new identity has dramatically improved our perception in the market. Client inquiries are up 198%, and referrals have nearly tripled.',
             author: 'David Thompson',
-            role: 'Managing Director, Catalyst Ventures'
+            role: 'Managing Director, Catalyst Ventures',
           },
           additionalMetrics: [
             { label: 'Brand Consistency', before: '3/10', after: '9.5/10' },
             { label: 'Perceived Value', before: '+0%', after: '+67%' },
             { label: 'Website Sessions', before: '890/mo', after: '3,240/mo' },
-            { label: 'Media Mentions', before: '2/yr', after: '18/yr' }
-          ]
+            { label: 'Media Mentions', before: '2/yr', after: '18/yr' },
+          ],
         };
 
       case 'AutomateX':
@@ -262,36 +290,42 @@ export function CaseStudyDetailPage({
           location: 'Seattle, WA',
           timeline: '6 months',
           team: '7 specialists',
-          overview: 'AutomateX provides business services but was overwhelmed by manual processes consuming 40+ hours weekly and creating customer service bottlenecks.',
+          overview:
+            'AutomateX provides business services but was overwhelmed by manual processes consuming 40+ hours weekly and creating customer service bottlenecks.',
           challenges: [
             'Manual processes consuming 40+ hours per week',
             'Customer service response times of 24+ hours',
             'High operational costs limiting scalability',
             'Frequent errors in manual data entry',
             'Limited ability to handle growth',
-            'Poor customer satisfaction scores'
+            'Poor customer satisfaction scores',
           ],
           approach: [
             {
               title: 'Process Mapping',
-              description: 'Detailed analysis of workflows to identify automation opportunities and pain points.'
+              description:
+                'Detailed analysis of workflows to identify automation opportunities and pain points.',
             },
             {
               title: 'AI Chatbot Development',
-              description: 'Custom-trained chatbot handling 80% of common customer inquiries instantly.'
+              description:
+                'Custom-trained chatbot handling 80% of common customer inquiries instantly.',
             },
             {
               title: 'Workflow Automation',
-              description: 'Automated data entry, reporting, invoicing, and internal communications.'
+              description:
+                'Automated data entry, reporting, invoicing, and internal communications.',
             },
             {
               title: 'Predictive Analytics',
-              description: 'Implemented ML models for demand forecasting and resource optimization.'
+              description:
+                'Implemented ML models for demand forecasting and resource optimization.',
             },
             {
               title: 'Integration & Training',
-              description: 'Seamless integration with existing systems and comprehensive team training.'
-            }
+              description:
+                'Seamless integration with existing systems and comprehensive team training.',
+            },
           ],
           features: [
             'AI-powered customer support',
@@ -299,19 +333,20 @@ export function CaseStudyDetailPage({
             'Predictive analytics dashboard',
             'Automated reporting',
             'Smart resource allocation',
-            'Integration with existing tools'
+            'Integration with existing tools',
           ],
           testimonial: {
-            quote: 'The automation solutions WMD implemented have been transformative. We\'ve saved 40 hours per week, response times are down 85%, and customer satisfaction has never been higher. It\'s allowed us to scale without proportional cost increases.',
+            quote:
+              "The automation solutions WMD implemented have been transformative. We've saved 40 hours per week, response times are down 85%, and customer satisfaction has never been higher. It's allowed us to scale without proportional cost increases.",
             author: 'Amanda Foster',
-            role: 'CEO, AutomateX'
+            role: 'CEO, AutomateX',
           },
           additionalMetrics: [
             { label: 'Manual Hours', before: '40hrs/wk', after: '8hrs/wk' },
             { label: 'Error Rate', before: '12%', after: '0.8%' },
             { label: 'Capacity', before: '100 clients', after: '320 clients' },
-            { label: 'Cost per Transaction', before: '$12', after: '$3.20' }
-          ]
+            { label: 'Cost per Transaction', before: '$12', after: '$3.20' },
+          ],
         };
 
       case 'GlobalTech Corp':
@@ -319,36 +354,42 @@ export function CaseStudyDetailPage({
           location: 'Denver, CO',
           timeline: '7 months',
           team: '12 specialists',
-          overview: 'GlobalTech needed to rebrand and launch a new SaaS product in a competitive market with aggressive timelines and limited budget.',
+          overview:
+            'GlobalTech needed to rebrand and launch a new SaaS product in a competitive market with aggressive timelines and limited budget.',
           challenges: [
             'Tight launch deadline (6 months)',
             'Competitive market with established players',
             'Limited brand awareness',
             'No existing marketing infrastructure',
             'Budget constraints for customer acquisition',
-            'Need for immediate market traction'
+            'Need for immediate market traction',
           ],
           approach: [
             {
               title: 'Brand Development',
-              description: 'Fast-tracked brand strategy and identity creation with focus on differentiation.'
+              description:
+                'Fast-tracked brand strategy and identity creation with focus on differentiation.',
             },
             {
               title: 'Product Website',
-              description: 'Built high-converting product site with demo capabilities and clear value proposition.'
+              description:
+                'Built high-converting product site with demo capabilities and clear value proposition.',
             },
             {
               title: 'Go-to-Market Strategy',
-              description: 'Comprehensive launch plan integrating PR, content, paid ads, and influencer partnerships.'
+              description:
+                'Comprehensive launch plan integrating PR, content, paid ads, and influencer partnerships.',
             },
             {
               title: 'Marketing Automation',
-              description: 'Set up complete marketing stack with CRM, email automation, and analytics.'
+              description:
+                'Set up complete marketing stack with CRM, email automation, and analytics.',
             },
             {
               title: 'Launch Campaigns',
-              description: 'Coordinated multi-channel launch with PR outreach, paid campaigns, and content marketing.'
-            }
+              description:
+                'Coordinated multi-channel launch with PR outreach, paid campaigns, and content marketing.',
+            },
           ],
           features: [
             'Complete brand identity',
@@ -356,19 +397,20 @@ export function CaseStudyDetailPage({
             'Marketing automation setup',
             'Multi-channel campaigns',
             'PR and media outreach',
-            'Influencer partnerships'
+            'Influencer partnerships',
           ],
           testimonial: {
-            quote: 'WMD delivered everything we needed on time and under budget. We launched with 12,500 signups, coverage in 45+ publications, and achieved 340% of our market penetration targets. Truly exceptional work.',
+            quote:
+              'WMD delivered everything we needed on time and under budget. We launched with 12,500 signups, coverage in 45+ publications, and achieved 340% of our market penetration targets. Truly exceptional work.',
             author: 'Robert Chen',
-            role: 'VP Product, GlobalTech Corp'
+            role: 'VP Product, GlobalTech Corp',
           },
           additionalMetrics: [
             { label: 'Launch Timeline', before: 'N/A', after: 'On time' },
             { label: 'Budget Efficiency', before: 'N/A', after: '92%' },
             { label: 'Trial-to-Paid', before: 'N/A', after: '28%' },
-            { label: 'NPS Score', before: 'N/A', after: '72' }
-          ]
+            { label: 'NPS Score', before: 'N/A', after: '72' },
+          ],
         };
 
       default:
@@ -379,30 +421,19 @@ export function CaseStudyDetailPage({
           overview: problem,
           challenges: [problem],
           approach: [
-            {
-              title: 'Discovery',
-              description: 'Understanding business goals and challenges.'
-            },
-            {
-              title: 'Strategy',
-              description: 'Developing comprehensive solution roadmap.'
-            },
-            {
-              title: 'Implementation',
-              description: 'Executing with precision and attention to detail.'
-            },
-            {
-              title: 'Optimization',
-              description: 'Continuous improvement and refinement.'
-            }
+            { title: 'Discovery', description: 'Understanding business goals and challenges.' },
+            { title: 'Strategy', description: 'Developing comprehensive solution roadmap.' },
+            { title: 'Implementation', description: 'Executing with precision and attention to detail.' },
+            { title: 'Optimization', description: 'Continuous improvement and refinement.' },
           ],
           features: [solution],
           testimonial: {
-            quote: 'Working with Web Media Design was an exceptional experience. They delivered outstanding results.',
+            quote:
+              'Working with Web Media Design was an exceptional experience. They delivered outstanding results.',
             author: 'Client',
-            role: client
+            role: client,
           },
-          additionalMetrics: []
+          additionalMetrics: [],
         };
     }
   };
@@ -414,22 +445,19 @@ export function CaseStudyDetailPage({
       <CodeRain />
 
       {/* Hero Section */}
-      <section className="relative pt-32 pb-20">
+      <section className="relative pt-28 lg:pt-32 pb-16 lg:pb-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-x-16 gap-y-12 items-start">
-            <motion.div
-              initial={{ opacity: 0, x: -20 }}
-              animate={{ opacity: 1, x: 0 }}
-            >
-              <motion.button
-                initial={{ opacity: 0, x: -20 }}
-                animate={{ opacity: 1, x: 0 }}
+          {/* Make left column a bit wider than right on desktop */}
+          <div className="grid grid-cols-1 lg:grid-cols-[1.15fr_1fr] gap-x-14 gap-y-12 items-start">
+            {/* Left */}
+            <motion.div initial={{ opacity: 0, x: -20 }} animate={{ opacity: 1, x: 0 }}>
+              <button
                 onClick={() => onNavigate('portfolio')}
-                className="flex items-center space-x-2 text-white/60 hover:text-[#00AEEF] mb-6 transition-colors"
+                className="flex items-center gap-2 text-white/60 hover:text-[#00AEEF] mb-6 transition-colors"
               >
                 <ArrowLeft className="w-4 h-4" />
                 <span>Back to Portfolio</span>
-              </motion.button>
+              </button>
 
               <div className="inline-block glass rounded-full px-4 py-1 mb-6">
                 <span className="text-[#00AEEF]">{industry}</span>
@@ -437,20 +465,21 @@ export function CaseStudyDetailPage({
 
               <h1 className="text-5xl md:text-6xl mb-6">{client}</h1>
 
-              <p className="text-xl text-white/70 mb-8">{details.overview}</p>
+              <p className="text-lg md:text-xl text-white/70 mb-8 max-w-3xl">{details.overview}</p>
 
-              <div className="grid grid-cols-3 gap-4">
-                <div className="glass rounded-lg p-4">
+              {/* Metrics row: 1 → 2 → 3 columns */}
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+                <div className="glass rounded-lg p-4 h-full">
                   <MapPin className="w-5 h-5 text-[#00AEEF] mb-2" />
                   <div className="text-sm text-white/60">Location</div>
                   <div className="text-white">{details.location}</div>
                 </div>
-                <div className="glass rounded-lg p-4">
+                <div className="glass rounded-lg p-4 h-full">
                   <Calendar className="w-5 h-5 text-[#00AEEF] mb-2" />
                   <div className="text-sm text-white/60">Timeline</div>
                   <div className="text-white">{details.timeline}</div>
                 </div>
-                <div className="glass rounded-lg p-4">
+                <div className="glass rounded-lg p-4 h-full">
                   <Users className="w-5 h-5 text-[#00AEEF] mb-2" />
                   <div className="text-sm text-white/60">Team</div>
                   <div className="text-white">{details.team}</div>
@@ -458,17 +487,15 @@ export function CaseStudyDetailPage({
               </div>
             </motion.div>
 
+            {/* Right (image) */}
             <motion.div
               initial={{ opacity: 0, x: 20 }}
               animate={{ opacity: 1, x: 0 }}
-              transition={{ delay: 0.2 }}
-              className="relative rounded-2xl overflow-hidden glass-strong glow-cyan"
+              transition={{ delay: 0.1 }}
+              className="relative rounded-2xl overflow-hidden glass-strong glow-cyan lg:mt-0"
             >
-              <ImageWithFallback
-                src={image}
-                alt={client}
-                className="w-full h-[400px] object-cover"
-              />
+              <ImageWithFallback src={image} alt={client} className="relative rounded-2xl overflow-hidden glass-strong glow-cyan lg:mt-0 min-h-[380px]"
+ />
               <div className="absolute inset-0 bg-gradient-to-t from-[#0A0A0A] via-transparent to-transparent" />
             </motion.div>
           </div>
@@ -478,11 +505,7 @@ export function CaseStudyDetailPage({
       {/* Key Results */}
       <section className="relative py-20 bg-gradient-to-b from-transparent via-[#1A237E]/5 to-transparent">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            className="text-center mb-12"
-          >
+          <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} className="text-center mb-12">
             <TrendingUp className="w-12 h-12 mx-auto mb-4 text-[#00AEEF]" />
             <h2 className="text-4xl mb-4">Key Results</h2>
             <p className="text-white/60">Measurable impact that exceeded expectations</p>
@@ -505,14 +528,10 @@ export function CaseStudyDetailPage({
         </div>
       </section>
 
-      {/* Challenges */}
+      {/* The Challenge */}
       <section className="relative py-20">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            className="mb-12"
-          >
+          <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} className="mb-12">
             <Target className="w-12 h-12 mb-4 text-[#00AEEF]" />
             <h2 className="text-4xl mb-4">The Challenge</h2>
             <p className="text-xl text-white/70 mb-8">{problem}</p>
@@ -540,11 +559,7 @@ export function CaseStudyDetailPage({
       {/* Our Approach */}
       <section className="relative py-20 bg-gradient-to-b from-transparent via-[#00AEEF]/5 to-transparent">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            className="text-center mb-12"
-          >
+          <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} className="text-center mb-12">
             <Zap className="w-12 h-12 mx-auto mb-4 text-[#00AEEF]" />
             <h2 className="text-4xl mb-4">Our Approach</h2>
             <p className="text-white/60">{solution}</p>
@@ -575,16 +590,12 @@ export function CaseStudyDetailPage({
       {/* Features Implemented */}
       <section className="relative py-20">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            className="mb-12"
-          >
+          <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} className="mb-12">
             <h2 className="text-4xl mb-4">Features Implemented</h2>
             <p className="text-white/60">Comprehensive solutions tailored to drive results</p>
           </motion.div>
 
-          <div className="grid md:grid-cols-2 gap-4">
+        <div className="grid md:grid-cols-2 gap-4">
             {details.features.map((feature, index) => (
               <motion.div
                 key={feature}
@@ -605,11 +616,7 @@ export function CaseStudyDetailPage({
       {details.additionalMetrics && details.additionalMetrics.length > 0 && (
         <section className="relative py-20 bg-gradient-to-b from-transparent via-[#1A237E]/5 to-transparent">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              className="mb-12 text-center"
-            >
+            <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} className="mb-12 text-center">
               <h2 className="text-4xl mb-4">Before & After</h2>
               <p className="text-white/60">Comprehensive performance improvements</p>
             </motion.div>
@@ -663,10 +670,7 @@ export function CaseStudyDetailPage({
       {/* CTA */}
       <section className="relative py-20">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-          >
+          <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }}>
             <h2 className="text-4xl md:text-5xl mb-6">
               Ready for <span className="text-gradient">Similar Results</span>?
             </h2>
