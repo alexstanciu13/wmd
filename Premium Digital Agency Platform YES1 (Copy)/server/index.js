@@ -12,11 +12,11 @@ const PORT = process.env.PORT || 3001;
 app.use(cors());
 app.use(express.json());
 
-// Create email transporter
+// Create email transporter for Zoho Mail
 const transporter = nodemailer.createTransport({
-  host: process.env.SMTP_HOST || 'smtp.gmail.com',
-  port: process.env.SMTP_PORT || 587,
-  secure: false, // true for 465, false for other ports
+  host: process.env.SMTP_HOST || 'smtp.zoho.eu',
+  port: Number(process.env.SMTP_PORT) || 465,
+  secure: process.env.SMTP_SECURE === 'true' || true, // true for port 465
   auth: {
     user: process.env.SMTP_USER,
     pass: process.env.SMTP_PASS,
@@ -131,7 +131,7 @@ contact@webmediadesign.ro`;
 
     // Email options
     const mailOptions = {
-      from: process.env.SMTP_FROM || 'contact@webmediadesign.ro',
+      from: process.env.SMTP_FROM || 'Web Media Design <contact@webmediadesign.ro>',
       to: 'contact@webmediadesign.ro',
       subject: 'Nouă cerere de colaborare — Web Media Design',
       text: emailContent,
