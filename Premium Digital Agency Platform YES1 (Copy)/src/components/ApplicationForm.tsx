@@ -92,7 +92,10 @@ export function ApplicationForm({ title = "Aplică pentru Colaborare", descripti
     setIsSubmitting(true);
 
     try {
-      const response = await fetch('/api/submit-application', {
+      // Use environment variable for API URL in production, fallback to relative path for development
+      const apiUrl = import.meta.env.VITE_API_URL || '/api';
+
+      const response = await fetch(`${apiUrl}/submit-application`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
