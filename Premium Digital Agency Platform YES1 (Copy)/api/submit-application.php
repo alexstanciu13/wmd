@@ -143,30 +143,34 @@ try {
   $mail->send();
 
   // --- Send confirmation email to user ---
-  require_once __DIR__ . '/email-template.php';
+  try {
+    require_once __DIR__ . '/email-template.php';
 
-  // Prepare user email
-  $mail->clearAddresses();
-  $mail->clearReplyTos();
-  $mail->addAddress($email, $name);
-  $mail->addReplyTo('contact@webmediadesign.ro', 'Web Media Design');
+    // Prepare user email
+    $mail->clearAddresses();
+    $mail->clearReplyTos();
+    $mail->addAddress($email, $name);
+    $mail->addReplyTo('contact@webmediadesign.ro', 'Web Media Design');
 
-  // Get HTML template with user data
-  $confirmationHTML = getConfirmationEmailHTML([
-    'name' => $name,
-    'company' => $company,
-    'projectType' => $projectType !== '' ? $projectType : '-',
-    'budget' => $formattedBudget,
-    'timeline' => $timeline !== '' ? $timeline : '-',
-  ]);
+    // Get HTML template with user data
+    $confirmationHTML = getConfirmationEmailHTML([
+      'name' => $name,
+      'company' => $company,
+      'projectType' => $projectType !== '' ? $projectType : '-',
+      'budget' => $formattedBudget,
+      'timeline' => $timeline !== '' ? $timeline : '-',
+    ]);
 
-  // Configure for HTML email
-  $mail->isHTML(true);
-  $mail->Subject = 'Aplicația ta a fost primită — Web Media Design';
-  $mail->Body = $confirmationHTML;
+    // Log template generation
+    error_log('[CONFIRMATION EMAIL] Template generated, length: ' . strlen($confirmationHTML));
 
-  // Plain text fallback
-  $mail->AltBody = <<<TEXT
+    // Configure for HTML email
+    $mail->isHTML(true);
+    $mail->Subject = 'Aplicația ta a fost primită — Web Media Design';
+    $mail->Body = $confirmationHTML;
+
+    // Plain text fallback
+    $mail->AltBody = <<<TEXT
 Bună {$name},
 
 Mulțumim pentru interesul tău de a colabora cu Web Media Design. Am primit cu succes aplicația ta și suntem entuziasmați să aflăm mai multe despre proiectul tău!
@@ -196,8 +200,30 @@ Ai întrebări? Ne poți contacta la contact@webmediadesign.ro
 Excelență Digitală Premium
 TEXT;
 
-  // Send confirmation email
-  $mail->send();
+    // Log before sending
+    error_log('[CONFIRMATION EMAIL] Sending to: ' . $email);
+    error_log('[CONFIRMATION EMAIL] Subject: ' . $mail->Subject);
+
+    // Send confirmation email
+    $mail->send();
+
+    error_log('[CONFIRMATION EMAIL] ✓ Successfully sent to: ' . $email);
+
+  } catch (Exception $confirmError) {
+    // Log error but don't fail the request
+    error_log('[CONFIRMATION EMAIL] ✗ FAILED to send to: ' . $email);
+    error_log('[CONFIRMATION EMAIL] Error: ' . $confirmError->getMessage());
+    error_log('[CONFIRMATION EMAIL] Code: ' . $confirmError->getCode());
+    error_log('[CONFIRMATION EMAIL] File: ' . $confirmError->getFile() . ':' . $confirmError->getLine());
+
+    // Return error details in response for debugging
+    echo json_encode([
+      'ok'=>true,
+      'warning'=>'Internal notification sent, but confirmation email failed',
+      'confirmation_error'=>$confirmError->getMessage()
+    ], JSON_UNESCAPED_UNICODE);
+    exit;
+  }
 
   echo json_encode(['ok'=>true], JSON_UNESCAPED_UNICODE);
   exit;
