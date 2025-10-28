@@ -172,18 +172,18 @@ try {
         body { margin: 0; padding: 0; background-color: #f4f4f4; font-family: Arial, sans-serif; }
         .container { max-width: 600px; margin: 0 auto; background-color: #0A0A0A; }
         .header { padding: 40px; text-align: center; }
-        .icon { width: 80px; height: 80px; background: linear-gradient(135deg, #00AEEF 0%, #9333EA 100%); border-radius: 50%; display: inline-block; line-height: 80px; font-size: 40px; color: white; }
+        .icon { width: 80px; height: 80px; background: linear-gradient(135deg, #0B61D6 0%, #06306F 100%); border-radius: 50%; display: inline-block; line-height: 80px; font-size: 40px; color: white; }
         .title { font-size: 32px; color: white; margin: 20px 0; }
         .gradient { background: linear-gradient(90deg, #0B61D6 0%, #00AEEF 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
         .content { padding: 0 40px 40px; color: #cccccc; }
         .card { background-color: #1A1A1A; border-radius: 12px; padding: 30px; margin: 20px 0; }
         .step { display: table; width: 100%; margin: 15px 0; }
         .step-num { display: table-cell; width: 40px; vertical-align: top; }
-        .step-badge { width: 32px; height: 32px; background: linear-gradient(135deg, #00AEEF 0%, #0EA5E9 100%); border-radius: 8px; text-align: center; line-height: 32px; font-weight: bold; color: white; font-size: 14px; }
+        .step-badge { width: 32px; height: 32px; background: linear-gradient(135deg, #0B61D6 0%, #06306F 100%); border-radius: 8px; text-align: center; line-height: 32px; font-weight: bold; color: white; font-size: 14px; }
         .step-content { display: table-cell; vertical-align: top; padding-left: 15px; }
         .step-title { color: white; font-weight: 600; margin-bottom: 4px; }
         .step-desc { color: #999; font-size: 14px; }
-        .button { display: inline-block; padding: 16px 32px; background: linear-gradient(90deg, #0B61D6 0%, #06306F 100%); color: white; text-decoration: none; border-radius: 8px; font-weight: 600; margin: 20px 0; }
+        .button { display: inline-block; padding: 16px 32px; background: linear-gradient(90deg, #0B61D6 0%, #06306F 100%); color: #ffffff !important; text-decoration: none; border-radius: 8px; font-weight: 600; margin: 20px 0; }
         .footer { padding: 30px 40px; color: #999; font-size: 14px; text-align: center; border-top: 1px solid #333; }
         .cyan { color: #00AEEF; }
     </style>
@@ -212,7 +212,7 @@ try {
                 </div>
 
                 <div class="step">
-                    <div class="step-num"><div class="step-badge" style="background: linear-gradient(135deg, #9333EA 0%, #A855F7 100%);">2</div></div>
+                    <div class="step-num"><div class="step-badge" style="background: linear-gradient(135deg, #0070C9 0%, #002F6C 100%);">2</div></div>
                     <div class="step-content">
                         <div class="step-title">Apel Descoperire</div>
                         <div class="step-desc">Vom programa o sesiune de strategie pentru a discuta viziunea ta</div>
@@ -220,7 +220,7 @@ try {
                 </div>
 
                 <div class="step">
-                    <div class="step-num"><div class="step-badge" style="background: linear-gradient(135deg, #00AEEF 0%, #9333EA 100%);">3</div></div>
+                    <div class="step-num"><div class="step-badge" style="background: linear-gradient(135deg, #00AEEF 0%, #0070C9 100%);">3</div></div>
                     <div class="step-content">
                         <div class="step-title">Propunere Personalizată</div>
                         <div class="step-desc">Primești o strategie adaptată și un plan detaliat al proiectului</div>
@@ -231,15 +231,7 @@ try {
             <p style="text-align: center; color: #999;">📅 Te vom contacta în <strong class="cyan">24–48 de ore</strong></p>
 
             <div style="text-align: center;">
-                <a href="https://webmediadesign.ro/studii-de-caz" class="button">Explorează Portofoliul</a>
-            </div>
-
-            <div style="border-top: 1px solid #333; padding-top: 20px; margin-top: 30px; font-size: 14px;">
-                <p style="color: white;"><strong>Detalii aplicație:</strong></p>
-                <p><strong>Companie:</strong> {$companyHtml}<br>
-                <strong>Tip proiect:</strong> {$projectTypeHtml}<br>
-                <strong>Buget:</strong> {$budgetHtml}<br>
-                <strong>Cronologie:</strong> {$timelineHtml}</p>
+                <a href="https://webmediadesign.ro/studii-de-caz" class="button" style="color: #ffffff;">Explorează Portofoliul</a>
             </div>
         </div>
 
