@@ -168,86 +168,148 @@ try {
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
     <title>Aplicația ta a fost primită</title>
-    <style>
-        body { margin: 0; padding: 0; background-color: #f4f4f4; font-family: Arial, sans-serif; }
-        .container { max-width: 600px; margin: 0 auto; background-color: #0A0A0A; }
-        .header { padding: 40px; text-align: center; }
-        .icon { width: 80px; height: 80px; background: linear-gradient(135deg, #0B61D6 0%, #06306F 100%); border-radius: 50%; display: inline-block; line-height: 80px; font-size: 40px; color: white; }
-        .title { font-size: 32px; color: white; margin: 20px 0; }
-        .gradient { background: linear-gradient(90deg, #0B61D6 0%, #00AEEF 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
-        .content { padding: 0 40px 40px; color: #cccccc; }
-        .card { background-color: #1A1A1A; border-radius: 12px; padding: 30px; margin: 20px 0; }
-        .step { display: table; width: 100%; margin: 15px 0; }
-        .step-num { display: table-cell; width: 40px; vertical-align: top; }
-        .step-badge { width: 32px; height: 32px; background: linear-gradient(135deg, #0B61D6 0%, #06306F 100%); border-radius: 8px; text-align: center; line-height: 32px; font-weight: bold; color: white; font-size: 14px; }
-        .step-content { display: table-cell; vertical-align: top; padding-left: 15px; }
-        .step-title { color: white; font-weight: 600; margin-bottom: 4px; }
-        .step-desc { color: #999; font-size: 14px; }
-        .button { display: inline-block; padding: 16px 32px; background: linear-gradient(90deg, #0B61D6 0%, #06306F 100%); color: #ffffff !important; text-decoration: none; border-radius: 8px; font-weight: 600; margin: 20px 0; }
-        .footer { padding: 30px 40px; color: #999; font-size: 14px; text-align: center; border-top: 1px solid #333; }
-        .cyan { color: #00AEEF; }
-    </style>
 </head>
-<body>
-    <div class="container">
-        <div class="header">
-            <div class="icon">✓</div>
-            <div class="title">Aplicația ta a fost <span class="gradient">primită</span>!</div>
-        </div>
+<body style="margin: 0; padding: 0; background-color: #0A0A0A; font-family: Arial, sans-serif;">
+    <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%" style="background-color: #0A0A0A;">
+        <tr>
+            <td align="center" style="padding: 40px 20px;">
+                <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="600" style="max-width: 600px; width: 100%;">
 
-        <div class="content">
-            <p style="text-align: center; font-size: 16px;">Bună {$nameHtml},</p>
+                    <!-- Header -->
+                    <tr>
+                        <td align="center" style="padding: 40px 20px; background-color: #0A0A0A;">
+                            <table role="presentation" cellspacing="0" cellpadding="0" border="0">
+                                <tr>
+                                    <td align="center" style="width: 80px; height: 80px; background: linear-gradient(135deg, #0B61D6 0%, #06306F 100%); border-radius: 50%; text-align: center; line-height: 80px; font-size: 40px; color: #ffffff;">
+                                        ✓
+                                    </td>
+                                </tr>
+                            </table>
+                            <h1 style="margin: 20px 0 0 0; font-size: 32px; font-weight: bold; color: #ffffff; text-align: center;">
+                                Aplicația ta a fost <span style="background: linear-gradient(90deg, #0B61D6 0%, #00AEEF 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; color: #00AEEF;">primită</span>!
+                            </h1>
+                        </td>
+                    </tr>
 
-            <p style="text-align: center;">Mulțumim pentru interesul tău de a colabora cu <strong class="cyan">Web Media Design</strong>. Am primit cu succes aplicația ta și suntem entuziasmați să aflăm mai multe despre proiectul tău!</p>
+                    <!-- Content -->
+                    <tr>
+                        <td style="padding: 0 40px 40px; background-color: #0A0A0A;">
+                            <p style="text-align: center; font-size: 16px; color: #cccccc; margin: 0 0 20px 0;">Bună {$nameHtml},</p>
 
-            <div class="card">
-                <h3 style="text-align: center; color: white; margin-bottom: 20px;">✨ Ce urmează?</h3>
+                            <p style="text-align: center; color: #cccccc; margin: 0 0 30px 0; line-height: 1.6;">
+                                Mulțumim pentru interesul tău de a colabora cu <strong style="color: #00AEEF;">Web Media Design</strong>. Am primit cu succes aplicația ta și suntem entuziasmați să aflăm mai multe despre proiectul tău!
+                            </p>
 
-                <div class="step">
-                    <div class="step-num"><div class="step-badge">1</div></div>
-                    <div class="step-content">
-                        <div class="step-title">Revizuire Aplicație</div>
-                        <div class="step-desc">Echipa noastră analizează detaliile și cerințele proiectului tău</div>
-                    </div>
-                </div>
+                            <!-- What's Next Card -->
+                            <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%" style="background-color: #1A1A1A; border-radius: 12px; margin: 20px 0;">
+                                <tr>
+                                    <td style="padding: 30px;">
+                                        <h3 style="text-align: center; color: #ffffff; margin: 0 0 20px 0; font-size: 18px;">✨ Ce urmează?</h3>
 
-                <div class="step">
-                    <div class="step-num"><div class="step-badge" style="background: linear-gradient(135deg, #0070C9 0%, #002F6C 100%);">2</div></div>
-                    <div class="step-content">
-                        <div class="step-title">Apel Descoperire</div>
-                        <div class="step-desc">Vom programa o sesiune de strategie pentru a discuta viziunea ta</div>
-                    </div>
-                </div>
+                                        <!-- Step 1 -->
+                                        <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%" style="margin: 15px 0;">
+                                            <tr>
+                                                <td width="40" style="vertical-align: top;">
+                                                    <table role="presentation" cellspacing="0" cellpadding="0" border="0">
+                                                        <tr>
+                                                            <td align="center" style="width: 32px; height: 32px; background: linear-gradient(135deg, #0B61D6 0%, #06306F 100%); border-radius: 8px; color: #ffffff; font-weight: bold; font-size: 14px; line-height: 32px;">
+                                                                1
+                                                            </td>
+                                                        </tr>
+                                                    </table>
+                                                </td>
+                                                <td style="padding-left: 15px; vertical-align: top;">
+                                                    <div style="color: #ffffff; font-weight: 600; margin-bottom: 4px;">Revizuire Aplicație</div>
+                                                    <div style="color: #999999; font-size: 14px;">Echipa noastră analizează detaliile și cerințele proiectului tău</div>
+                                                </td>
+                                            </tr>
+                                        </table>
 
-                <div class="step">
-                    <div class="step-num"><div class="step-badge" style="background: linear-gradient(135deg, #00AEEF 0%, #0070C9 100%);">3</div></div>
-                    <div class="step-content">
-                        <div class="step-title">Propunere Personalizată</div>
-                        <div class="step-desc">Primești o strategie adaptată și un plan detaliat al proiectului</div>
-                    </div>
-                </div>
-            </div>
+                                        <!-- Step 2 -->
+                                        <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%" style="margin: 15px 0;">
+                                            <tr>
+                                                <td width="40" style="vertical-align: top;">
+                                                    <table role="presentation" cellspacing="0" cellpadding="0" border="0">
+                                                        <tr>
+                                                            <td align="center" style="width: 32px; height: 32px; background: linear-gradient(135deg, #0070C9 0%, #002F6C 100%); border-radius: 8px; color: #ffffff; font-weight: bold; font-size: 14px; line-height: 32px;">
+                                                                2
+                                                            </td>
+                                                        </tr>
+                                                    </table>
+                                                </td>
+                                                <td style="padding-left: 15px; vertical-align: top;">
+                                                    <div style="color: #ffffff; font-weight: 600; margin-bottom: 4px;">Apel Descoperire</div>
+                                                    <div style="color: #999999; font-size: 14px;">Vom programa o sesiune de strategie pentru a discuta viziunea ta</div>
+                                                </td>
+                                            </tr>
+                                        </table>
 
-            <p style="text-align: center; color: #999;">📅 Te vom contacta în <strong class="cyan">24–48 de ore</strong></p>
+                                        <!-- Step 3 -->
+                                        <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%" style="margin: 15px 0;">
+                                            <tr>
+                                                <td width="40" style="vertical-align: top;">
+                                                    <table role="presentation" cellspacing="0" cellpadding="0" border="0">
+                                                        <tr>
+                                                            <td align="center" style="width: 32px; height: 32px; background: linear-gradient(135deg, #00AEEF 0%, #0070C9 100%); border-radius: 8px; color: #ffffff; font-weight: bold; font-size: 14px; line-height: 32px;">
+                                                                3
+                                                            </td>
+                                                        </tr>
+                                                    </table>
+                                                </td>
+                                                <td style="padding-left: 15px; vertical-align: top;">
+                                                    <div style="color: #ffffff; font-weight: 600; margin-bottom: 4px;">Propunere Personalizată</div>
+                                                    <div style="color: #999999; font-size: 14px;">Primești o strategie adaptată și un plan detaliat al proiectului</div>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                </tr>
+                            </table>
 
-            <div style="text-align: center;">
-                <a href="https://webmediadesign.ro/studii-de-caz" class="button" style="color: #ffffff;">Explorează Portofoliul</a>
-            </div>
-        </div>
+                            <p style="text-align: center; color: #999999; margin: 30px 0 20px 0;">
+                                📅 Te vom contacta în <strong style="color: #00AEEF;">24–48 de ore</strong>
+                            </p>
 
-        <div class="footer">
-            <p>Ai întrebări? Ne poți contacta la<br>
-            <a href="mailto:contact@webmediadesign.ro" class="cyan" style="text-decoration: none;">contact@webmediadesign.ro</a></p>
+                            <!-- CTA Button -->
+                            <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+                                <tr>
+                                    <td align="center" style="padding: 20px 0;">
+                                        <a href="https://webmediadesign.ro/studii-de-caz" style="display: inline-block; padding: 16px 32px; background: linear-gradient(90deg, #0B61D6 0%, #06306F 100%); color: #ffffff; text-decoration: none; border-radius: 8px; font-weight: 600; font-size: 16px;">
+                                            Explorează Portofoliul
+                                        </a>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
 
-            <p style="margin-top: 20px;">
-                <a href="https://webmediadesign.ro" class="cyan" style="text-decoration: none;">Website</a> |
-                <a href="https://webmediadesign.ro/studii-de-caz" class="cyan" style="text-decoration: none;">Portofoliu</a> |
-                <a href="https://webmediadesign.ro/academia" class="cyan" style="text-decoration: none;">Academie</a>
-            </p>
+                    <!-- Footer -->
+                    <tr>
+                        <td style="padding: 30px 40px; background-color: #0A0A0A; border-top: 1px solid #333333;">
+                            <p style="text-align: center; color: #999999; font-size: 14px; margin: 0 0 20px 0;">
+                                Ai întrebări? Ne poți contacta la<br>
+                                <a href="mailto:contact@webmediadesign.ro" style="color: #00AEEF; text-decoration: none;">contact@webmediadesign.ro</a>
+                            </p>
 
-            <p style="color: #666; font-size: 12px; margin-top: 20px;">© 2025 Web Media Design. Toate drepturile rezervate.<br>Excelență Digitală Premium</p>
-        </div>
-    </div>
+                            <p style="text-align: center; margin: 20px 0; font-size: 14px;">
+                                <a href="https://webmediadesign.ro" style="color: #00AEEF; text-decoration: none;">Website</a>
+                                <span style="color: #333333;"> | </span>
+                                <a href="https://webmediadesign.ro/studii-de-caz" style="color: #00AEEF; text-decoration: none;">Portofoliu</a>
+                                <span style="color: #333333;"> | </span>
+                                <a href="https://webmediadesign.ro/academia" style="color: #00AEEF; text-decoration: none;">Academie</a>
+                            </p>
+
+                            <p style="text-align: center; color: #666666; font-size: 12px; margin: 20px 0 0 0;">
+                                © 2025 Web Media Design. Toate drepturile rezervate.<br>
+                                Excelență Digitală Premium
+                            </p>
+                        </td>
+                    </tr>
+
+                </table>
+            </td>
+        </tr>
+    </table>
 </body>
 </html>
 HTML;
