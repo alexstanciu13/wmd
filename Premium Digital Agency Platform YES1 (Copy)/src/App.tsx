@@ -13,6 +13,7 @@ import { PortfolioPage } from './components/pages/PortfolioPage';
 import { CaseStudyDetailPage } from './components/pages/CaseStudyDetailPage';
 import { AboutPage } from './components/pages/AboutPage';
 import { ApplyPage } from './components/pages/ApplyPage';
+import { ThankYouPage } from './components/pages/ThankYouPage';
 import { TermsPage } from './components/pages/TermsPage';
 import { PrivacyPage } from './components/pages/PrivacyPage';
 import { CookiesPage } from './components/pages/CookiesPage';
@@ -86,6 +87,7 @@ function AppContent() {
           <Route path="/academia" element={<AcademyPage />} />
           <Route path="/despre" element={<AboutPage />} />
           <Route path="/aplica" element={<ApplyPage />} />
+          <Route path="/thank-you" element={<ThankYouPage />} />
           <Route path="/termeni-conditii" element={<TermsPage />} />
           <Route path="/politica-confidentialitate" element={<PrivacyPage />} />
           <Route path="/politica-cookies" element={<CookiesPage />} />
