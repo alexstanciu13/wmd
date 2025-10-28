@@ -38,7 +38,7 @@ export function AcademyPage() {
           {/* CTA Button */}
           <Link
             to="/"
-            className="btn-primary inline-block"
+            className="btn-primary inline-block px-3 py-1 text-lg"
           >
             Înapoi la Acasă
           </Link>
