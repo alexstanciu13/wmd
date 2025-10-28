@@ -75,7 +75,18 @@ const sanitizeInput = (input) => {
 const getEmailTemplate = (data) => {
   try {
     const templatePath = path.join(__dirname, 'email-templates', 'application-confirmation.html');
+
+    // Log the template path for debugging
+    console.log('Loading email template from:', templatePath);
+
+    // Check if file exists
+    if (!fs.existsSync(templatePath)) {
+      console.error('Email template file not found at:', templatePath);
+      return null;
+    }
+
     let template = fs.readFileSync(templatePath, 'utf-8');
+    console.log('Email template loaded successfully, length:', template.length);
 
     // Replace placeholders with actual data
     template = template.replace(/{{name}}/g, data.name);
@@ -87,6 +98,11 @@ const getEmailTemplate = (data) => {
     return template;
   } catch (error) {
     console.error('Error loading email template:', error);
+    console.error('Error details:', {
+      message: error.message,
+      stack: error.stack,
+      dirname: __dirname
+    });
     return null;
   }
 };
@@ -172,9 +188,12 @@ contact@webmediadesign.ro`;
     console.log('Internal notification email sent successfully');
 
     // Send confirmation email to user
+    console.log('Attempting to send confirmation email to:', sanitizedData.email);
     const htmlTemplate = getEmailTemplate(sanitizedData);
 
     if (htmlTemplate) {
+      console.log('HTML template loaded, preparing confirmation email...');
+
       const confirmationMailOptions = {
         from: process.env.SMTP_FROM || 'Web Media Design <contact@webmediadesign.ro>',
         to: sanitizedData.email,
@@ -211,12 +230,24 @@ Excelență Digitală Premium`,
       };
 
       try {
-        await transporter.sendMail(confirmationMailOptions);
-        console.log('Confirmation email sent to user successfully');
+        console.log('Sending confirmation email with options:', {
+          from: confirmationMailOptions.from,
+          to: confirmationMailOptions.to,
+          subject: confirmationMailOptions.subject,
+        });
+
+        const info = await transporter.sendMail(confirmationMailOptions);
+        console.log('Confirmation email sent successfully!');
+        console.log('Email info:', info);
       } catch (confirmationError) {
-        console.error('Error sending confirmation email to user:', confirmationError);
+        console.error('❌ ERROR sending confirmation email to user');
+        console.error('Error message:', confirmationError.message);
+        console.error('Error code:', confirmationError.code);
+        console.error('Full error:', confirmationError);
         // Don't fail the request if confirmation email fails
       }
+    } else {
+      console.error('❌ Failed to load HTML template, confirmation email not sent');
     }
 
     res.status(200).json({ success: true, message: 'Application submitted successfully' });
@@ -235,4 +266,11 @@ app.get('/api/health', (req, res) => {
 // Start server
 app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`);
+  console.log('Environment check:');
+  console.log('  - SMTP_HOST:', process.env.SMTP_HOST || 'smtp.zoho.eu (default)');
+  console.log('  - SMTP_PORT:', process.env.SMTP_PORT || '465 (default)');
+  console.log('  - SMTP_USER:', process.env.SMTP_USER ? '✓ Set' : '❌ NOT SET');
+  console.log('  - SMTP_PASS:', process.env.SMTP_PASS ? '✓ Set' : '❌ NOT SET');
+  console.log('  - SMTP_FROM:', process.env.SMTP_FROM || 'contact@webmediadesign.ro (default)');
+  console.log('  - Working directory:', __dirname);
 });
