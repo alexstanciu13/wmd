@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { Button } from './ui/button';
 import { Input } from './ui/input';
 import { Label } from './ui/label';
@@ -13,6 +14,7 @@ interface ApplicationFormProps {
 }
 
 export function ApplicationForm({ title = "Aplică pentru Colaborare", description = "Hai să construim ceva extraordinar împreună" }: ApplicationFormProps) {
+  const navigate = useNavigate();
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -127,11 +129,6 @@ export function ApplicationForm({ title = "Aplică pentru Colaborare", descripti
         throw new Error('Failed to submit application');
       }
 
-      toast.success('Mulțumim! Cererea ta a fost trimisă cu succes.', {
-        description: 'Te vom contacta în curând.',
-        duration: 5000,
-      });
-
       // Reset form
       setFormData({
         name: '',
@@ -146,6 +143,9 @@ export function ApplicationForm({ title = "Aplică pentru Colaborare", descripti
         _honeypot: '',
       });
       setErrors({});
+
+      // Navigate to thank you page with state flag
+      navigate('/thank-you', { state: { fromApply: true } });
 
     } catch (error) {
       console.error('Form submission error:', error);
