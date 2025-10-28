@@ -2,8 +2,15 @@ import express from 'express';
 import cors from 'cors';
 import nodemailer from 'nodemailer';
 import dotenv from 'dotenv';
+import fs from 'fs';
+import path from 'path';
+import { fileURLToPath } from 'url';
 
 dotenv.config();
+
+// Get __dirname equivalent in ES modules
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
 const app = express();
 const PORT = process.env.PORT || 3001;
@@ -37,7 +44,9 @@ const formatProjectType = (type) => {
   const types = {
     'web-design': 'Design Web',
     'ecommerce': 'E-Commerce',
+    'seo': 'SEO',
     'marketing': 'Marketing Digital',
+    'email-marketing': 'E-mail Marketing',
     'branding': 'Branding',
     'ai-automation': 'Automatizare AI',
     'comprehensive': 'Pachet Complet',
@@ -48,10 +57,10 @@ const formatProjectType = (type) => {
 // Helper function to format timeline
 const formatTimeline = (timeline) => {
   const timelines = {
-    'asap': 'Cât mai curând (În 1 lună)',
-    '1-3': '1-3 luni',
-    '3-6': '3-6 luni',
-    '6+': '6+ luni',
+    'asap': 'Cât mai curând (1 săptămână)',
+    '1-3': '1-3 săptămâni',
+    '3-6': '3-6 săptămâni',
+    '6+': '6+ săptămâni',
   };
   return timelines[timeline] || timeline;
 };
@@ -60,6 +69,26 @@ const formatTimeline = (timeline) => {
 const sanitizeInput = (input) => {
   if (typeof input !== 'string') return input;
   return input.replace(/[<>]/g, '');
+};
+
+// Helper function to load and populate email template
+const getEmailTemplate = (data) => {
+  try {
+    const templatePath = path.join(__dirname, 'email-templates', 'application-confirmation.html');
+    let template = fs.readFileSync(templatePath, 'utf-8');
+
+    // Replace placeholders with actual data
+    template = template.replace(/{{name}}/g, data.name);
+    template = template.replace(/{{company}}/g, data.company);
+    template = template.replace(/{{projectType}}/g, formatProjectType(data.projectType));
+    template = template.replace(/{{budget}}/g, Number(data.budget).toLocaleString('ro-RO'));
+    template = template.replace(/{{timeline}}/g, formatTimeline(data.timeline));
+
+    return template;
+  } catch (error) {
+    console.error('Error loading email template:', error);
+    return null;
+  }
 };
 
 // API endpoint for form submission
@@ -129,8 +158,8 @@ Formular Aplica Acum
 Web Media Design
 contact@webmediadesign.ro`;
 
-    // Email options
-    const mailOptions = {
+    // Email options for internal notification
+    const internalMailOptions = {
       from: process.env.SMTP_FROM || 'Web Media Design <contact@webmediadesign.ro>',
       to: 'contact@webmediadesign.ro',
       subject: 'Nouă cerere de colaborare — Web Media Design',
@@ -138,10 +167,58 @@ contact@webmediadesign.ro`;
       replyTo: sanitizedData.email,
     };
 
-    // Send email
-    await transporter.sendMail(mailOptions);
+    // Send internal notification email
+    await transporter.sendMail(internalMailOptions);
+    console.log('Internal notification email sent successfully');
 
-    console.log('Form submission email sent successfully');
+    // Send confirmation email to user
+    const htmlTemplate = getEmailTemplate(sanitizedData);
+
+    if (htmlTemplate) {
+      const confirmationMailOptions = {
+        from: process.env.SMTP_FROM || 'Web Media Design <contact@webmediadesign.ro>',
+        to: sanitizedData.email,
+        subject: 'Aplicația ta a fost primită — Web Media Design',
+        html: htmlTemplate,
+        // Fallback text version
+        text: `Bună ${sanitizedData.name},
+
+Mulțumim pentru interesul tău de a colabora cu Web Media Design. Am primit cu succes aplicația ta și suntem entuziasmați să aflăm mai multe despre proiectul tău!
+
+CE URMEAZĂ?
+
+1. Revizuire Aplicație
+   Echipa noastră analizează detaliile și cerințele proiectului tău
+
+2. Apel Descoperire
+   Vom programa o sesiune de strategie pentru a discuta viziunea ta
+
+3. Propunere Personalizată
+   Primești o strategie adaptată și un plan detaliat al proiectului
+
+📅 Te vom contacta în 24–48 de ore
+
+DETALII APLICAȚIE:
+Companie: ${sanitizedData.company}
+Tip proiect: ${formatProjectType(sanitizedData.projectType)}
+Buget: ${formattedBudget}
+Cronologie: ${formatTimeline(sanitizedData.timeline)}
+
+Ai întrebări? Ne poți contacta la contact@webmediadesign.ro
+
+© 2025 Web Media Design. Toate drepturile rezervate.
+Excelență Digitală Premium`,
+      };
+
+      try {
+        await transporter.sendMail(confirmationMailOptions);
+        console.log('Confirmation email sent to user successfully');
+      } catch (confirmationError) {
+        console.error('Error sending confirmation email to user:', confirmationError);
+        // Don't fail the request if confirmation email fails
+      }
+    }
+
     res.status(200).json({ success: true, message: 'Application submitted successfully' });
 
   } catch (error) {
