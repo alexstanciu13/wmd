@@ -15,7 +15,7 @@ export function ApplyPage() {
   const qualifications = [
     {
       title: 'Angajament Bugetar',
-      description: 'Buget minim pentru proiect de $3.000',
+      description: 'Investiție serioasă în rezultate de calitate',
     },
     {
       title: 'Mentalitate de Creștere',
@@ -150,7 +150,7 @@ export function ApplyPage() {
             },
             {
               q: 'Care este bugetul minim pentru proiect?',
-              a: 'Proiectele noastre încep de obicei de la $3.000. Acest nivel de investiție asigură că avem resursele necesare pentru a livra rezultate transformaționale.',
+              a: 'Bugetele proiectelor variază în funcție de domeniu și complexitate. Lucrăm cu fiecare client pentru a crea o soluție care se potrivește obiectivelor și bugetului său, asigurând întotdeauna maximizarea valorii investiției.',
             },
             {
               q: 'Cât durează procesul de aplicare?',
