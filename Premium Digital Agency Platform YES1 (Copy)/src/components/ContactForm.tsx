@@ -10,6 +10,7 @@ import { Send } from 'lucide-react';
 export function ContactForm() {
   const [formData, setFormData] = useState({
     name: '',
+    email: '',
     phone: '',
     service: '',
     message: '',
@@ -25,6 +26,12 @@ export function ContactForm() {
 
     if (!formData.name.trim()) {
       newErrors.name = 'Numele este obligatoriu';
+    }
+
+    if (!formData.email.trim()) {
+      newErrors.email = 'Email-ul este obligatoriu';
+    } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email)) {
+      newErrors.email = 'Email invalid';
     }
 
     if (!formData.phone.trim()) {
@@ -76,7 +83,7 @@ export function ContactForm() {
         },
         body: JSON.stringify({
           name: formData.name,
-          email: 'contact@webmediadesign.ro', // Default email since it's not collected
+          email: formData.email,
           phone: formData.phone,
           company: 'Contact Form Submission',
           website: 'N/A',
@@ -94,6 +101,7 @@ export function ContactForm() {
       // Reset form
       setFormData({
         name: '',
+        email: '',
         phone: '',
         service: '',
         message: '',
@@ -147,7 +155,7 @@ export function ContactForm() {
           />
         </div>
 
-        {/* Name & Phone */}
+        {/* Name, Email & Phone */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           <div className="space-y-2">
             <Label htmlFor="contact-name">Nume Complet *</Label>
@@ -163,19 +171,35 @@ export function ContactForm() {
             )}
           </div>
           <div className="space-y-2">
-            <Label htmlFor="contact-phone">Telefon *</Label>
+            <Label htmlFor="contact-email">Adresă Email *</Label>
             <Input
-              id="contact-phone"
-              type="tel"
-              value={formData.phone}
-              onChange={(e) => handleChange('phone', e.target.value)}
+              id="contact-email"
+              type="email"
+              value={formData.email}
+              onChange={(e) => handleChange('email', e.target.value)}
               className="bg-white/5 border-white/10 text-white"
-              placeholder="+40 712 345 678"
+              placeholder="ion@companie.ro"
             />
-            {errors.phone && (
-              <p className="text-red-400 text-sm">{errors.phone}</p>
+            {errors.email && (
+              <p className="text-red-400 text-sm">{errors.email}</p>
             )}
           </div>
+        </div>
+
+        {/* Phone */}
+        <div className="space-y-2">
+          <Label htmlFor="contact-phone">Telefon *</Label>
+          <Input
+            id="contact-phone"
+            type="tel"
+            value={formData.phone}
+            onChange={(e) => handleChange('phone', e.target.value)}
+            className="bg-white/5 border-white/10 text-white"
+            placeholder="+40 712 345 678"
+          />
+          {errors.phone && (
+            <p className="text-red-400 text-sm">{errors.phone}</p>
+          )}
         </div>
 
         {/* Service Selection */}
