@@ -7,6 +7,7 @@ import { CaseStudyCard } from '../CaseStudyCard';
 import { TestimonialCard } from '../TestimonialCard';
 import { SeamlessTestimonialsMarquee } from '../SeamlessTestimonialsMarquee';
 import { CodeRain } from '../CodeRain';
+import { ContactForm } from '../ContactForm';
 import { ImageWithFallback } from '../figma/ImageWithFallback';
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '../ui/accordion';
 import { SEO } from '../SEO';
@@ -731,6 +732,13 @@ export function HomePage() {
               <ArrowRight className="ml-2 w-5 h-5" />
             </Link>
           </Button>
+        </div>
+      </section>
+
+      {/* Contact Form Section */}
+      <section className="relative py-20 bg-gradient-to-b from-transparent via-[#1A237E]/5 to-transparent">
+        <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+          <ContactForm />
         </div>
       </section>
     </div>
