@@ -66,6 +66,7 @@ const formatProjectType = (type) => {
     'branding': 'Branding',
     'ai-automation': 'Automatizare AI',
     'comprehensive': 'Pachet Complet',
+    'other': 'Altceva',
   };
   return types[type] || type;
 };
