@@ -6,7 +6,9 @@ This guide will help you run the Web Media Design website locally for developmen
 
 Previously, running `npm run dev` only started the **frontend** (Vite dev server on port 3000), but the application also requires a **backend server** (Express on port 3001) to handle API requests like form submissions.
 
-Without the backend running, the Vite proxy couldn't forward API requests, which could cause issues.
+Without the backend running, the Vite proxy couldn't forward API requests, which caused the white screen issue.
+
+**UPDATE:** SMTP errors have been fixed! The server now runs without requiring email credentials for local development.
 
 ## The Solution
 
@@ -80,30 +82,34 @@ This tells the frontend to make API requests to `/api`, which Vite proxies to `h
 
 ### Backend Environment (`server/.env`)
 
-Located in the `server/` directory. Contains SMTP configuration for sending emails.
+Located in the `server/` directory. Contains server configuration.
 
-**Important:** If you want to test email functionality (like form submissions), you need to add your SMTP credentials to `server/.env`:
+**Good news!** SMTP credentials are now **completely optional** for local development. The server will run without any errors even if you don't configure email.
 
-```env
-SMTP_HOST=smtp.zoho.eu
-SMTP_PORT=465
-SMTP_SECURE=true
-SMTP_USER=contact@webmediadesign.ro
-SMTP_PASS=your_actual_password_here
-SMTP_FROM=Web Media Design <contact@webmediadesign.ro>
-```
+**What happens without SMTP?**
+- ✅ Server starts normally without errors
+- ✅ Frontend works perfectly
+- ✅ Form submissions are accepted by the API
+- ℹ️  Emails are skipped (form data is logged to console instead)
+- ✅ All other functionality works normally
 
-**Don't have SMTP credentials?** No problem! The website will still work for development. Form submissions will fail gracefully, but you can test all other functionality.
+**Want to test actual email sending?** You have three options:
 
-### Testing Email Functionality (Optional)
+1. **Mailtrap** (Recommended for testing) - Free service that catches emails
+   - Sign up at https://mailtrap.io
+   - Get free test credentials
+   - Emails won't actually send but you can view them in Mailtrap
 
-If you want to test emails without using production credentials, you can use:
+2. **Gmail** - Use your personal Gmail with App Password
+   - Requires 2FA enabled
+   - Generate App Password in Google Account settings
+   - Good for testing real email delivery
 
-1. **Ethereal Email** (fake SMTP for testing): https://ethereal.email
-2. **Mailtrap** (email testing tool): https://mailtrap.io
-3. **Gmail** with an App Password (requires 2FA)
+3. **Production SMTP** (Not recommended for local dev)
+   - Use your actual Zoho credentials
+   - Be careful - emails will actually send!
 
-Just update the `server/.env` file with the appropriate SMTP settings.
+To enable emails, edit `server/.env` and uncomment the SMTP section you want to use.
 
 ---
 
@@ -134,11 +140,16 @@ lsof -ti:3000 | xargs kill -9
 lsof -ti:3001 | xargs kill -9
 ```
 
-### SMTP Errors in Console
+### Want to Enable Email Testing?
 
-If you see SMTP-related errors, it means the backend can't connect to the email server. This is normal if you haven't configured SMTP credentials yet. The website will still work for development.
+SMTP is optional for development! If you want to test email functionality:
 
-To fix: Add valid SMTP credentials to `server/.env`.
+1. Open `server/.env`
+2. Uncomment one of the SMTP configuration options
+3. Add your credentials
+4. Restart the server with `npm run dev`
+
+Recommended: Use [Mailtrap](https://mailtrap.io) for safe email testing without sending real emails.
 
 ### White Screen Still Appears
 
