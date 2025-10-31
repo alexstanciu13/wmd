@@ -561,7 +561,7 @@ export function HomePage() {
                 title: 'Parteneri Ideali',
                 icon: CheckCircle2,
                 items: [
-                  'Afacere stabilită cu viziune de creștere',
+                  'Afacere stabilită cu viziune clară',
                   'Angajați pentru creștere și inovație',
                   'Apreciază parteneriatul strategic',
                   'Pregătiți să investească în soluții premium',
