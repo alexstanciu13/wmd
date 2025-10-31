@@ -76,7 +76,7 @@ export function ContactForm() {
       // Use environment variable for API URL in production, fallback to relative path for development
       const apiUrl = import.meta.env.VITE_API_URL || '/api';
 
-      const response = await fetch(`${apiUrl}/submit-application`, {
+      const response = await fetch(`${apiUrl}/submit-contact`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -85,12 +85,8 @@ export function ContactForm() {
           name: formData.name.trim(),
           email: formData.email.trim(),
           phone: formData.phone.trim(),
-          company: 'Contact Form - Homepage',
-          website: '',
-          budget: '1000',
-          projectType: formData.service,
-          timeline: '1-3',
-          description: formData.message.trim() || 'Contact form submission - client wishes to be contacted.',
+          service: formData.service,
+          message: formData.message.trim(),
         }),
       });
 
