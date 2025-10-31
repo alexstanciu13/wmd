@@ -14,30 +14,46 @@ const __dirname = path.dirname(__filename);
 
 const app = express();
 const PORT = process.env.PORT || 3001;
+const IS_DEVELOPMENT = process.env.NODE_ENV === 'development';
 
 // Middleware
 app.use(cors());
 app.use(express.json());
 
-// Create email transporter for Zoho Mail
-const transporter = nodemailer.createTransport({
-  host: process.env.SMTP_HOST || 'smtp.zoho.eu',
-  port: Number(process.env.SMTP_PORT) || 465,
-  secure: process.env.SMTP_SECURE === 'true' || true, // true for port 465
-  auth: {
-    user: process.env.SMTP_USER,
-    pass: process.env.SMTP_PASS,
-  },
-});
+// Check if SMTP credentials are configured
+const hasSmtpCredentials = !!(process.env.SMTP_USER && process.env.SMTP_PASS);
 
-// Verify transporter configuration
-transporter.verify((error, success) => {
-  if (error) {
-    console.error('SMTP configuration error:', error);
+// Create email transporter for Zoho Mail (only if credentials are available)
+let transporter = null;
+
+if (hasSmtpCredentials) {
+  transporter = nodemailer.createTransport({
+    host: process.env.SMTP_HOST || 'smtp.zoho.eu',
+    port: Number(process.env.SMTP_PORT) || 465,
+    secure: process.env.SMTP_SECURE === 'true' || true, // true for port 465
+    auth: {
+      user: process.env.SMTP_USER,
+      pass: process.env.SMTP_PASS,
+    },
+  });
+
+  // Verify transporter configuration
+  transporter.verify((error, success) => {
+    if (error) {
+      console.error('⚠️  SMTP configuration error:', error.message);
+      console.log('📧 Email functionality will be disabled');
+    } else {
+      console.log('✅ SMTP server is ready to send emails');
+    }
+  });
+} else {
+  if (IS_DEVELOPMENT) {
+    console.log('ℹ️  Development mode: SMTP not configured (emails will be skipped)');
+    console.log('ℹ️  To enable emails, add SMTP credentials to server/.env');
   } else {
-    console.log('SMTP server is ready to send emails');
+    console.warn('⚠️  WARNING: SMTP credentials not configured in production!');
   }
-});
+}
 
 // Helper function to format project type
 const formatProjectType = (type) => {
@@ -174,33 +190,36 @@ Formular Aplica Acum
 Web Media Design
 contact@webmediadesign.ro`;
 
-    // Email options for internal notification
-    const internalMailOptions = {
-      from: process.env.SMTP_FROM || 'Web Media Design <contact@webmediadesign.ro>',
-      to: 'contact@webmediadesign.ro',
-      subject: 'Nouă cerere de colaborare — Web Media Design',
-      text: emailContent,
-      replyTo: sanitizedData.email,
-    };
+    // Only send emails if SMTP is configured
+    if (transporter) {
+      try {
+        // Email options for internal notification
+        const internalMailOptions = {
+          from: process.env.SMTP_FROM || 'Web Media Design <contact@webmediadesign.ro>',
+          to: 'contact@webmediadesign.ro',
+          subject: 'Nouă cerere de colaborare — Web Media Design',
+          text: emailContent,
+          replyTo: sanitizedData.email,
+        };
 
-    // Send internal notification email
-    await transporter.sendMail(internalMailOptions);
-    console.log('Internal notification email sent successfully');
+        // Send internal notification email
+        await transporter.sendMail(internalMailOptions);
+        console.log('✅ Internal notification email sent successfully');
 
-    // Send confirmation email to user
-    console.log('Attempting to send confirmation email to:', sanitizedData.email);
-    const htmlTemplate = getEmailTemplate(sanitizedData);
+        // Send confirmation email to user
+        console.log('📧 Attempting to send confirmation email to:', sanitizedData.email);
+        const htmlTemplate = getEmailTemplate(sanitizedData);
 
-    if (htmlTemplate) {
-      console.log('HTML template loaded, preparing confirmation email...');
+        if (htmlTemplate) {
+          console.log('📄 HTML template loaded, preparing confirmation email...');
 
-      const confirmationMailOptions = {
-        from: process.env.SMTP_FROM || 'Web Media Design <contact@webmediadesign.ro>',
-        to: sanitizedData.email,
-        subject: 'Aplicația ta a fost primită — Web Media Design',
-        html: htmlTemplate,
-        // Fallback text version
-        text: `Bună ${sanitizedData.name},
+          const confirmationMailOptions = {
+            from: process.env.SMTP_FROM || 'Web Media Design <contact@webmediadesign.ro>',
+            to: sanitizedData.email,
+            subject: 'Aplicația ta a fost primită — Web Media Design',
+            html: htmlTemplate,
+            // Fallback text version
+            text: `Bună ${sanitizedData.name},
 
 Mulțumim pentru interesul tău de a colabora cu Web Media Design. Am primit cu succes aplicația ta și suntem entuziasmați să aflăm mai multe despre proiectul tău!
 
@@ -227,27 +246,29 @@ Ai întrebări? Ne poți contacta la contact@webmediadesign.ro
 
 © 2025 Web Media Design. Toate drepturile rezervate.
 Excelență Digitală Premium`,
-      };
+          };
 
-      try {
-        console.log('Sending confirmation email with options:', {
-          from: confirmationMailOptions.from,
-          to: confirmationMailOptions.to,
-          subject: confirmationMailOptions.subject,
-        });
-
-        const info = await transporter.sendMail(confirmationMailOptions);
-        console.log('Confirmation email sent successfully!');
-        console.log('Email info:', info);
-      } catch (confirmationError) {
-        console.error('❌ ERROR sending confirmation email to user');
-        console.error('Error message:', confirmationError.message);
-        console.error('Error code:', confirmationError.code);
-        console.error('Full error:', confirmationError);
-        // Don't fail the request if confirmation email fails
+          try {
+            const info = await transporter.sendMail(confirmationMailOptions);
+            console.log('✅ Confirmation email sent successfully to user!');
+          } catch (confirmationError) {
+            console.error('⚠️  Failed to send confirmation email to user:', confirmationError.message);
+            // Don't fail the request if confirmation email fails
+          }
+        } else {
+          console.warn('⚠️  Email template not found, confirmation email skipped');
+        }
+      } catch (emailError) {
+        console.error('⚠️  Failed to send internal notification email:', emailError.message);
+        // Continue even if email fails - the form data is still valid
       }
     } else {
-      console.error('❌ Failed to load HTML template, confirmation email not sent');
+      // SMTP not configured - log the submission but don't send emails
+      console.log('ℹ️  Form submission received (emails skipped - SMTP not configured):');
+      console.log(`   - Company: ${sanitizedData.company}`);
+      console.log(`   - Email: ${sanitizedData.email}`);
+      console.log(`   - Budget: ${formattedBudget}`);
+      console.log(`   - Project: ${formatProjectType(sanitizedData.projectType)}`);
     }
 
     res.status(200).json({ success: true, message: 'Application submitted successfully' });
@@ -265,12 +286,16 @@ app.get('/api/health', (req, res) => {
 
 // Start server
 app.listen(PORT, () => {
-  console.log(`Server running on port ${PORT}`);
-  console.log('Environment check:');
+  console.log('\n' + '='.repeat(60));
+  console.log(`🚀 Server running on port ${PORT}`);
+  console.log('='.repeat(60));
+  console.log('\n📋 Environment:', IS_DEVELOPMENT ? 'Development' : 'Production');
+  console.log('📁 Working directory:', __dirname);
+  console.log('\n📧 Email Configuration:');
   console.log('  - SMTP_HOST:', process.env.SMTP_HOST || 'smtp.zoho.eu (default)');
   console.log('  - SMTP_PORT:', process.env.SMTP_PORT || '465 (default)');
-  console.log('  - SMTP_USER:', process.env.SMTP_USER ? '✓ Set' : '❌ NOT SET');
-  console.log('  - SMTP_PASS:', process.env.SMTP_PASS ? '✓ Set' : '❌ NOT SET');
-  console.log('  - SMTP_FROM:', process.env.SMTP_FROM || 'contact@webmediadesign.ro (default)');
-  console.log('  - Working directory:', __dirname);
+  console.log('  - SMTP_USER:', process.env.SMTP_USER ? '✓ Configured' : '❌ Not configured');
+  console.log('  - SMTP_PASS:', process.env.SMTP_PASS ? '✓ Configured' : '❌ Not configured');
+  console.log('  - Email Status:', transporter ? '✅ Enabled' : '⚠️  Disabled (dev mode OK)');
+  console.log('\n' + '='.repeat(60) + '\n');
 });
