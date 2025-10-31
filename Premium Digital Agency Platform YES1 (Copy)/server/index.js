@@ -280,6 +280,101 @@ Excelență Digitală Premium`,
   }
 });
 
+// API endpoint for contact form submission (simpler, no confirmation email)
+app.post('/api/submit-contact', async (req, res) => {
+  try {
+    const {
+      name,
+      email,
+      phone,
+      service,
+      message,
+    } = req.body;
+
+    // Basic validation
+    if (!name || !email || !phone || !service) {
+      return res.status(400).json({ error: 'Missing required fields' });
+    }
+
+    // Validate email format
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(email)) {
+      return res.status(400).json({ error: 'Invalid email format' });
+    }
+
+    // Validate Romanian phone number
+    const normalizedPhone = phone.replace(/[\s\-()]/g, '');
+    const romanianPhoneRegex = /^(\+?40|0)(7[0-9]{8}|[2-3][0-9]{8})$/;
+    if (!romanianPhoneRegex.test(normalizedPhone)) {
+      return res.status(400).json({ error: 'Invalid Romanian phone number' });
+    }
+
+    // Sanitize inputs
+    const sanitizedData = {
+      name: sanitizeInput(name),
+      email: sanitizeInput(email),
+      phone: sanitizeInput(phone),
+      service: sanitizeInput(service),
+      message: message ? sanitizeInput(message) : 'N/A',
+    };
+
+    // Create email content for internal notification only
+    const emailContent = `
+Nou Contact din Formularul Homepage
+=====================================
+
+Informații Contact:
+------------------
+Nume: ${sanitizedData.name}
+Email: ${sanitizedData.email}
+Telefon: ${sanitizedData.phone}
+Serviciu Interes: ${formatProjectType(sanitizedData.service)}
+
+${sanitizedData.message !== 'N/A' ? `Mesaj:\n${sanitizedData.message}` : 'Mesaj: (Nu a fost completat)'}
+
+---
+Primit din: Formular Contact - Homepage
+Data: ${new Date().toLocaleString('ro-RO')}
+`;
+
+    // Only send email if SMTP is configured
+    if (transporter) {
+      try {
+        // Email options for internal notification ONLY (no confirmation email to user)
+        const internalMailOptions = {
+          from: process.env.SMTP_FROM || 'Web Media Design <contact@webmediadesign.ro>',
+          to: 'contact@webmediadesign.ro',
+          subject: `🔔 Nou Contact - ${sanitizedData.name}`,
+          text: emailContent,
+          replyTo: sanitizedData.email,
+        };
+
+        // Send internal notification email
+        await transporter.sendMail(internalMailOptions);
+        console.log('✅ Contact form notification email sent successfully');
+        console.log(`   - From: ${sanitizedData.name} (${sanitizedData.email})`);
+        console.log(`   - Service: ${formatProjectType(sanitizedData.service)}`);
+      } catch (emailError) {
+        console.error('⚠️  Failed to send contact notification email:', emailError.message);
+        // Continue even if email fails - the form data is still valid
+      }
+    } else {
+      // SMTP not configured - log the submission but don't send emails
+      console.log('ℹ️  Contact form submission received (emails skipped - SMTP not configured):');
+      console.log(`   - Name: ${sanitizedData.name}`);
+      console.log(`   - Email: ${sanitizedData.email}`);
+      console.log(`   - Phone: ${sanitizedData.phone}`);
+      console.log(`   - Service: ${formatProjectType(sanitizedData.service)}`);
+    }
+
+    res.status(200).json({ success: true, message: 'Contact form submitted successfully' });
+
+  } catch (error) {
+    console.error('Error processing contact form submission:', error);
+    res.status(500).json({ error: 'Internal server error' });
+  }
+});
+
 // Health check endpoint
 app.get('/api/health', (req, res) => {
   res.status(200).json({ status: 'ok' });
