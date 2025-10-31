@@ -82,15 +82,15 @@ export function ContactForm() {
           'Content-Type': 'application/json',
         },
         body: JSON.stringify({
-          name: formData.name,
-          email: formData.email,
-          phone: formData.phone,
-          company: 'Contact Form Submission',
-          website: 'N/A',
-          budget: '0',
+          name: formData.name.trim(),
+          email: formData.email.trim(),
+          phone: formData.phone.trim(),
+          company: 'Contact Form - Homepage',
+          website: '',
+          budget: '1000',
           projectType: formData.service,
-          timeline: 'To be discussed',
-          description: formData.message || 'Clientul dorește să fie contactat.',
+          timeline: '1-3',
+          description: formData.message.trim() || 'Contact form submission - client wishes to be contacted.',
         }),
       });
 
