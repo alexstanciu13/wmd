@@ -161,158 +161,197 @@ try {
     $timelineHtml = htmlspecialchars($timeline !== '' ? $timeline : '-', ENT_QUOTES, 'UTF-8');
 
     // Build HTML email body
-    $confirmationHTML = <<<HTML
+$confirmationHTML = <<<HTML
 <!DOCTYPE html>
 <html lang="ro">
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width">
-    <title>Aplicația ta a fost primită</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Aplicația ta a fost primită</title>
+
+  <!-- Hints for clients that respect schemes -->
+  <meta name="color-scheme" content="dark only">
+  <meta name="supported-color-schemes" content="dark">
+  <style>
+    /* Fallback classes some clients respect in dark mode */
+    .bg-outer { background:#111315 !important; }
+    .bg-card  { background:#181B1F !important; }
+    .text-hi  { color:#F2F5F7 !important; }
+    .text-mid { color:#D1D5DB !important; }
+    .text-lo  { color:#9AA3AF !important; }
+    .link     { color:#00AEEF !important; text-decoration:none !important; }
+    [data-ogsc] .bg-outer{ background:#111315 !important; }
+    [data-ogsc] .bg-card { background:#181B1F !important; }
+    [data-ogsc] .text-hi { color:#F2F5F7 !important; }
+    [data-ogsc] .text-mid{ color:#D1D5DB !important; }
+    [data-ogsc] .text-lo { color:#9AA3AF !important; }
+    [data-ogsc] .link    { color:#00AEEF !important; }
+  </style>
 </head>
-<body style="margin: 0; padding: 0; background-color: #0A0A0A; font-family: Arial, sans-serif;">
-    <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%" style="background-color: #0A0A0A;">
-        <tr>
-            <td align="center" style="padding: 40px 20px;">
-                <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="600" style="max-width: 600px; width: 100%;">
 
-                    <!-- Header -->
-                    <tr>
-                        <td align="center" style="padding: 40px 20px; background-color: #0A0A0A;">
-                            <table role="presentation" cellspacing="0" cellpadding="0" border="0">
-                                <tr>
-                                    <td align="center" style="width: 80px; height: 80px; background: linear-gradient(135deg, #0B61D6 0%, #06306F 100%); border-radius: 50%; text-align: center; line-height: 80px; font-size: 40px; color: #ffffff;">
-                                        ✓
-                                    </td>
-                                </tr>
-                            </table>
-                            <h1 style="margin: 20px 0 0 0; font-size: 32px; font-weight: bold; color: #ffffff; text-align: center;">
-                                Aplicația ta a fost <span style="background: linear-gradient(90deg, #0B61D6 0%, #00AEEF 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; color: #00AEEF;">primită</span>!
-                            </h1>
-                        </td>
-                    </tr>
+<body style="margin:0; padding:0; background:#111315;" bgcolor="#111315">
+  <!-- Full-bleed wrapper -->
+  <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0"
+         class="bg-outer" style="background:#111315;" bgcolor="#111315">
+    <tr>
+      <td align="center" style="padding:40px 20px; background:#111315;" class="bg-outer" bgcolor="#111315">
 
-                    <!-- Content -->
-                    <tr>
-                        <td style="padding: 0 40px 40px; background-color: #0A0A0A;">
-                            <p style="text-align: center; font-size: 16px; color: #cccccc; margin: 0 0 20px 0;">Bună {$nameHtml},</p>
+        <!-- Container -->
+        <table role="presentation" width="600" cellspacing="0" cellpadding="0" border="0"
+               style="max-width:600px; width:100%; background:#111315;" class="bg-outer" bgcolor="#111315">
 
-                            <p style="text-align: center; color: #cccccc; margin: 0 0 30px 0; line-height: 1.6;">
-                                Mulțumim pentru interesul tău de a colabora cu <strong style="color: #00AEEF;">Web Media Design</strong>. Am primit cu succes aplicația ta și suntem entuziasmați să aflăm mai multe despre proiectul tău!
-                            </p>
-
-                            <!-- What's Next Card -->
-                            <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%" style="background-color: #1A1A1A; border-radius: 12px; margin: 20px 0;">
-                                <tr>
-                                    <td style="padding: 30px;">
-                                        <h3 style="text-align: center; color: #ffffff; margin: 0 0 20px 0; font-size: 18px;">✨ Ce urmează?</h3>
-
-                                        <!-- Step 1 -->
-                                        <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%" style="margin: 15px 0;">
-                                            <tr>
-                                                <td width="40" style="vertical-align: top;">
-                                                    <table role="presentation" cellspacing="0" cellpadding="0" border="0">
-                                                        <tr>
-                                                            <td align="center" style="width: 32px; height: 32px; background: linear-gradient(135deg, #0B61D6 0%, #06306F 100%); border-radius: 8px; color: #ffffff; font-weight: bold; font-size: 14px; line-height: 32px;">
-                                                                1
-                                                            </td>
-                                                        </tr>
-                                                    </table>
-                                                </td>
-                                                <td style="padding-left: 15px; vertical-align: top;">
-                                                    <div style="color: #ffffff; font-weight: 600; margin-bottom: 4px;">Revizuire Aplicație</div>
-                                                    <div style="color: #999999; font-size: 14px;">Echipa noastră analizează detaliile și cerințele proiectului tău</div>
-                                                </td>
-                                            </tr>
-                                        </table>
-
-                                        <!-- Step 2 -->
-                                        <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%" style="margin: 15px 0;">
-                                            <tr>
-                                                <td width="40" style="vertical-align: top;">
-                                                    <table role="presentation" cellspacing="0" cellpadding="0" border="0">
-                                                        <tr>
-                                                            <td align="center" style="width: 32px; height: 32px; background: linear-gradient(135deg, #0070C9 0%, #002F6C 100%); border-radius: 8px; color: #ffffff; font-weight: bold; font-size: 14px; line-height: 32px;">
-                                                                2
-                                                            </td>
-                                                        </tr>
-                                                    </table>
-                                                </td>
-                                                <td style="padding-left: 15px; vertical-align: top;">
-                                                    <div style="color: #ffffff; font-weight: 600; margin-bottom: 4px;">Apel Descoperire</div>
-                                                    <div style="color: #999999; font-size: 14px;">Vom programa o sesiune de strategie pentru a discuta viziunea ta</div>
-                                                </td>
-                                            </tr>
-                                        </table>
-
-                                        <!-- Step 3 -->
-                                        <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%" style="margin: 15px 0;">
-                                            <tr>
-                                                <td width="40" style="vertical-align: top;">
-                                                    <table role="presentation" cellspacing="0" cellpadding="0" border="0">
-                                                        <tr>
-                                                            <td align="center" style="width: 32px; height: 32px; background: linear-gradient(135deg, #00AEEF 0%, #0070C9 100%); border-radius: 8px; color: #ffffff; font-weight: bold; font-size: 14px; line-height: 32px;">
-                                                                3
-                                                            </td>
-                                                        </tr>
-                                                    </table>
-                                                </td>
-                                                <td style="padding-left: 15px; vertical-align: top;">
-                                                    <div style="color: #ffffff; font-weight: 600; margin-bottom: 4px;">Propunere Personalizată</div>
-                                                    <div style="color: #999999; font-size: 14px;">Primești o strategie adaptată și un plan detaliat al proiectului</div>
-                                                </td>
-                                            </tr>
-                                        </table>
-                                    </td>
-                                </tr>
-                            </table>
-
-                            <p style="text-align: center; color: #999999; margin: 30px 0 20px 0;">
-                                📅 Te vom contacta în <strong style="color: #00AEEF;">24–48 de ore</strong>
-                            </p>
-
-                            <!-- CTA Button -->
-                            <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
-                                <tr>
-                                    <td align="center" style="padding: 20px 0;">
-                                        <a href="https://webmediadesign.ro/studii-de-caz" style="display: inline-block; padding: 16px 32px; background: linear-gradient(90deg, #0B61D6 0%, #06306F 100%); color: #ffffff; text-decoration: none; border-radius: 8px; font-weight: 600; font-size: 16px;">
-                                            Explorează Portofoliul
-                                        </a>
-                                    </td>
-                                </tr>
-                            </table>
-                        </td>
-                    </tr>
-
-                    <!-- Footer -->
-                    <tr>
-                        <td style="padding: 30px 40px; background-color: #0A0A0A; border-top: 1px solid #333333;">
-                            <p style="text-align: center; color: #999999; font-size: 14px; margin: 0 0 20px 0;">
-                                Ai întrebări? Ne poți contacta la<br>
-                                <a href="mailto:contact@webmediadesign.ro" style="color: #00AEEF; text-decoration: none;">contact@webmediadesign.ro</a>
-                            </p>
-
-                            <p style="text-align: center; margin: 20px 0; font-size: 14px;">
-                                <a href="https://webmediadesign.ro" style="color: #00AEEF; text-decoration: none;">Website</a>
-                                <span style="color: #333333;"> | </span>
-                                <a href="https://webmediadesign.ro/studii-de-caz" style="color: #00AEEF; text-decoration: none;">Portofoliu</a>
-                                <span style="color: #333333;"> | </span>
-                                <a href="https://webmediadesign.ro/academia" style="color: #00AEEF; text-decoration: none;">Academie</a>
-                            </p>
-
-                            <p style="text-align: center; color: #666666; font-size: 12px; margin: 20px 0 0 0;">
-                                © 2025 Web Media Design. Toate drepturile rezervate.<br>
-                                Excelență Digitală Premium
-                            </p>
-                        </td>
-                    </tr>
-
-                </table>
+          <!-- Header -->
+          <tr>
+            <td align="center" style="padding:28px 20px; background:#111315;" class="bg-outer" bgcolor="#111315">
+              <table role="presentation" cellspacing="0" cellpadding="0" border="0">
+                <tr>
+                  <td align="center"
+                      style="width:80px; height:80px; border-radius:50%;
+                             background:linear-gradient(135deg,#0B61D6 0%,#06306F 100%);
+                             line-height:80px; font-size:40px; color:#FFFFFF;">
+                    ✓
+                  </td>
+                </tr>
+              </table>
+              <h1 style="margin:16px 0 0 0; font-size:28px; font-weight:700; color:#F2F5F7;"
+                  class="text-hi">
+                Aplicația ta a fost <span style="color:#00AEEF;">primită</span>!
+              </h1>
             </td>
-        </tr>
-    </table>
+          </tr>
+
+          <!-- Intro -->
+          <tr>
+            <td style="padding:0 24px 22px; background:#111315;" class="bg-outer" bgcolor="#111315">
+              <p style="text-align:center; font-size:16px; margin:0 0 8px 0; color:#D1D5DB;" class="text-mid">
+                Bună {$nameHtml},
+              </p>
+              <p style="text-align:center; line-height:1.6; margin:0; color:#D1D5DB;" class="text-mid">
+                Mulțumim pentru interesul tău de a colabora cu
+                <strong style="color:#00AEEF;">Web Media Design</strong>.
+                Am primit cu succes aplicația ta și suntem entuziasmați să aflăm mai multe despre proiect!
+              </p>
+            </td>
+          </tr>
+
+          <!-- What's next card -->
+          <tr>
+            <td style="padding:0 24px 24px; background:#111315;" class="bg-outer" bgcolor="#111315">
+              <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0"
+                     style="border-radius:12px; background:#181B1F; border:1px solid #23262A;"
+                     class="bg-card" bgcolor="#181B1F">
+                <tr>
+                  <td style="padding:22px; background:#181B1F;" class="bg-card" bgcolor="#181B1F">
+                    <h3 style="margin:0 0 10px 0; font-size:18px; text-align:center; color:#F2F5F7;" class="text-hi">
+                      ✨ Ce urmează?
+                    </h3>
+
+                    <!-- Step -->
+                    <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" style="margin:10px 0;">
+                      <tr>
+                        <td width="36" valign="top">
+                          <div style="width:32px; height:32px; border-radius:8px;
+                                      background:linear-gradient(135deg,#0B61D6 0%,#06306F 100%);
+                                      text-align:center; line-height:32px; font-weight:700; color:#FFFFFF;">1</div>
+                        </td>
+                        <td valign="top" style="padding-left:12px;">
+                          <div style="font-weight:600; margin-bottom:2px; color:#F2F5F7;" class="text-hi">Revizuire aplicație</div>
+                          <div style="font-size:14px; color:#9AA3AF;" class="text-lo">Analizăm detaliile și cerințele proiectului tău.</div>
+                        </td>
+                      </tr>
+                    </table>
+
+                    <!-- Step -->
+                    <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" style="margin:10px 0;">
+                      <tr>
+                        <td width="36" valign="top">
+                          <div style="width:32px; height:32px; border-radius:8px;
+                                      background:linear-gradient(135deg,#0070C9 0%,#002F6C 100%);
+                                      text-align:center; line-height:32px; font-weight:700; color:#FFFFFF;">2</div>
+                        </td>
+                        <td valign="top" style="padding-left:12px;">
+                          <div style="font-weight:600; margin-bottom:2px; color:#F2F5F7;" class="text-hi">Apel de descoperire</div>
+                          <div style="font-size:14px; color:#9AA3AF;" class="text-lo">Stabilim o sesiune scurtă pentru a clarifica obiectivele.</div>
+                        </td>
+                      </tr>
+                    </table>
+
+                    <!-- Step -->
+                    <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" style="margin:10px 0;">
+                      <tr>
+                        <td width="36" valign="top">
+                          <div style="width:32px; height:32px; border-radius:8px;
+                                      background:linear-gradient(135deg,#00AEEF 0%,#0070C9 100%);
+                                      text-align:center; line-height:32px; font-weight:700; color:#FFFFFF;">3</div>
+                        </td>
+                        <td valign="top" style="padding-left:12px;">
+                          <div style="font-weight:600; margin-bottom:2px; color:#F2F5F7;" class="text-hi">Propunere personalizată</div>
+                          <div style="font-size:14px; color:#9AA3AF;" class="text-lo">Primești o strategie adaptată și un plan clar de implementare.</div>
+                        </td>
+                      </tr>
+                    </table>
+
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+
+          <!-- Reminder -->
+          <tr>
+            <td align="center" style="padding:6px 24px 0; background:#111315;" class="bg-outer" bgcolor="#111315">
+              <p style="margin:0; color:#9AA3AF;" class="text-lo">
+                📅 Te contactăm în <strong style="color:#00AEEF;">24–48 de ore</strong>
+              </p>
+            </td>
+          </tr>
+
+          <!-- CTA -->
+          <tr>
+            <td align="center" style="padding:16px 24px 26px; background:#111315;" class="bg-outer" bgcolor="#111315">
+              <a href="https://webmediadesign.ro/studii-de-caz"
+   style="display:inline-block; padding:14px 28px;
+          background:linear-gradient(90deg,#0B61D6 0%,#06306F 100%);
+          color:#00AEEF !important; text-decoration:none !important;
+          border-radius:8px; font-weight:600; font-size:16px;">
+  <span style="color:#00AEEF !important; -webkit-text-fill-color:#00AEEF !important;">Explorează Portofoliul</span>
+</a>
+
+            </td>
+          </tr>
+
+          <!-- Footer -->
+          <tr>
+            <td style="padding:18px 24px; background:#111315; border-top:1px solid #23262A;"
+                class="bg-outer" bgcolor="#111315">
+              <p style="text-align:center; font-size:14px; margin:0 0 12px 0; color:#9AA3AF;" class="text-lo">
+                Ai întrebări? Scrie-ne la
+                <a href="mailto:contact@webmediadesign.ro" style="color:#00AEEF; text-decoration:none;">contact@webmediadesign.ro</a>
+              </p>
+
+              <p style="text-align:center; margin:10px 0; color:#D1D5DB;" class="text-mid">
+                <a href="https://webmediadesign.ro" style="color:#00AEEF; text-decoration:none;">Website</a>
+                <span style="margin:0 8px; color:#23262A;">|</span>
+                <a href="https://webmediadesign.ro/studii-de-caz" style="color:#00AEEF; text-decoration:none;">Portofoliu</a>
+                <span style="margin:0 8px; color:#23262A;">|</span>
+                <a href="https://webmediadesign.ro/academia" style="color:#00AEEF; text-decoration:none;">Academie</a>
+              </p>
+
+              <p style="text-align:center; font-size:12px; margin:8px 0 0 0; color:#9AA3AF;" class="text-lo">
+                © 2025 Web Media Design · Excelență Digitală Premium
+              </p>
+            </td>
+          </tr>
+
+        </table>
+      </td>
+    </tr>
+  </table>
 </body>
 </html>
 HTML;
+
+
 
     // Configure for HTML email
     $mail->isHTML(true);
