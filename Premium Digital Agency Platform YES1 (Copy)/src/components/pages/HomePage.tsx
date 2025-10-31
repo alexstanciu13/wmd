@@ -561,7 +561,7 @@ export function HomePage() {
                 title: 'Parteneri Ideali',
                 icon: CheckCircle2,
                 items: [
-                  'Venit anual $50K+',
+                  'Afacere stabilită cu viziune clară',
                   'Angajați pentru creștere și inovație',
                   'Apreciază parteneriatul strategic',
                   'Pregătiți să investească în soluții premium',
@@ -677,7 +677,7 @@ export function HomePage() {
               },
               {
                 question: 'Care sunt cerințele minime pentru proiecte?',
-                answer: 'Lucrăm cu afaceri consacrate cu venituri anuale de $500K+ și bugete de proiect începând de la $25,000. Acest lucru asigură că putem livra calitatea și profunzimea serviciilor care generează rezultate transformatoare.'
+                answer: 'Lucrăm cu afaceri de toate dimensiunile care sunt serioase în privința creșterii digitale. Proiectele noastre sunt adaptate obiectivelor și bugetului tău, asigurând că fiecare investiție generează rezultate măsurabile și transformatoare.'
               },
               {
                 question: 'Oferiți planuri de plată?',
